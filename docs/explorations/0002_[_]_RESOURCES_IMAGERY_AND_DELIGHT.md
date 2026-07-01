@@ -334,9 +334,9 @@ Make an inline island survive view transitions:
 - [x] Build the `/resources` hub page: grouped, curated link library with
       an `ExternalLink` component (`rel="noopener"`) and the honest
       "no dedicated hub yet" framing; add **Resources** to nav + footer
-- [ ] Create a cohesive custom illustration set: `PositionArt.astro`
+- [x] Create a cohesive custom illustration set: `PositionArt.astro`
       (one line-art scene per position slug) and a small shared scene set
-- [ ] Use the illustrations on `PositionCard`, the positions detail route,
+- [x] Use the illustrations on `PositionCard`, the positions detail route,
       and the start gallery; refresh the home/pillar motifs for cohesion
 - [ ] Wire the image pipeline: `Figure.astro` (caption + credit) over
       `astro:assets` `<Image>`, an `src/assets/` dir, and README notes on

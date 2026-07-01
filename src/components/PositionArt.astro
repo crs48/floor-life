@@ -1,0 +1,96 @@
+---
+// A cohesive set of hand-tuned line-art figures — one per floor position.
+// Two-tone (sage line + clay head) via CSS vars so they adapt to dark mode.
+// Deliberately minimal and a little imperfect: wabi-sabi, not clip-art.
+interface Props {
+  slug: string;
+  class?: string;
+}
+const { slug, class: className = '' } = Astro.props;
+
+// head { cx, cy } + figure paths, on a shared 200×160 frame.
+const figures: Record<string, { head: [number, number]; paths: string[] }> = {
+  'cross-legged': {
+    head: [100, 74],
+    paths: [
+      'M100 116 C95 105 95 97 100 89',           // torso
+      'M62 130 Q100 111 138 130',                 // crossed shins (low arc)
+      'M80 128 L122 121', 'M122 128 L80 121',     // the cross
+      'M89 108 Q79 119 73 129', 'M111 108 Q121 119 127 129', // arms to knees
+    ],
+  },
+  seiza: {
+    head: [100, 70],
+    paths: [
+      'M100 112 L100 84',                         // upright torso
+      'M100 112 Q83 120 73 131',                  // folded left leg
+      'M100 112 Q117 120 127 131',                // folded right leg
+      'M84 131 Q100 137 116 131',                 // heels/seat
+    ],
+  },
+  'deep-squat': {
+    head: [100, 66],
+    paths: [
+      'M100 108 L100 82',                         // short torso
+      'M84 130 L92 99 L100 108',                  // left thigh up + shin
+      'M116 130 L108 99 L100 108',                // right thigh up + shin
+      'M78 130 L90 130', 'M110 130 L122 130',     // flat feet
+    ],
+  },
+  'long-sitting': {
+    head: [96, 72],
+    paths: [
+      'M96 116 C91 105 91 97 96 88',              // torso (leaning back a touch)
+      'M92 128 L170 128',                         // legs straight out
+      'M170 128 L173 119',                        // foot
+      'M100 108 L142 125',                        // arm reaching down the leg
+    ],
+  },
+  'side-sitting': {
+    head: [104, 74],
+    paths: [
+      'M104 116 C101 105 103 97 108 89',          // torso, slight side lean
+      'M104 118 Q82 123 66 130',                  // both knees folded left
+      'M104 118 Q90 129 76 133',
+      'M64 130 Q100 120 128 128',                 // seat line
+    ],
+  },
+  'hero-sit': {
+    head: [100, 70],
+    paths: [
+      'M100 112 L100 84',                         // upright torso
+      'M100 112 L73 129',                         // thigh splayed left
+      'M100 112 L127 129',                        // thigh splayed right
+      'M68 129 L80 129', 'M120 129 L132 129',     // feet beside hips
+    ],
+  },
+};
+
+const fig = figures[slug] ?? figures['cross-legged'];
+---
+
+<svg
+  viewBox="0 0 200 160"
+  class:list={['h-auto w-full', className]}
+  role="img"
+  aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- horizon sun -->
+  <circle cx="158" cy="46" r="26" fill="var(--color-straw)" fill-opacity="0.4" />
+  <!-- ground -->
+  <line x1="26" y1="134" x2="174" y2="134" stroke="var(--color-line)" stroke-width="2" stroke-linecap="round" />
+  <!-- cushion hint -->
+  <ellipse cx={fig.head[0]} cy="132" rx="52" ry="8" fill="var(--color-clay)" fill-opacity="0.12" />
+  <!-- figure -->
+  <g
+    fill="none"
+    stroke="var(--color-sagedeep)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    {fig.paths.map((d) => <path d={d} />)}
+  </g>
+  <circle cx={fig.head[0]} cy={fig.head[1]} r="13" fill="var(--color-clay)" />
+</svg>

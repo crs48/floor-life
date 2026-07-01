@@ -277,7 +277,7 @@
   {
     "id": "rd-bowman-why",
     "title": "Why I Went Furniture-Free",
-    "url": "https://www.nutritiousmovement.com/why-i-went-furniture-free/",
+    "url": "https://nutritiousmovement.com/articles/why-i-went-furniture-free",
     "kind": "reading",
     "source": "Nutritious Movement · Katy Bowman",
     "note": "The essay that seeded the whole Western furniture-free movement.",
@@ -286,7 +286,7 @@
   {
     "id": "rd-bowman-gear",
     "title": "Your Gear Guide to Going Furniture-Free",
-    "url": "https://www.nutritiousmovement.com/your-gear-guide-to-going-furniture-free/",
+    "url": "https://nutritiousmovement.com/articles/your-gear-guide-to-going-furniture-free",
     "kind": "reading",
     "source": "Nutritious Movement · Katy Bowman",
     "note": "A practical 'what to remove and what to add' list for anyone ready to try it.",
@@ -372,6 +372,24 @@
     "source": "GMB Fitness",
     "note": "The best written breakdown of the science — and how to actually improve your score.",
     "order": 15
+  },
+  {
+    "id": "rd-readystate-ground",
+    "title": "Ground Game: Why Sitting on the Ground Can Transform Your Life",
+    "url": "https://thereadystate.com/blogs/why-sitting-more-on-the-ground-can-transform-your-life/",
+    "kind": "reading",
+    "source": "The Ready State",
+    "note": "Kelly & Juliet Starrett's clearest piece on why floor sitting is worth the effort.",
+    "order": 16
+  },
+  {
+    "id": "rd-bowman-transition",
+    "title": "Transitioning to Floor Sitting",
+    "url": "https://nutritiousmovement.com/articles/transitioning-to-floor-sitting-podcast-episode-65",
+    "kind": "reading",
+    "source": "Nutritious Movement · Katy Bowman",
+    "note": "The most practical 'how to actually ease into it' resource there is.",
+    "order": 17
   },
 
   {
