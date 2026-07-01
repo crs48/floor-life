@@ -1,0 +1,24 @@
+---
+// Small framed note. `evidence` for what the research supports, `caution`
+// for honest cautions, `note` for asides. Keeps the "myths vs evidence"
+// voice visually consistent.
+interface Props {
+  variant?: 'evidence' | 'caution' | 'note' | 'myth';
+  title?: string;
+}
+const { variant = 'note', title } = Astro.props;
+
+const styles = {
+  evidence: { ring: 'border-sage/50 bg-sage/10', dot: 'text-sagedeep', label: 'What the evidence says' },
+  caution: { ring: 'border-clay/40 bg-clay/10', dot: 'text-claydeep', label: 'Worth a caution' },
+  note: { ring: 'border-line bg-sand/40', dot: 'text-inkmuted', label: 'Note' },
+  myth: { ring: 'border-line bg-sand/40', dot: 'text-inkmuted', label: 'Myth vs evidence' },
+}[variant];
+---
+
+<aside class:list={['rounded-soft border px-5 py-4', styles.ring]}>
+  <p class:list={['eyebrow mb-2', styles.dot]}>{title ?? styles.label}</p>
+  <div class="text-[0.95rem] leading-relaxed text-inksoft [&_a]:text-claydeep [&_strong]:text-ink">
+    <slot />
+  </div>
+</aside>

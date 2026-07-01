@@ -1,0 +1,145 @@
+[
+  {
+    "id": "cross-legged",
+    "name": "Cross-legged",
+    "otherName": "Sukhasana · “easy” pose",
+    "order": 1,
+    "difficulty": "gentle",
+    "summary": "The default floor seat: shins crossed, knees dropping toward the floor. Comfortable for most people once the hips learn to open — and the single most useful position to make friends with first.",
+    "demands": [
+      "Hip external rotation (the knees fall out, not the ankles up)",
+      "A pelvis that can stay upright rather than rolling back"
+    ],
+    "cues": [
+      "Sit on the front edge of a firm cushion so the hips are higher than the knees — this tips the pelvis forward and un-rounds the low back",
+      "Let the knees be heavy; don't force them down",
+      "Stack the shins loosely rather than jamming the feet under the thighs",
+      "Swap which shin is in front every few minutes"
+    ],
+    "cautions": [
+      "If the hips are tight, the pelvis tucks under and the load shifts to the lumbar spine and knees — raise the seat higher instead of muscling through",
+      "Alternate the front leg; a habitual side builds asymmetry"
+    ],
+    "goodFor": ["Reading", "Eating", "Working at a low desk", "Conversation"],
+    "props": ["Zafu or firm cushion", "Folded blanket", "Yoga blocks under the knees"]
+  },
+  {
+    "id": "seiza",
+    "name": "Kneeling",
+    "otherName": "Seiza · 正座",
+    "order": 2,
+    "difficulty": "moderate",
+    "summary": "Kneeling with the hips settled back over the heels. Tall, alert, and surprisingly restful — the traditional Japanese sitting posture, and the one that keeps the spine stacked with the least effort.",
+    "demands": [
+      "Knee flexion and ankle plantarflexion (pointing the toes back)",
+      "Tolerance for weight through the front of the shins"
+    ],
+    "cues": [
+      "Slide a seiza bench or a firm cushion between your heels to take the load off the ankles and knees",
+      "Let the sit-bones rest down; lengthen up through the crown",
+      "Point the toes straight back, not tucked",
+      "Come out and shake the legs the moment they tingle"
+    ],
+    "cautions": [
+      "Seiza reduces blood flow in the lower leg — pins-and-needles is normal and harmless, but don't hold it long enough to go fully numb",
+      "Skip or heavily prop it with knee pain or after a knee/ankle injury"
+    ],
+    "goodFor": ["Tea & meals", "Focused desk work", "Meditation", "A tall reset from slumping"],
+    "props": ["Seiza / kneeling bench", "Cushion between the heels", "Rolled towel under the ankles"]
+  },
+  {
+    "id": "deep-squat",
+    "name": "Resting squat",
+    "otherName": "Malasana · the “Asian squat”",
+    "order": 3,
+    "difficulty": "advanced",
+    "summary": "Heels down, hips low, chest tall — the resting position much of the world still drops into to wait, cook, and chat. The best single test and builder of ankle and hip range you own.",
+    "demands": [
+      "Roughly 35° of ankle dorsiflexion (the calf and soleus have to lengthen)",
+      "Deep hip flexion with the knees tracking over the toes"
+    ],
+    "cues": [
+      "Start heels-elevated on a rolled mat, a wedge, or a couple of books — this unlocks the squat while the ankles open up",
+      "Feet a little wider than the hips, toes turned slightly out",
+      "Push the knees gently apart with the elbows and lift the chest",
+      "Hold for short, frequent bouts rather than one long marathon"
+    ],
+    "cautions": [
+      "Prolonged, high-volume deep squatting is linked to more knee osteoarthritis — keep it varied and pain-free rather than grinding out long holds",
+      "Back out of any sharp knee pain; build the range slowly over weeks"
+    ],
+    "goodFor": ["Ankle & hip mobility", "Waiting", "Gardening & low tasks", "Getting comfortable near the ground"],
+    "props": ["Heel wedge or slant board", "Rolled mat under the heels", "A wall or door frame to hold"]
+  },
+  {
+    "id": "long-sitting",
+    "name": "Long-sitting",
+    "otherName": "Dandasana · staff pose",
+    "order": 4,
+    "difficulty": "gentle",
+    "summary": "Legs straight out in front, torso tall. A clean counter-pose to all the folded positions — it asks the hamstrings to lengthen and the spine to hold itself up.",
+    "demands": [
+      "Hamstring length (short hamstrings pull the pelvis into a slump)",
+      "Active trunk extension to stay upright"
+    ],
+    "cues": [
+      "Sit up on a cushion so the pelvis can tip forward",
+      "Soften the knees rather than locking them",
+      "Press the backs of the thighs down and grow tall through the spine",
+      "A slight bend in the knees is fine — height matters more than straight legs"
+    ],
+    "cautions": [
+      "Tight hamstrings round the low back — raise the seat and bend the knees before forcing the legs flat"
+    ],
+    "goodFor": ["A break from folded positions", "Stretching", "Working with a lap desk", "Reading on your back's terms"],
+    "props": ["Cushion under the sit-bones", "Rolled blanket under the knees"]
+  },
+  {
+    "id": "side-sitting",
+    "name": "Side-sitting",
+    "otherName": "Z-sit · mermaid",
+    "order": 5,
+    "difficulty": "moderate",
+    "summary": "Both knees folded to one side — a relaxed, informal way to be on the floor that most people already fall into. Its whole trick is remembering to switch sides.",
+    "demands": [
+      "External rotation in the front hip, internal rotation in the back hip",
+      "Some rotation through the spine"
+    ],
+    "cues": [
+      "Let the whole pelvis settle; don't perch on one buttock",
+      "Keep the ribs stacked over the hips rather than collapsing sideways",
+      "Deliberately switch to the other side every few minutes",
+      "Use a hand or cushion to level the low hip"
+    ],
+    "cautions": [
+      "It loads the two sides unequally — habitually favouring one side deepens an asymmetry, so alternate on purpose",
+      "Ease off if the knee of the back leg complains"
+    ],
+    "goodFor": ["Lounging", "Floor play with kids", "Casual conversation", "Transitioning between positions"],
+    "props": ["Cushion under the low hip", "Bolster to lean into"]
+  },
+  {
+    "id": "hero-sit",
+    "name": "Between the heels",
+    "otherName": "Virasana · hero pose",
+    "order": 6,
+    "difficulty": "advanced",
+    "summary": "Kneeling with the feet apart and the hips settling down between the heels. A deep, quad-and-ankle stretch that doubles as a very stable, upright seat once the knees allow it.",
+    "demands": [
+      "Deep knee flexion with tolerance for the tibia rotating",
+      "Ankle plantarflexion along the floor"
+    ],
+    "cues": [
+      "Sit up on a block or bolster placed between the feet — never force the hips to the floor",
+      "Keep the feet pointing straight back, not splaying out",
+      "Lengthen up; let the thighs and ankles stretch, not the knees",
+      "Build tolerance with short holds"
+    ],
+    "cautions": [
+      "This is the highest-knee-stress seat here — prop it generously and avoid it entirely with knee pain or injury",
+      "Sharp knee pain means come out; a broad quad/ankle stretch is the goal"
+    ],
+    "goodFor": ["Quad & ankle mobility", "A tall, stable seat once available", "Following a long walk"],
+    "props": ["Block or bolster between the feet", "Folded blanket under the shins"]
+  }
+]

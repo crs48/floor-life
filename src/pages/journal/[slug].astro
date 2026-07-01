@@ -1,0 +1,52 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Newsletter from '../../components/Newsletter.astro';
+import { href } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('journal', ({ data }) => !data.draft);
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { data } = entry;
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<BaseLayout title={data.title} description={data.description} type="article">
+  <article class="mx-auto max-w-2xl px-5 pt-16 sm:px-8 sm:pt-24">
+    <a href={href('/journal')} class="text-sm text-inkmuted no-underline hover:text-claydeep">← The Journal</a>
+
+    <header class="mt-6">
+      <div class="flex items-center gap-3 text-xs">
+        <span class="eyebrow text-sagedeep">{data.category}</span>
+        <span class="text-inkmuted">{fmt(data.pubDate)}</span>
+        {data.readingMinutes && <span class="text-inkmuted">· {data.readingMinutes} min read</span>}
+      </div>
+      <h1 class="display-1 mt-4 font-display text-ink">{data.title}</h1>
+      <p class="mt-5 text-xl leading-relaxed text-inksoft">{data.description}</p>
+    </header>
+
+    <div class="prose prose-floor mt-10 max-w-none">
+      <Content />
+    </div>
+
+    {
+      data.tags.length > 0 && (
+        <ul class="mt-12 flex flex-wrap gap-2 border-t border-line pt-6">
+          {data.tags.map((t) => (
+            <li class="rounded-pill bg-sand px-3 py-1 text-xs text-inkmuted">#{t}</li>
+          ))}
+        </ul>
+      )
+    }
+  </article>
+
+  <div class="mt-20">
+    <Newsletter title="More from the floor" blurb="The occasional letter when a new piece lands. No noise." />
+  </div>
+</BaseLayout>

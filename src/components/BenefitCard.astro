@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  icon?: Parameters<typeof Icon>[0]['name'];
+  title: string;
+}
+const { icon = 'ground', title } = Astro.props;
+---
+
+<div class="group rounded-soft border border-line bg-paper/60 p-6 transition-colors hover:border-sage/60">
+  <span
+    class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-soft bg-sage/12 text-sagedeep"
+  >
+    <Icon name={icon} size={22} />
+  </span>
+  <h3 class="text-xl font-display text-ink">{title}</h3>
+  <p class="mt-2 text-[0.95rem] leading-relaxed text-inksoft">
+    <slot />
+  </p>
+</div>

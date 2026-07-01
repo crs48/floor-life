@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { href } from '../lib/url';
+---
+
+<BaseLayout
+  title="About"
+  description="Why Floor Life exists: to marry the science of floor living with the beauty of it, honestly, for the ordinary Western home."
+>
+  <PageHeader
+    eyebrow="The story & the method"
+    title="About Floor Life"
+    lede="Two camps already write about living close to the ground. One has the evidence and none of the charm. The other has all the charm and skips the evidence. We're trying to stand in the gap."
+  />
+
+  <div class="prose prose-floor mx-auto mt-12 max-w-2xl px-5 pb-8 sm:px-8">
+    <p>
+      On one side sit the movement people — biomechanists and mobility coaches
+      with credible, sometimes viral science, wrapped in plain, functional,
+      faintly clinical writing. On the other sit the design people — beautiful
+      photography of tatami rooms and low sofas, treating the floor as a styling
+      trend and rarely mentioning why it might matter.
+    </p>
+    <p>
+      Floor Life is an attempt to hold both at once: the calm, sunlit beauty of a
+      home built low to the ground, <em>and</em> an honest account of what the
+      research actually says — applied not to a Japanese farmhouse but to an
+      ordinary Western apartment with a couch and a deadline.
+    </p>
+
+    <h2>What we believe</h2>
+    <ul>
+      <li>
+        <strong>Honesty is the whole brand.</strong> Every strong claim gets its
+        caveat. When the evidence is thin, we say so. Being trusted is worth more
+        than sounding impressive.
+      </li>
+      <li>
+        <strong>Retrofit, don't evangelise.</strong> You don't have to go
+        furniture-free. One inviting corner beats a vow you'll break by Thursday.
+      </li>
+      <li>
+        <strong>Variety over dogma.</strong> There is no single correct posture.
+        The goal is to own many and move between them — which also happens to be
+        the safest way to treat your joints.
+      </li>
+      <li>
+        <strong>Beauty is functional.</strong> A floor you want to be on is a
+        floor you'll use. Charm isn't decoration here; it's the mechanism.
+      </li>
+    </ul>
+
+    <h2>Who it's for</h2>
+    <p>
+      The floor-curious taking their first cushion down, and the seasoned
+      floor-sitter going deeper. Start with <a href={href('/why')}>the evidence</a>,
+      or just <a href={href('/start')}>get down on the floor</a> and see how it
+      feels.
+    </p>
+
+    <p class="text-sm text-inkmuted">
+      Not medical advice — see the <a href={href('/disclosure')}>disclosure</a>.
+    </p>
+  </div>
+</BaseLayout>

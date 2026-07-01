@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { href } from '../lib/url';
+import { nav } from '../lib/site';
+---
+
+<BaseLayout title="Not found" description="That page isn't here — but the floor still is.">
+  <section class="mx-auto max-w-2xl px-5 py-28 text-center sm:px-8">
+    <p class="eyebrow mb-4">404</p>
+    <h1 class="display-1 font-display text-ink">You've reached the floor.</h1>
+    <p class="mx-auto mt-6 max-w-md text-lg leading-relaxed text-inksoft">
+      There's nothing below this — the page you wanted isn't here. No harm done;
+      you're already as low as it goes. Here's the way back up.
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a href={href('/')} class="rounded-pill bg-ink px-6 py-3 font-semibold text-paper no-underline">Back home</a>
+      {
+        nav.map((item) => (
+          <a
+            href={href(item.href)}
+            class="rounded-pill border border-line px-5 py-3 font-semibold text-ink no-underline transition-colors hover:border-clay"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
