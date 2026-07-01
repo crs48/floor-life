@@ -415,10 +415,10 @@ export function href(path = '/') {
 
 ## Implementation Checklist
 
-- [ ] Scaffold the project: `package.json` (scripts: `dev`, `build`,
+- [x] Scaffold the project: `package.json` (scripts: `dev`, `build`,
       `preview`), `astro.config.mjs` (`site` + `base` + mdx + sitemap +
       tailwind vite plugin), `tsconfig.json`, `.gitignore`, `.nvmrc`
-- [ ] Install dependencies (`astro`, `@astrojs/mdx`, `@astrojs/sitemap`,
+- [x] Install dependencies (`astro`, `@astrojs/mdx`, `@astrojs/sitemap`,
       `@astrojs/rss`, `tailwindcss`, `@tailwindcss/vite`,
       `@tailwindcss/typography`, `sharp`, Fontsource Fraunces + Nunito
       Sans) and verify a clean `npm install`
