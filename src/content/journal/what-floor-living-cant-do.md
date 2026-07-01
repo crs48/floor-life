@@ -2,10 +2,20 @@
 title: "What floor living can't do"
 description: "The honest counter-column: the popular claims that outrun the evidence — fascia 'release', core strengthening, posture cures — and why we're better off without them."
 pubDate: 2026-06-25
+updatedDate: 2026-06-27
 category: science
 tags: ["myths", "evidence", "honesty"]
 readingMinutes: 6
 featured: true
+sources:
+  - label: "Chaudhry et al., 2008 — Three-dimensional mathematical model for deformation of human fasciae (JAOA)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/18723456/"
+  - label: "Wilke et al., 1999 — New in vivo measurements of pressures in the intervertebral disc (Spine)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/10222525/"
+  - label: "Swain et al., 2020 — No consensus on causality of spine postures or physical exposure and low back pain (J Biomech)"
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S002192901930524X"
+  - label: "Schoenfeld, 2013 — Is there a minimum intensity threshold for resistance training-induced hypertrophy?"
+    url: "https://pubmed.ncbi.nlm.nih.gov/23955603/"
 ---
 
 Wellness writing loves floor living a little too much. Search around and you'll be told that sitting on the ground releases your fascia, strengthens your core, fixes your posture, and cures your back pain. It's an appealing pile of claims. Most of it doesn't hold up — and saying so is the only way to be trusted about the parts that do.

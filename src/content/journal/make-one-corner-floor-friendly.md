@@ -2,6 +2,7 @@
 title: "Start with one corner"
 description: "The gentlest possible on-ramp to floor living: don't redesign your home, just make a single square metre irresistible."
 pubDate: 2026-05-30
+updatedDate: 2026-06-02
 category: guide
 tags: ["getting started", "spaces", "habits"]
 readingMinutes: 4

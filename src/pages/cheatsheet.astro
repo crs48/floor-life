@@ -1,0 +1,96 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { href } from '../lib/url';
+
+const positions = (await getCollection('positions')).sort((a, b) => a.data.order - b.data.order);
+
+const firstMoves = [
+  'Raise your hips — sit on the front edge of a firm cushion so hips sit above knees.',
+  'Keep it short — five minutes, several times a day, beats one grim half-hour.',
+  'Rotate positions — your best posture is your next one. Cycle through a few.',
+  'Rise the hard way — use as little support as you can. Those get-ups are the training.',
+];
+---
+
+<BaseLayout
+  title="Floor-sitting cheat sheet"
+  description="A printable one-page summary of how to start floor living — the first moves and a quick reference of positions with a cue and a caution each."
+>
+  <article class="mx-auto max-w-3xl px-5 pt-16 sm:px-8 sm:pt-20">
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <p class="eyebrow text-sagedeep">Print & pin it up</p>
+        <h1 class="display-2 mt-3 font-display text-ink">The floor-sitting cheat sheet</h1>
+      </div>
+      <button
+        type="button"
+        data-print
+        data-no-print
+        class="mt-2 shrink-0 rounded-pill border border-line px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-clay"
+      >
+        Print
+      </button>
+    </div>
+
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-inksoft">
+      One page to keep by the cushion. The four first moves, then a quick
+      reference of positions — one cue and one caution each.
+    </p>
+
+    <section class="mt-10">
+      <h2 class="font-display text-2xl text-ink">Four first moves</h2>
+      <ol class="mt-4 space-y-2">
+        {
+          firstMoves.map((m, i) => (
+            <li class="cheat-item flex gap-3 text-inksoft">
+              <span class="font-display text-lg leading-none text-clay">{i + 1}</span>
+              <span>{m}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="font-display text-2xl text-ink">Positions at a glance</h2>
+      <div class="mt-4 space-y-4">
+        {
+          positions.map((p) => (
+            <div class="cheat-item rounded-soft border border-line px-5 py-4">
+              <div class="flex flex-wrap items-baseline gap-x-3">
+                <h3 class="font-display text-lg text-ink">{p.data.name}</h3>
+                {p.data.otherName && <span class="text-sm italic text-inkmuted">{p.data.otherName}</span>}
+                <span class="text-xs uppercase tracking-wider text-sagedeep">{p.data.difficulty}</span>
+              </div>
+              <p class="mt-1.5 text-sm text-inksoft">
+                <span class="font-semibold text-ink">Cue:</span> {p.data.cues[0]}
+              </p>
+              <p class="mt-1 text-sm text-inksoft">
+                <span class="font-semibold text-ink">Caution:</span> {p.data.cautions[0]}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <p class="mt-8 text-sm text-inkmuted">
+      Not medical advice — build up gently, stay pain-free, and see the full
+      <a href={href('/start')} class="text-claydeep">getting-started guide</a>.
+    </p>
+  </article>
+</BaseLayout>
+
+<script>
+  function initPrint() {
+    document.querySelectorAll('[data-print]').forEach((btn) => {
+      if ((btn as HTMLElement).dataset.bound) return;
+      (btn as HTMLElement).dataset.bound = '1';
+      btn.addEventListener('click', () => window.print());
+    });
+  }
+  if (document.readyState !== 'loading') initPrint();
+  else document.addEventListener('DOMContentLoaded', initPrint);
+  document.addEventListener('astro:page-load', initPrint);
+</script>

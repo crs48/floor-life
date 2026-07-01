@@ -44,18 +44,27 @@ const {
 </section>
 
 <script is:inline define:vars={{ email: site.email }}>
-  const form = document.getElementById('subscribe');
-  const note = document.getElementById('subscribe-note');
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const value = /** @type {HTMLInputElement} */ (document.getElementById('email'))?.value?.trim();
-    if (!value || !value.includes('@')) {
-      if (note) note.textContent = 'Please enter a valid email address.';
-      return;
-    }
-    const subject = encodeURIComponent('Subscribe to Floor Life');
-    const body = encodeURIComponent(`Please add ${value} to the Floor Life letter.`);
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-    if (note) note.textContent = 'Thanks — your mail app should be opening. Send that note and you are on the list.';
-  });
+  function initNewsletter() {
+    const form = document.getElementById('subscribe');
+    if (!form || form.dataset.bound) return;
+    form.dataset.bound = '1';
+    const note = document.getElementById('subscribe-note');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const value = document.getElementById('email')?.value?.trim();
+      if (!value || !value.includes('@')) {
+        if (note) note.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      const subject = encodeURIComponent('Subscribe to Floor Life');
+      const body = encodeURIComponent('Please add ' + value + ' to the Floor Life letter.');
+      window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+      if (note) note.textContent = 'Thanks — your mail app should be opening. Send that note and you are on the list.';
+    });
+  }
+  initNewsletter();
+  if (!window.__ffNewsletter) {
+    window.__ffNewsletter = true;
+    document.addEventListener('astro:page-load', initNewsletter);
+  }
 </script>

@@ -10,34 +10,101 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings, remarkPluginFrontmatter } = await render(entry);
 const { data } = entry;
 
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const readingTime =
+  remarkPluginFrontmatter?.minutesRead ??
+  (data.readingMinutes ? `${data.readingMinutes} min read` : null);
+
+const toc = headings.filter((h) => h.depth === 2);
+
+// Related reading: other posts sharing a category or tag, best-matched first.
+const all = await getCollection('journal', ({ data }) => !data.draft);
+const related = all
+  .filter((p) => p.id !== entry.id)
+  .map((p) => {
+    const sharedTags = p.data.tags.filter((t) => data.tags.includes(t)).length;
+    const score = sharedTags + (p.data.category === data.category ? 1 : 0);
+    return { p, score };
+  })
+  .filter((x) => x.score > 0)
+  .sort((a, b) => b.score - a.score || b.p.data.pubDate.valueOf() - a.p.data.pubDate.valueOf())
+  .slice(0, 2)
+  .map((x) => x.p);
 ---
 
 <BaseLayout title={data.title} description={data.description} type="article">
-  <article class="mx-auto max-w-2xl px-5 pt-16 sm:px-8 sm:pt-24">
+  <article class="mx-auto max-w-2xl px-5 pt-16 sm:px-8 sm:pt-24" data-pagefind-body>
     <a href={href('/journal')} class="text-sm text-inkmuted no-underline hover:text-claydeep">← The Journal</a>
 
     <header class="mt-6">
-      <div class="flex items-center gap-3 text-xs">
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
         <span class="eyebrow text-sagedeep">{data.category}</span>
-        <span class="text-inkmuted">{fmt(data.pubDate)}</span>
-        {data.readingMinutes && <span class="text-inkmuted">· {data.readingMinutes} min read</span>}
+        <span class="text-inkmuted"><time datetime={data.pubDate.toISOString()}>{fmt(data.pubDate)}</time></span>
+        {readingTime && <span class="text-inkmuted">· {readingTime}</span>}
       </div>
       <h1 class="display-1 mt-4 font-display text-ink">{data.title}</h1>
       <p class="mt-5 text-xl leading-relaxed text-inksoft">{data.description}</p>
+      {
+        data.updatedDate && (
+          <p class="mt-4 text-xs text-inkmuted">
+            Last reviewed <time datetime={data.updatedDate.toISOString()}>{fmt(data.updatedDate)}</time>.
+            We update pieces as the evidence and our thinking change.
+          </p>
+        )
+      }
     </header>
+
+    {
+      toc.length > 1 && (
+        <nav
+          aria-label="On this page"
+          class="mt-10 rounded-soft border border-line bg-sand/40 px-5 py-4"
+          data-pagefind-ignore
+        >
+          <p class="eyebrow mb-2 text-inkmuted">On this page</p>
+          <ol class="space-y-1.5">
+            {toc.map((h) => (
+              <li>
+                <a href={`#${h.slug}`} class="text-sm text-inksoft no-underline hover:text-claydeep">
+                  {h.text}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
 
     <div class="prose prose-floor mt-10 max-w-none">
       <Content />
     </div>
 
     {
+      data.sources.length > 0 && (
+        <section class="mt-12 border-t border-line pt-6" data-pagefind-ignore>
+          <h2 class="eyebrow mb-3 text-sagedeep">Sources</h2>
+          <ol class="space-y-2 text-sm">
+            {data.sources.map((s, i) => (
+              <li class="flex gap-2 text-inksoft">
+                <span class="text-inkmuted">{i + 1}.</span>
+                <a href={s.url} rel="noopener" target="_blank" class="text-claydeep">
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+
+    {
       data.tags.length > 0 && (
-        <ul class="mt-12 flex flex-wrap gap-2 border-t border-line pt-6">
+        <ul class="mt-8 flex flex-wrap gap-2" data-pagefind-ignore>
           {data.tags.map((t) => (
             <li class="rounded-pill bg-sand px-3 py-1 text-xs text-inkmuted">#{t}</li>
           ))}
@@ -45,6 +112,26 @@ const fmt = (d: Date) =>
       )
     }
   </article>
+
+  {
+    related.length > 0 && (
+      <section class="mx-auto mt-20 max-w-2xl px-5 sm:px-8">
+        <h2 class="eyebrow mb-5 text-sagedeep">Related reading</h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {related.map((post) => (
+            <a
+              href={href(`/journal/${post.id}`)}
+              class="group flex h-full flex-col rounded-soft border border-line bg-paper/60 p-5 no-underline transition-all hover:-translate-y-0.5 hover:border-clay/50"
+            >
+              <span class="eyebrow text-sagedeep">{post.data.category}</span>
+              <h3 class="mt-2 font-display text-lg text-ink transition-colors group-hover:text-claydeep">{post.data.title}</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-inksoft">{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
 
   <div class="mt-20">
     <Newsletter title="More from the floor" blurb="The occasional letter when a new piece lands. No noise." />

@@ -3,6 +3,8 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import pagefind from 'astro-pagefind';
+import { remarkReadingTime } from './remark-reading-time.mjs';
 
 // GitHub Pages project site: https://crs48.github.io/floor-life/
 // To move to a custom domain (e.g. floor.life) later: set `site` to the
@@ -11,7 +13,16 @@ export default defineConfig({
   site: 'https://crs48.github.io',
   base: '/floor-life',
   trailingSlash: 'ignore',
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), pagefind()],
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
+  image: {
+    // Responsive images (stable since Astro 5.10). `responsiveStyles` is
+    // required or <Image>/<Picture> won't actually be responsive.
+    layout: 'constrained',
+    responsiveStyles: true,
+  },
   vite: {
     // Cast to any: Astro bundles its own copy of Vite, whose `Plugin` type
     // differs from the top-level one at the type level only — runtime is fine.

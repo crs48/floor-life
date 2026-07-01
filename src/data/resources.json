@@ -1,0 +1,415 @@
+[
+  {
+    "id": "r-simpleliving",
+    "title": "r/simpleliving",
+    "url": "https://www.reddit.com/r/simpleliving/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Intentional, minimalist living — where the 'do I even need a couch?' threads happen.",
+    "order": 1
+  },
+  {
+    "id": "r-minimalism",
+    "title": "r/minimalism",
+    "url": "https://www.reddit.com/r/minimalism/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Empty-room aesthetics and furniture-free setups from people who cleared the middle of the room.",
+    "order": 2
+  },
+  {
+    "id": "r-malelivingspace",
+    "title": "r/malelivingspace",
+    "url": "https://www.reddit.com/r/malelivingspace/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Real rooms and honest advice; low-furniture and floor-based layouts show up constantly.",
+    "order": 3
+  },
+  {
+    "id": "r-furniturefree",
+    "title": "r/furniturefree",
+    "url": "https://www.reddit.com/r/furniturefree/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Small and niche, but the single closest match to the whole idea — living without chairs and sofas.",
+    "order": 4
+  },
+  {
+    "id": "r-mobility",
+    "title": "r/Mobility",
+    "url": "https://www.reddit.com/r/Mobility/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Hip and ankle work — the ranges that make floor sitting and squatting comfortable.",
+    "order": 5
+  },
+  {
+    "id": "r-flexibility",
+    "title": "r/flexibility",
+    "url": "https://www.reddit.com/r/flexibility/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Hip openers and getting cross-legged with ease.",
+    "order": 6
+  },
+  {
+    "id": "r-bodyweightfitness",
+    "title": "r/bodyweightfitness",
+    "url": "https://www.reddit.com/r/bodyweightfitness/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Deep squats, floor-based mobility, and get-ups — very active.",
+    "order": 7
+  },
+  {
+    "id": "r-squatuniversity",
+    "title": "r/squatuniversity",
+    "url": "https://www.reddit.com/r/squatuniversity/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "The resting (Asian) squat and its mechanics, in detail.",
+    "order": 8
+  },
+  {
+    "id": "r-japanlife",
+    "title": "r/japanlife",
+    "url": "https://www.reddit.com/r/japanlife/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Practical tatami, futon and kotatsu talk from people who actually live it.",
+    "order": 9
+  },
+  {
+    "id": "r-kotatsu",
+    "title": "r/kotatsu",
+    "url": "https://www.reddit.com/r/kotatsu/",
+    "kind": "community",
+    "source": "Reddit",
+    "note": "Devoted to the heated low table — floor living's coziest winter object.",
+    "order": 10
+  },
+  {
+    "id": "ig-furniturefree",
+    "title": "#furniturefree",
+    "url": "https://www.instagram.com/explore/tags/furniturefree/",
+    "kind": "community",
+    "source": "Instagram",
+    "note": "The main hashtag: floor-sitting homes, low tables, cushions, movement setups.",
+    "order": 11
+  },
+  {
+    "id": "ig-nutritiousmovement",
+    "title": "Katy Bowman — @nutritiousmovement",
+    "url": "https://www.instagram.com/nutritiousmovement/",
+    "kind": "community",
+    "source": "Instagram",
+    "note": "The definitive furniture-free voice in the West, in bite-size form.",
+    "order": 12
+  },
+  {
+    "id": "ig-thenaturallifestylist",
+    "title": "Tony Riddle — @thenaturallifestylist",
+    "url": "https://www.instagram.com/thenaturallifestylist/",
+    "kind": "community",
+    "source": "Instagram",
+    "note": "Chair-free home, barefoot, unapologetically ground-based living.",
+    "order": 13
+  },
+
+  {
+    "id": "yt-squatuniversity",
+    "title": "Squat University",
+    "url": "https://www.youtube.com/@SquatUniversity",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "Dr. Aaron Horschig on the deep squat and the ankle/hip range it needs. The go-to.",
+    "detail": "Deep squat & mobility",
+    "order": 1
+  },
+  {
+    "id": "yt-gmb",
+    "title": "GMB Fitness",
+    "url": "https://www.youtube.com/@gmbfit",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "Approachable floor mobility, seiza and ground movement — beginner-friendly.",
+    "detail": "Floor movement",
+    "order": 2
+  },
+  {
+    "id": "yt-thereadystate",
+    "title": "The Ready State",
+    "url": "https://www.youtube.com/@thereadystate",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "Kelly Starrett's mobility work — 'your next posture is your best posture.'",
+    "detail": "Mobility",
+    "order": 3
+  },
+  {
+    "id": "yt-uprighthealth",
+    "title": "Upright Health",
+    "url": "https://www.youtube.com/channel/UCCwj1xAY55Dd-H281T1g-bQ",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "Matt Hsu on fixing the hips and ankles that stop you resting on the floor.",
+    "detail": "Hips & ankles",
+    "order": 4
+  },
+  {
+    "id": "yt-bodyweightwarrior",
+    "title": "Bodyweight Warrior (Tom Merrick)",
+    "url": "https://www.youtube.com/@BodyweightWarrior",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "Flexibility and floor-based bodyweight routines, twice a week.",
+    "detail": "Flexibility",
+    "order": 5
+  },
+  {
+    "id": "yt-idoportal",
+    "title": "Ido Portal",
+    "url": "https://www.youtube.com/@portaldo",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "The philosophy of floor-based movement culture and ground locomotion.",
+    "detail": "Movement culture",
+    "order": 6
+  },
+  {
+    "id": "yt-nutritiousmovement",
+    "title": "Nutritious Movement (Katy Bowman)",
+    "url": "https://www.youtube.com/channel/UClgvURJ0dOkiLpkaQtT1NuQ",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "Furniture-free home tours and floor-sitting transitions from the movement's founder.",
+    "detail": "Furniture-free",
+    "order": 7
+  },
+  {
+    "id": "yt-lifewhereimfrom",
+    "title": "Life Where I'm From",
+    "url": "https://www.youtube.com/@LifeWhereImFrom",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "Thoughtful documentary looks at how Japanese homes actually live at floor level.",
+    "detail": "Japanese living",
+    "order": 8
+  },
+  {
+    "id": "yt-paolofromtokyo",
+    "title": "Paolo fromTOKYO",
+    "url": "https://www.youtube.com/@paolofromtokyo",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "Real Japanese apartment tours — genkan, tatami, and low living in context.",
+    "detail": "Japanese homes",
+    "order": 9
+  },
+  {
+    "id": "yt-srt-debunked",
+    "title": "Sitting-Rising Test… Debunked",
+    "url": "https://www.youtube.com/watch?v=69qqyngcgoE",
+    "kind": "watch",
+    "source": "YouTube · video · Squat University",
+    "note": "A physical therapist's honest take on why chasing a perfect 10 isn't the whole story.",
+    "detail": "Video",
+    "order": 10
+  },
+  {
+    "id": "yt-seiza",
+    "title": "Seiza: Why You Should Learn Japanese Formal Sitting",
+    "url": "https://www.youtube.com/watch?v=IXCR5bQssQY",
+    "kind": "watch",
+    "source": "YouTube · video · GMB Fitness",
+    "note": "A friendly bridge between floor-sitting practice and Japanese low living.",
+    "detail": "Video",
+    "order": 11
+  },
+  {
+    "id": "yt-bowman-tour",
+    "title": "A Tour of My Movement-Rich (Furniture-Free) Home",
+    "url": "https://www.youtube.com/watch?v=E-sROj4QrPI",
+    "kind": "watch",
+    "source": "YouTube · video · Katy Bowman",
+    "note": "The definitive furniture-free home tour from the biomechanist who named the idea.",
+    "detail": "Video",
+    "order": 12
+  },
+
+  {
+    "id": "rd-bluezones",
+    "title": "The Okinawan practice of sitting on the floor",
+    "url": "https://www.bluezones.com/2020/07/why-the-okinawan-practice-of-sitting-on-the-floor-is-linked-to-health-mobility-and-longevity-how-you-can-practice-it-at-home/",
+    "kind": "reading",
+    "source": "Blue Zones",
+    "note": "How a furniture-light Okinawan home ties floor sitting to mobility and long life.",
+    "order": 1
+  },
+  {
+    "id": "rd-harvard-srt",
+    "title": "What the sitting-rising test says about your health",
+    "url": "https://www.health.harvard.edu/healthy-aging-and-longevity/what-the-sitting-rising-test-says-about-your-health",
+    "kind": "reading",
+    "source": "Harvard Health",
+    "note": "A trusted medical-institution explainer of the test and what it does (and doesn't) mean.",
+    "order": 2
+  },
+  {
+    "id": "rd-wapo-2025",
+    "title": "Can the sit-rise test predict longevity?",
+    "url": "https://www.washingtonpost.com/wellness/2025/06/18/sitting-rising-test-longevity/",
+    "kind": "reading",
+    "source": "The Washington Post · 2025",
+    "note": "Timely, careful coverage of the 2025 study that put the test back in the news.",
+    "order": 3
+  },
+  {
+    "id": "rd-wapo-2019",
+    "title": "We investigated the sit-rise test",
+    "url": "https://www.washingtonpost.com/lifestyle/wellness/this-anxiety-inducing-fitness-test-purports-to-tell-you-how-long-youll-live-we-investigated/2019/03/18/0a1d06fe-4035-11e9-9361-301ffb5bd5e6_story.html",
+    "kind": "reading",
+    "source": "The Washington Post · 2019",
+    "note": "A healthy skeptic's counterweight on the test's limits — worth reading alongside the hype.",
+    "order": 4
+  },
+  {
+    "id": "rd-bowman-why",
+    "title": "Why I Went Furniture-Free",
+    "url": "https://nutritiousmovement.com/articles/why-i-went-furniture-free",
+    "kind": "reading",
+    "source": "Nutritious Movement · Katy Bowman",
+    "note": "The essay that seeded the whole Western furniture-free movement.",
+    "order": 5
+  },
+  {
+    "id": "rd-bowman-gear",
+    "title": "Your Gear Guide to Going Furniture-Free",
+    "url": "https://nutritiousmovement.com/articles/your-gear-guide-to-going-furniture-free",
+    "kind": "reading",
+    "source": "Nutritious Movement · Katy Bowman",
+    "note": "A practical 'what to remove and what to add' list for anyone ready to try it.",
+    "order": 6
+  },
+  {
+    "id": "rd-petra-examples",
+    "title": "Furniture-Free: Real Life Examples",
+    "url": "https://www.petrafishermovement.com/furniture-free-style/",
+    "kind": "reading",
+    "source": "Petra Fisher Movement",
+    "note": "Photographed case studies of real people who did it — proof it can look good.",
+    "order": 7
+  },
+  {
+    "id": "rd-petra-steps",
+    "title": "How To Go Furniture-Free In 8 Easy Steps",
+    "url": "https://www.petrafishermovement.com/furniture-free/",
+    "kind": "reading",
+    "source": "Petra Fisher Movement",
+    "note": "A gentle, start-with-the-dining-set transition plan.",
+    "order": 8
+  },
+  {
+    "id": "rd-wander",
+    "title": "Would You Give Furniture-Free Living a Go?",
+    "url": "https://wander-mag.com/articles/live-well/furniture-free-living/",
+    "kind": "reading",
+    "source": "Wander Magazine",
+    "note": "Arguably the best single explainer of the concept, in a warm editorial voice.",
+    "order": 9
+  },
+  {
+    "id": "rd-at-couch",
+    "title": "I Skipped the Couch",
+    "url": "https://www.apartmenttherapy.com/why-i-did-not-buy-a-couch-36978504",
+    "kind": "reading",
+    "source": "Apartment Therapy",
+    "note": "A first-person couch-free living room — low table, floor chairs, real apartment.",
+    "order": 10
+  },
+  {
+    "id": "rd-at-floorseating",
+    "title": "Floor Seating Ideas: Cushions, Poufs & Pillows",
+    "url": "https://www.apartmenttherapy.com/alternative-seating-options-36650215",
+    "kind": "reading",
+    "source": "Apartment Therapy",
+    "note": "A practical roundup of how to seat people — and host — without chairs.",
+    "order": 11
+  },
+  {
+    "id": "rd-dwell-wabisabi",
+    "title": "11 Homes That Embrace Wabi-Sabi Design",
+    "url": "https://www.dwell.com/article/wabi-sabi-home-design-cd8d61ff",
+    "kind": "reading",
+    "source": "Dwell",
+    "note": "The wabi-sabi aesthetic in real, beautifully photographed homes.",
+    "order": 12
+  },
+  {
+    "id": "rd-kinfolk-suyama",
+    "title": "Home Tour: George Suyama",
+    "url": "https://www.kinfolk.com/stories/home-tour-george-suyama/",
+    "kind": "reading",
+    "source": "Kinfolk",
+    "note": "Slow-living restraint and Japanese influence — pure tone-setting.",
+    "order": 13
+  },
+  {
+    "id": "rd-irasshai",
+    "title": "Living Closer To The Ground",
+    "url": "https://irasshai.store/blogs/news/tatami-japandi-ideas",
+    "kind": "reading",
+    "source": "Irasshai",
+    "note": "How furniture height shapes posture and mood — tatami as wellness design. (A tatami shop's blog.)",
+    "order": 14
+  },
+  {
+    "id": "rd-gmb-sitrise",
+    "title": "What the Sit-to-Rise Test Really Tells You",
+    "url": "https://gmb.io/sit-to-rise-test/",
+    "kind": "reading",
+    "source": "GMB Fitness",
+    "note": "The best written breakdown of the science — and how to actually improve your score.",
+    "order": 15
+  },
+  {
+    "id": "rd-readystate-ground",
+    "title": "Ground Game: Why Sitting on the Ground Can Transform Your Life",
+    "url": "https://thereadystate.com/blogs/why-sitting-more-on-the-ground-can-transform-your-life/",
+    "kind": "reading",
+    "source": "The Ready State",
+    "note": "Kelly & Juliet Starrett's clearest piece on why floor sitting is worth the effort.",
+    "order": 16
+  },
+  {
+    "id": "rd-bowman-transition",
+    "title": "Transitioning to Floor Sitting",
+    "url": "https://nutritiousmovement.com/articles/transitioning-to-floor-sitting-podcast-episode-65",
+    "kind": "reading",
+    "source": "Nutritious Movement · Katy Bowman",
+    "note": "The most practical 'how to actually ease into it' resource there is.",
+    "order": 17
+  },
+
+  {
+    "id": "sci-srt-2012",
+    "title": "Ability to sit and rise from the floor as a predictor of all-cause mortality",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23242910/",
+    "kind": "research",
+    "source": "de Brito et al.",
+    "note": "The foundational study behind the whole longevity claim — 2,002 adults, ~6.3-yr follow-up.",
+    "detail": "Eur J Prev Cardiol · 2014 · PMID 23242910",
+    "order": 1
+  },
+  {
+    "id": "sci-srt-2025",
+    "title": "Sitting–rising test scores predict natural and cardiovascular causes of death",
+    "url": "https://academic.oup.com/eurjpc/advance-article/doi/10.1093/eurjpc/zwaf325/8163161",
+    "kind": "research",
+    "source": "Araújo et al.",
+    "note": "The larger, longer follow-up — 4,282 adults, ~12-yr follow-up, cause-specific mortality.",
+    "detail": "Eur J Prev Cardiol · 2025 · doi:10.1093/eurjpc/zwaf325",
+    "order": 2
+  }
+]

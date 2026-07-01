@@ -1,0 +1,91 @@
+---
+import Search from 'astro-pagefind/components/Search.astro';
+---
+
+<button
+  type="button"
+  data-search-open
+  class="inline-flex h-9 w-9 items-center justify-center rounded-pill border border-line text-inksoft transition-colors hover:border-clay hover:text-claydeep"
+  aria-label="Search"
+  title="Search"
+>
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="7" />
+    <path d="m20 20-3.2-3.2" />
+  </svg>
+</button>
+
+<dialog data-search-dialog class="search-dialog" aria-label="Search Floor Life">
+  <div class="search-panel">
+    <div class="mb-3 flex items-center justify-between">
+      <p class="eyebrow text-inkmuted">Search Floor Life</p>
+      <button data-search-close type="button" class="text-inkmuted hover:text-claydeep" aria-label="Close search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" />
+        </svg>
+      </button>
+    </div>
+    <Search className="ff-search" searchboxOptions={{ placeholder: 'Try “squat”, “seiza”, “cushion”…' }} />
+  </div>
+</dialog>
+
+<style>
+  .search-dialog {
+    margin: 0 auto;
+    top: 8vh;
+    width: min(38rem, calc(100vw - 2rem));
+    max-height: 82vh;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-soft);
+    background: var(--color-paper);
+    color: var(--color-inksoft);
+    padding: 0;
+    overflow: hidden;
+  }
+  .search-dialog::backdrop {
+    background: color-mix(in oklab, var(--color-ink) 45%, transparent);
+    backdrop-filter: blur(2px);
+  }
+  .search-panel {
+    padding: 1.25rem 1.25rem 1.5rem;
+    max-height: 82vh;
+    overflow: auto;
+  }
+  /* Theme the Pagefind component UI to match. */
+  .ff-search {
+    --pagefind-ui-primary: var(--color-claydeep);
+    --pagefind-ui-text: var(--color-ink);
+    --pagefind-ui-background: var(--color-paper);
+    --pagefind-ui-border: var(--color-line);
+    --pagefind-ui-tag: var(--color-sand);
+    --pagefind-ui-border-radius: 0.6rem;
+    --pagefind-ui-font: var(--font-body);
+  }
+</style>
+
+<script>
+  function initSearch() {
+    const dialog = document.querySelector('[data-search-dialog]') as HTMLDialogElement | null;
+    if (!dialog) return;
+    document.querySelectorAll('[data-search-open]').forEach((btn) => {
+      if ((btn as HTMLElement).dataset.bound) return;
+      (btn as HTMLElement).dataset.bound = '1';
+      btn.addEventListener('click', () => {
+        dialog.showModal();
+        const input = dialog.querySelector('input');
+        if (input) setTimeout(() => (input as HTMLInputElement).focus(), 40);
+      });
+    });
+    if (!dialog.dataset.bound) {
+      dialog.dataset.bound = '1';
+      // Close when clicking the backdrop (outside the panel).
+      dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) dialog.close();
+      });
+      dialog.querySelector('[data-search-close]')?.addEventListener('click', () => dialog.close());
+    }
+  }
+  if (document.readyState !== 'loading') initSearch();
+  else document.addEventListener('DOMContentLoaded', initSearch);
+  document.addEventListener('astro:page-load', initSearch);
+</script>

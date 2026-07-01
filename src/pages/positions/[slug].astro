@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Callout from '../../components/Callout.astro';
 import Icon from '../../components/Icon.astro';
+import PositionArt from '../../components/PositionArt.astro';
 import { href } from '../../lib/url';
 
 export async function getStaticPaths() {
@@ -46,6 +47,10 @@ const pill = {
       <h1 class="display-1 mt-4 font-display text-ink">{p.name}</h1>
       <p class="mt-5 text-xl leading-relaxed text-inksoft">{p.summary}</p>
     </header>
+
+    <div class="mt-10 rounded-soft border border-line bg-sand/40 px-6 py-8">
+      <PositionArt slug={entry.id} class="mx-auto max-w-sm" />
+    </div>
 
     <div class="mt-12 space-y-10">
       <section>

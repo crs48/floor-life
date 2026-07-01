@@ -79,8 +79,10 @@
 </style>
 
 <script>
-  const root = document.getElementById('srt');
-  if (root) {
+  function initSRT() {
+    const root = document.getElementById('srt');
+    if (!root || root.dataset.bound) return;
+    root.dataset.bound = '1';
     const outs = {
       down: root.querySelector('[data-out="down"]'),
       up: root.querySelector('[data-out="up"]'),
@@ -118,4 +120,7 @@
     wobble?.addEventListener('change', render);
     render();
   }
+  if (document.readyState !== 'loading') initSRT();
+  else document.addEventListener('DOMContentLoaded', initSRT);
+  document.addEventListener('astro:page-load', initSRT);
 </script>
