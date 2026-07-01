@@ -328,10 +328,10 @@ Make an inline island survive view transitions:
 
 ## Implementation Checklist
 
-- [ ] Add a typed `resources` collection to `src/content.config.ts` and
+- [x] Add a typed `resources` collection to `src/content.config.ts` and
       seed `src/data/resources.json` (communities, watch, reading,
       research — all real, honestly labelled)
-- [ ] Build the `/resources` hub page: grouped, curated link library with
+- [x] Build the `/resources` hub page: grouped, curated link library with
       an `ExternalLink` component (`rel="noopener"`) and the honest
       "no dedicated hub yet" framing; add **Resources** to nav + footer
 - [ ] Create a cohesive custom illustration set: `PositionArt.astro`

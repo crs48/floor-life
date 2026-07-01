@@ -62,4 +62,18 @@ const products = defineCollection({
   }),
 });
 
-export const collections = { journal, positions, products };
+// Curated external resources: the "map" of the floor-living internet.
+const resources = defineCollection({
+  loader: file('./src/data/resources.json'),
+  schema: z.object({
+    title: z.string(),
+    url: z.string().url(),
+    kind: z.enum(['community', 'watch', 'reading', 'research']),
+    source: z.string(),
+    note: z.string(),
+    detail: z.string().optional(),
+    order: z.number().default(0),
+  }),
+});
+
+export const collections = { journal, positions, products, resources };

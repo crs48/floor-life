@@ -22,6 +22,7 @@ export const nav: NavItem[] = [
   { label: 'Spaces', href: '/spaces', blurb: 'Architect & retrofit your rooms' },
   { label: 'Gear', href: '/gear', blurb: 'Compared, curated, disclosed' },
   { label: 'Journal', href: '/journal', blurb: 'Long-form reading' },
+  { label: 'Resources', href: '/resources', blurb: 'A map of the floor-living web' },
 ];
 
 export const footerNav: NavItem[] = [
