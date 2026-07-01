@@ -1,0 +1,61 @@
+---
+import { site } from '../lib/site';
+import { href } from '../lib/url';
+
+interface Props {
+  title?: string;
+  blurb?: string;
+}
+const {
+  title = 'A letter from the floor',
+  blurb = 'The occasional note — a new position, a room made lower, a piece of gear worth owning. No noise.',
+} = Astro.props;
+---
+
+<section class="mx-auto max-w-6xl px-5 sm:px-8">
+  <div class="rounded-soft border border-line bg-claypaper/60 px-6 py-10 sm:px-12 sm:py-12">
+    <div class="grid items-center gap-8 md:grid-cols-[1.3fr_1fr]">
+      <div>
+        <h2 class="display-3 font-display text-ink">{title}</h2>
+        <p class="mt-3 max-w-md text-inksoft">{blurb}</p>
+      </div>
+      <form id="subscribe" class="flex w-full flex-col gap-3 sm:flex-row" novalidate>
+        <label class="sr-only" for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          placeholder="you@email.com"
+          class="w-full rounded-pill border border-line bg-paper px-5 py-3 text-ink outline-none placeholder:text-inkmuted focus:border-clay"
+        />
+        <button
+          type="submit"
+          class="shrink-0 rounded-pill bg-ink px-6 py-3 font-semibold text-paper transition-opacity hover:opacity-90"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+    <p id="subscribe-note" class="mt-4 text-xs text-inkmuted">
+      Prefer feeds? <a href={href('/rss.xml')} class="text-claydeep">Follow the Journal via RSS</a>.
+    </p>
+  </div>
+</section>
+
+<script define:vars={{ email: site.email }}>
+  const form = document.getElementById('subscribe');
+  const note = document.getElementById('subscribe-note');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const value = /** @type {HTMLInputElement} */ (document.getElementById('email'))?.value?.trim();
+    if (!value || !value.includes('@')) {
+      if (note) note.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    const subject = encodeURIComponent('Subscribe to Floor Life');
+    const body = encodeURIComponent(`Please add ${value} to the Floor Life letter.`);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    if (note) note.textContent = 'Thanks — your mail app should be opening. Send that note and you are on the list.';
+  });
+</script>

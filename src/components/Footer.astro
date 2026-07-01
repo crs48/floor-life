@@ -1,0 +1,51 @@
+---
+import { site, footerNav } from '../lib/site';
+import { href } from '../lib/url';
+
+const year = 2026;
+---
+
+<footer class="mt-24 border-t border-line/70 bg-sand/50">
+  <div class="mx-auto max-w-6xl px-5 py-14 sm:px-8">
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr]">
+      <div class="max-w-md">
+        <a href={href('/')} class="flex items-baseline gap-2 no-underline">
+          <span class="font-display text-xl font-medium text-ink">Floor</span>
+          <span class="font-display text-xl font-medium italic text-clay">Life</span>
+        </a>
+        <p class="mt-4 text-sm leading-relaxed text-inksoft">
+          {site.tagline} A calm, evidence-honest guide to getting down to the
+          floor — and back up again — a little more often.
+        </p>
+        <p class="mt-4 text-xs leading-relaxed text-inkmuted">
+          Not medical advice. Build up gradually, vary your positions, and
+          check with a professional if you have joint, back, or mobility
+          concerns.
+        </p>
+      </div>
+
+      <nav aria-label="Footer" class="grid grid-cols-2 gap-x-6 gap-y-2 self-start">
+        {
+          footerNav.map((item) => (
+            <a
+              href={href(item.href)}
+              class="text-sm text-inksoft no-underline transition-colors hover:text-claydeep"
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+
+    <div
+      class="mt-12 flex flex-col gap-2 border-t border-linesoft pt-6 text-xs text-inkmuted sm:flex-row sm:items-center sm:justify-between"
+    >
+      <p>© {year} {site.name}. Made low to the ground.</p>
+      <p>
+        Some links are affiliate links —
+        <a href={href('/disclosure')} class="text-claydeep">how that works</a>.
+      </p>
+    </div>
+  </div>
+</footer>

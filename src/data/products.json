@@ -1,0 +1,228 @@
+[
+  {
+    "id": "soul-seat",
+    "name": "The Soul Seat",
+    "brand": "Ikaria Design Co.",
+    "category": "desk-chair",
+    "price": "$1,278+",
+    "priceNote": "Sold direct; no affiliate program — linked for reference.",
+    "affiliateUrl": "https://www.ikariadesign.com/the-soul-seat",
+    "retailer": "Ikaria Design",
+    "tier": "premium",
+    "rating": 4.6,
+    "pros": [
+      "A wide two-level perch that genuinely lets you sit cross-legged, kneel, or squat at a normal desk",
+      "Backless and armless, so it invites constant position changes",
+      "Handmade, height-adjustable, 90-day return"
+    ],
+    "cons": [
+      "Expensive, and sold direct-only",
+      "No back support — a feature, but an adjustment",
+      "You may need to raise your desk 2–4″ to clear tucked knees"
+    ],
+    "bestFor": "The person who loved the idea in the intro: cross-legged at a standard desk, all day.",
+    "verdict": "The category-defining piece. If floor-level work is the whole point, this is the one to covet.",
+    "featured": true
+  },
+  {
+    "id": "pipersong",
+    "name": "Pipersong Meditation Chair",
+    "brand": "Pipersong",
+    "category": "desk-chair",
+    "price": "$279–$439",
+    "affiliateUrl": "https://pipersong.com/products/pipersong-pro",
+    "retailer": "Pipersong / Amazon",
+    "tier": "mid",
+    "rating": 4.3,
+    "pros": [
+      "Cross-legged, kneeling, or conventional sitting with a movable footstool",
+      "Has a height-adjustable back/side support the Soul Seat lacks",
+      "A quarter of the price of the Soul Seat"
+    ],
+    "cons": [
+      "Narrower seat than the Soul Seat's large platform",
+      "More consumer-grade build; footstool can feel fiddly"
+    ],
+    "bestFor": "Fidgety desk workers who want position freedom without four figures.",
+    "verdict": "The value pick in the cross-legged-desk niche, and the one with a real back option.",
+    "featured": true
+  },
+  {
+    "id": "vivo-cross-legged",
+    "name": "VIVO Cross-Legged Chair",
+    "brand": "VIVO",
+    "category": "desk-chair",
+    "price": "$99–$180",
+    "affiliateUrl": "https://vivo-us.com/products/chair-cl02b",
+    "retailer": "VIVO / Amazon",
+    "tier": "budget",
+    "rating": 3.8,
+    "pros": [
+      "Cheapest way to try cross-legged sitting at a desk",
+      "Swivel seat, casters, adjustable height, a leg-rest extension"
+    ],
+    "cons": [
+      "Basic padding and build",
+      "Seat is narrower than the dedicated chairs — best for an ankle-over-knee tuck"
+    ],
+    "bestFor": "Testing the whole idea before committing to a Soul Seat or Pipersong.",
+    "verdict": "A low-risk on-ramp. Fine to start; you may outgrow it.",
+    "featured": false
+  },
+  {
+    "id": "bean-zafu-zabuton",
+    "name": "Zafu & Zabuton Cushion Set",
+    "brand": "Bean Products",
+    "category": "seating",
+    "price": "$149.95",
+    "affiliateUrl": "https://beanproducts.com/products/zafu-zabuton-meditation-cushion-set-cotton",
+    "retailer": "Bean Products",
+    "tier": "mid",
+    "rating": 4.7,
+    "pros": [
+      "Buckwheat zafu you can adjust for height; hand-tufted cotton zabuton cushions the knees",
+      "Removable, washable covers; made in the USA",
+      "The floor-sitting starter kit in one box"
+    ],
+    "cons": [
+      "Heavier than a bare cushion",
+      "Buckwheat is firm — a love-it-or-not feel"
+    ],
+    "bestFor": "Anyone starting out: a firm seat to raise the hips plus a mat to save the knees and ankles.",
+    "verdict": "The single best first purchase for making the floor inviting.",
+    "featured": true
+  },
+  {
+    "id": "bluecony-ikuko",
+    "name": "IKUKO Seiza Bench",
+    "brand": "Bluecony",
+    "category": "seating",
+    "price": "$169.95",
+    "affiliateUrl": "https://www.bluecony.com/products/original",
+    "retailer": "Bluecony",
+    "tier": "premium",
+    "rating": 4.5,
+    "pros": [
+      "Handmade solid birch with a curved seat — no cushion needed",
+      "Detachable legs (no hinge to loosen), three heights sized to you",
+      "Makes kneeling comfortable for far longer"
+    ],
+    "cons": [
+      "Priciest bench in the category",
+      "Slower to set up than a folding hinge"
+    ],
+    "bestFor": "People who love kneeling (seiza) but can't take the ankle and knee load unaided.",
+    "verdict": "The reference seiza bench. Buy once.",
+    "featured": false
+  },
+  {
+    "id": "backjack",
+    "name": "BackJack Floor Chair",
+    "brand": "BackJack",
+    "category": "seating",
+    "price": "$58–$81",
+    "affiliateUrl": "https://www.floorseating.com/",
+    "retailer": "BackJack / Amazon",
+    "tier": "budget",
+    "rating": 4.2,
+    "pros": [
+      "A rigid steel frame gives real lumbar support at floor level",
+      "Folds and stacks; a 20-year zendo and classroom staple"
+    ],
+    "cons": [
+      "Only 2″ of foam — pair it with a cushion for long sits",
+      "The upright back can encourage staying put rather than moving"
+    ],
+    "bestFor": "The biggest barrier to floor living for most Westerners: a tired lower back.",
+    "verdict": "The honest fix for back fatigue. Cheap knock-offs collapse — get the real frame.",
+    "featured": false
+  },
+  {
+    "id": "nnewvante-floor-desk",
+    "name": "Bamboo Floor Desk",
+    "brand": "Nnewvante",
+    "category": "desk",
+    "price": "$50–$75",
+    "affiliateUrl": "https://www.amazon.com/NNEWVANTE-Foldable-Adjustable-Breakfast-25-6x17-7in/dp/B0749JJ39S",
+    "retailer": "Amazon",
+    "tier": "budget",
+    "rating": 4.3,
+    "pros": [
+      "Height-adjustable legs (~11–15″) that actually reach floor height",
+      "Folds flat for storage; light, moisture-resistant bamboo"
+    ],
+    "cons": [
+      "Best paired with a floor chair for back support",
+      "Small top — fine for a laptop, tight with a mouse"
+    ],
+    "bestFor": "A true floor desk for working, eating, or writing at ground level.",
+    "verdict": "The best-value entry into actual floor work. Not to be confused with a 'low' standing desk.",
+    "featured": false
+  },
+  {
+    "id": "fuli-shikibuton",
+    "name": "Traditional Shiki Futon",
+    "brand": "FULI",
+    "category": "sleeping",
+    "price": "~$299",
+    "affiliateUrl": "https://fulijapan.com/products/futon-mattresses-shikibuton",
+    "retailer": "FULI / Amazon",
+    "tier": "mid",
+    "rating": 4.2,
+    "pros": [
+      "A thin, roll-up cotton mattress — reclaim the room by day",
+      "Made in Japan; medium-firm; rolls and folds easily"
+    ],
+    "cons": [
+      "Side sleepers on a hard floor want a thicker layer",
+      "Must be aired regularly or it can trap moisture"
+    ],
+    "bestFor": "Floor sleeping done properly, and small rooms that need to be many rooms.",
+    "verdict": "Authentic and space-reclaiming — the antidote to a bed frame. Air it; don't leave it flat 24/7.",
+    "featured": false
+  },
+  {
+    "id": "emoor-tatami",
+    "name": "Foldable Igusa Tatami Mat",
+    "brand": "EMOOR",
+    "category": "flooring",
+    "price": "$70–$130",
+    "affiliateUrl": "https://www.amazon.com/EMOOR-Japanese-Mattress-39x79in-Foldable/dp/B0876MZWVJ",
+    "retailer": "Amazon",
+    "tier": "mid",
+    "rating": 4.1,
+    "pros": [
+      "Natural rush-grass surface — firm, breathable, and it smells wonderful",
+      "Foldable and portable; a warm, honest base underfoot"
+    ],
+    "cons": [
+      "Straw absorbs moisture — needs airing in humid homes",
+      "Not for a damp basement slab without a vapour barrier"
+    ],
+    "bestFor": "A firm, insulating island of floor to sit, stretch, and nap on.",
+    "verdict": "The most direct taste of a tatami room without a full remodel.",
+    "featured": false
+  },
+  {
+    "id": "strongtek-slant",
+    "name": "Adjustable Slant Board",
+    "brand": "StrongTek",
+    "category": "props",
+    "price": "$59.95",
+    "affiliateUrl": "https://www.strong-tek.com/products/wooden-slant-board",
+    "retailer": "StrongTek / Amazon",
+    "tier": "budget",
+    "rating": 4.6,
+    "pros": [
+      "Five angles to raise the heels and unlock a deep squat",
+      "Sturdy hardwood, 450 lb capacity, doubles as a calf stretcher"
+    ],
+    "cons": [
+      "A stack of books works too, for free",
+      "One more thing to store"
+    ],
+    "bestFor": "Building the ankle range that makes getting down to (and up from) the floor easy.",
+    "verdict": "The quiet MVP. Better squats mean more time on the floor with less complaint.",
+    "featured": false
+  }
+]

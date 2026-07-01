@@ -422,23 +422,23 @@ export function href(path = '/') {
       `@astrojs/rss`, `tailwindcss`, `@tailwindcss/vite`,
       `@tailwindcss/typography`, `sharp`, Fontsource Fraunces + Nunito
       Sans) and verify a clean `npm install`
-- [ ] Build the design system: `src/styles/global.css` with `@theme`
+- [x] Build the design system: `src/styles/global.css` with `@theme`
       tokens (paper/ink/clay/sage/straw, display + body fonts), base
       typography, and `prose` styling
-- [ ] Add the `href()` base-path helper (`src/lib/url.ts`) and site
+- [x] Add the `href()` base-path helper (`src/lib/url.ts`) and site
       config/constants (`src/lib/site.ts`: title, description, nav, social)
-- [ ] Create `BaseLayout.astro` with a reusable `<Head>`/SEO partial
+- [x] Create `BaseLayout.astro` with a reusable `<Head>`/SEO partial
       (title, description, canonical, Open Graph, sitemap) importing the
       global stylesheet
-- [ ] Build site chrome: `Header`/nav (with mobile menu island) and
+- [x] Build site chrome: `Header`/nav (with mobile menu island) and
       `Footer`, using `href()` for every internal link
-- [ ] Define Content Collections in `src/content.config.ts`: `journal`
+- [x] Define Content Collections in `src/content.config.ts`: `journal`
       (glob MD/MDX) + `positions` (file JSON) + `products` (file JSON),
       each with a Zod schema
-- [ ] Build reusable components: `SectionHeader`, `Prose`, `Callout`,
+- [x] Build reusable components: `SectionHeader`, `Prose`, `Callout`,
       `BenefitCard`, `PositionCard`, `ProductCard`, `ComparisonTable`,
       `AffiliateLink` (emits `rel="sponsored nofollow"`), `Newsletter` CTA
-- [ ] Home page (`/`): hero, "the case", the **SRT self-test** interactive
+- [x] Home page (`/`): hero, "the case", the **SRT self-test** interactive
       island, the four pillars, featured Journal, gentle CTA
 - [ ] Why page (`/why`): the science told honestly — SRT stats, mobility,
       digestion, the knee caveat, myths-vs-evidence, cited sources

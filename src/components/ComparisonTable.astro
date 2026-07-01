@@ -1,0 +1,44 @@
+---
+import AffiliateLink from './AffiliateLink.astro';
+import type { Product } from './ProductCard.astro';
+
+interface Props {
+  products: Product[];
+  caption?: string;
+}
+const { products, caption } = Astro.props;
+const tierLabel = { budget: 'Budget', mid: 'Mid', premium: 'Premium' } as const;
+---
+
+<div class="overflow-x-auto rounded-soft border border-line">
+  <table class="w-full border-collapse text-left text-sm">
+    {caption && <caption class="px-5 pt-4 text-left text-sm text-inkmuted">{caption}</caption>}
+    <thead>
+      <tr class="border-b border-line bg-sand/50 text-xs uppercase tracking-wider text-inkmuted">
+        <th scope="col" class="px-5 py-3 font-semibold">Product</th>
+        <th scope="col" class="px-5 py-3 font-semibold">Price</th>
+        <th scope="col" class="px-5 py-3 font-semibold">Tier</th>
+        <th scope="col" class="px-5 py-3 font-semibold">Best for</th>
+        <th scope="col" class="px-5 py-3 font-semibold"><span class="sr-only">Link</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        products.map((p) => (
+          <tr class="border-b border-linesoft last:border-0 align-top">
+            <th scope="row" class="px-5 py-4 font-normal">
+              <span class="block font-display text-base text-ink">{p.name}</span>
+              <span class="text-xs text-inkmuted">{p.brand}</span>
+            </th>
+            <td class="px-5 py-4 font-semibold text-ink">{p.price}</td>
+            <td class="px-5 py-4 text-inksoft">{tierLabel[p.tier]}</td>
+            <td class="px-5 py-4 text-inksoft">{p.bestFor}</td>
+            <td class="px-5 py-4 whitespace-nowrap">
+              <AffiliateLink href={p.affiliateUrl} label="View" />
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

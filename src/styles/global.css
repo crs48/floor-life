@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*
+  Floor Life design system.
+  Warm, grounded, wabi-sabi: cream paper, warm ink, clay + sage naturals,
+  tatami straw. A soft display serif over a humanist sans. Negative space
+  (ma) is the hero; a faint grain keeps the screen from feeling like glass.
+*/
+@theme {
+  /* Type */
+  --font-display: "Fraunces Variable", ui-serif, Georgia, "Times New Roman", serif;
+  --font-body: "Nunito Sans Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Paper (warm creams — background family) */
+  --color-paper: #f6efe1;
+  --color-sand: #ece0cb;
+  --color-claypaper: #e5d6bd;
+
+  /* Ink (warm near-blacks — text family) */
+  --color-ink: #2a2520;
+  --color-inksoft: #574d42;
+  --color-inkmuted: #8a7d6c;
+
+  /* Naturals (accents) */
+  --color-clay: #b16844;
+  --color-claydeep: #8f4f2e;
+  --color-sage: #7a856a;
+  --color-sagedeep: #59634a;
+  --color-straw: #d7c197;
+
+  /* Hairlines */
+  --color-line: color-mix(in oklab, #2a2520 14%, transparent);
+  --color-linesoft: color-mix(in oklab, #2a2520 8%, transparent);
+
+  /* Rhythm */
+  --radius-soft: 0.75rem;
+  --radius-pill: 999px;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    /* generous editorial reading measure */
+    --measure: 68ch;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root { scroll-behavior: auto; }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-inksoft);
+    font-family: var(--font-body);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.65;
+  }
+
+  /* A whisper of grain — tactile, not noisy. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  a {
+    color: var(--color-claydeep);
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: from-font;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-straw) 70%, transparent);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--color-line);
+  }
+}
+
+@layer components {
+  /* Fluid display sizes — used sparingly, ma does the rest. */
+  .display-1 { font-size: clamp(2.6rem, 1.6rem + 4.6vw, 5.2rem); }
+  .display-2 { font-size: clamp(2rem, 1.4rem + 2.6vw, 3.4rem); }
+  .display-3 { font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.2rem); }
+
+  /* The site's reading column. */
+  .measure { max-width: var(--measure); }
+
+  /* Small caps label used above section headings. */
+  .eyebrow {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-sagedeep);
+  }
+
+  /* Long-form article styling built on @tailwindcss/typography. */
+  .prose-floor {
+    --tw-prose-body: var(--color-inksoft);
+    --tw-prose-headings: var(--color-ink);
+    --tw-prose-links: var(--color-claydeep);
+    --tw-prose-bold: var(--color-ink);
+    --tw-prose-counters: var(--color-inkmuted);
+    --tw-prose-bullets: var(--color-straw);
+    --tw-prose-hr: var(--color-line);
+    --tw-prose-quotes: var(--color-ink);
+    --tw-prose-quote-borders: var(--color-straw);
+    --tw-prose-captions: var(--color-inkmuted);
+    --tw-prose-code: var(--color-claydeep);
+    --tw-prose-th-borders: var(--color-line);
+    --tw-prose-td-borders: var(--color-linesoft);
+  }
+  .prose-floor :where(h1, h2, h3, h4) { font-family: var(--font-display); }
+  .prose-floor :where(blockquote) {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+  }
+}

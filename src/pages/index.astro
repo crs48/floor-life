@@ -1,0 +1,223 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BenefitCard from '../components/BenefitCard.astro';
+import PositionCard from '../components/PositionCard.astro';
+import ProductCard from '../components/ProductCard.astro';
+import SitRiseTest from '../components/SitRiseTest.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import Icon from '../components/Icon.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { nav } from '../lib/site';
+import { href } from '../lib/url';
+
+const journal = (await getCollection('journal', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const featuredPosts = journal.filter((p) => p.data.featured).slice(0, 3);
+const posts = (featuredPosts.length ? featuredPosts : journal).slice(0, 3);
+
+const positions = (await getCollection('positions')).sort((a, b) => a.data.order - b.data.order);
+const startPositions = positions.slice(0, 3);
+
+const products = await getCollection('products');
+const featuredProducts = products.filter((p) => p.data.featured).slice(0, 3);
+
+const pillarIcon = { '/why': 'longevity', '/start': 'squat', '/spaces': 'home', '/gear': 'compass' } as const;
+---
+
+<BaseLayout>
+  <!-- Hero -->
+  <section class="mx-auto max-w-6xl px-5 pt-14 sm:px-8 sm:pt-20">
+    <div class="grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr]">
+      <div>
+        <p class="eyebrow mb-5">Two-thirds of the world never left the floor</p>
+        <h1 class="display-1 font-display text-ink">
+          Live closer to the&nbsp;ground.
+        </h1>
+        <p class="mt-6 max-w-xl text-xl leading-relaxed text-inksoft">
+          The West built its life around chairs. Floor Life is a calm, honest
+          guide to getting back down — for the mobility, the daily getting
+          up-and-down, and rooms that breathe.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href={href('/start')}
+            class="rounded-pill bg-ink px-6 py-3 font-semibold text-paper no-underline transition-opacity hover:opacity-90"
+          >
+            Start on the floor
+          </a>
+          <a
+            href={href('/why')}
+            class="rounded-pill border border-line px-6 py-3 font-semibold text-ink no-underline transition-colors hover:border-clay"
+          >
+            See the evidence
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-inkmuted">
+          In one study, people who could rise from the floor unaided had roughly
+          <span class="text-inksoft">five to six times</span> lower mortality than
+          those who struggled. <a href={href('/why')} class="text-claydeep">The honest version →</a>
+        </p>
+      </div>
+
+      <!-- Motif -->
+      <div class="relative mx-auto w-full max-w-md">
+        <svg viewBox="0 0 400 380" class="h-auto w-full" role="img" aria-label="A figure sitting cross-legged on the floor beside a plant and a low table.">
+          <circle cx="300" cy="96" r="58" fill="#d7c197" fill-opacity="0.5" />
+          <line x1="40" y1="300" x2="360" y2="300" stroke="#2a2520" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
+          <!-- cushion -->
+          <ellipse cx="180" cy="300" rx="96" ry="20" fill="#b16844" fill-opacity="0.16" />
+          <!-- figure -->
+          <g fill="none" stroke="#59634a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M118 300c8-40 34-58 62-58s54 18 62 58" />
+            <path d="M118 300h124" stroke="#2a2520" stroke-opacity="0.25" />
+          </g>
+          <circle cx="180" cy="214" r="30" fill="#b16844" />
+          <path d="M180 244c-6 10-6 26 0 40" stroke="#8f4f2e" stroke-width="6" stroke-linecap="round" fill="none" />
+          <!-- plant -->
+          <g transform="translate(324 236)" stroke="#59634a" stroke-width="4" fill="none" stroke-linecap="round">
+            <path d="M0 64V28" />
+            <path d="M0 40C-14 34-20 22-18 8-6 12 2 24 0 40Z" fill="#7a856a" fill-opacity="0.35" />
+            <path d="M0 32C12 26 20 16 18 4 6 8 0 18 0 32Z" fill="#7a856a" fill-opacity="0.35" />
+            <rect x="-14" y="62" width="28" height="20" rx="3" fill="#b16844" fill-opacity="0.25" stroke="#8f4f2e" />
+          </g>
+          <!-- low table -->
+          <g transform="translate(40 250)" stroke="#8f4f2e" stroke-width="4" fill="none" stroke-linecap="round">
+            <rect x="0" y="0" width="60" height="10" rx="3" fill="#d7c197" fill-opacity="0.5" />
+            <path d="M6 10v18M54 10v18" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- The case -->
+  <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+    <div class="rounded-soft border border-line bg-sand/50 px-6 py-12 sm:px-12">
+      <p class="mx-auto max-w-3xl text-center font-display text-2xl leading-snug text-ink sm:text-3xl">
+        You don't need to throw out the couch. You need one corner of one room
+        that invites you down — and a body that remembers how to get up.
+      </p>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+    <SectionHeader
+      eyebrow="Why bother"
+      title="What living low actually does"
+      intro="No hype. Here is the case at its most defensible — and where we draw the honest line."
+    />
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <BenefitCard icon="swap" title="Getting up, often">
+        Every trip down to the floor and back is a squat you didn't schedule. Do
+        it dozens of times a day and the movement adds up where it counts.
+      </BenefitCard>
+      <BenefitCard icon="mobility" title="Range you keep">
+        Floor positions ask for hip and ankle range most chairs let you lose.
+        Use it or slowly surrender it.
+      </BenefitCard>
+      <BenefitCard icon="longevity" title="A longevity signal">
+        The ease of rising from the floor tracks with survival in the research —
+        as a marker of fitness, honestly read, not a magic act.
+      </BenefitCard>
+      <BenefitCard icon="ground" title="Rooms that breathe">
+        Clear the middle of the room and the floor becomes the furniture. Small
+        spaces feel larger; one room can be many.
+      </BenefitCard>
+    </div>
+  </section>
+
+  <!-- SRT -->
+  <section class="mx-auto mt-24 max-w-3xl px-5 sm:px-8">
+    <SitRiseTest />
+  </section>
+
+  <!-- Pillars -->
+  <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+    <SectionHeader eyebrow="Where to go" title="Four ways in" />
+    <div class="mt-10 grid gap-5 sm:grid-cols-2">
+      {
+        nav.slice(0, 4).map((item) => (
+          <a
+            href={href(item.href)}
+            class="group flex items-start gap-5 rounded-soft border border-line bg-paper/60 p-6 no-underline transition-all hover:-translate-y-0.5 hover:border-clay/50"
+          >
+            <span class="mt-1 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-soft bg-clay/12 text-claydeep">
+              <Icon name={pillarIcon[item.href as keyof typeof pillarIcon] ?? 'compass'} size={22} />
+            </span>
+            <span>
+              <span class="block font-display text-xl text-ink">{item.label}</span>
+              <span class="mt-1 block text-[0.95rem] text-inksoft">{item.blurb}</span>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Positions preview -->
+  <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+    <div class="flex items-end justify-between gap-4">
+      <SectionHeader eyebrow="The vocabulary" title="A handful of ways to sit" />
+      <a href={href('/start')} class="hidden shrink-0 text-sm font-semibold text-claydeep sm:block">All positions →</a>
+    </div>
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {startPositions.map((p) => (
+        <PositionCard
+          slug={p.id}
+          name={p.data.name}
+          otherName={p.data.otherName}
+          difficulty={p.data.difficulty}
+          summary={p.data.summary}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Journal -->
+  {
+    posts.length > 0 && (
+      <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+        <div class="flex items-end justify-between gap-4">
+          <SectionHeader eyebrow="From the Journal" title="Reading for the floor-curious" />
+          <a href={href('/journal')} class="hidden shrink-0 text-sm font-semibold text-claydeep sm:block">All writing →</a>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          {posts.map((post) => (
+            <a
+              href={href(`/journal/${post.id}`)}
+              class="group flex h-full flex-col rounded-soft border border-line bg-paper/60 p-6 no-underline transition-all hover:-translate-y-0.5 hover:border-clay/50"
+            >
+              <span class="eyebrow text-sagedeep">{post.data.category}</span>
+              <h3 class="mt-2 font-display text-xl text-ink">{post.data.title}</h3>
+              <p class="mt-2 flex-1 text-[0.95rem] leading-relaxed text-inksoft">{post.data.description}</p>
+              <span class="mt-4 text-sm font-semibold text-claydeep">Read →</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Gear teaser -->
+  {
+    featuredProducts.length > 0 && (
+      <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+        <div class="flex items-end justify-between gap-4">
+          <SectionHeader eyebrow="The gear" title="A few things worth owning" intro="Compared honestly, and clearly disclosed." />
+          <a href={href('/gear')} class="hidden shrink-0 text-sm font-semibold text-claydeep sm:block">All gear →</a>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          {featuredProducts.map((p) => (
+            <ProductCard product={p.data} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <div class="mt-24">
+    <Newsletter />
+  </div>
+</BaseLayout>
