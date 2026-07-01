@@ -14,9 +14,24 @@ deployed as a static site to GitHub Pages.
 - **Tailwind CSS v4** via the `@tailwindcss/vite` plugin (design tokens live in
   CSS with `@theme`; no `tailwind.config.js`).
 - **Content Collections** — Markdown/MDX `journal`, plus typed JSON data for
-  `positions` and `products` (Zod-validated).
+  `positions`, `products`, and `resources` (Zod-validated).
 - **@astrojs/sitemap**, **@astrojs/rss**, **@tailwindcss/typography**, **sharp**.
+- **Pagefind** on-site search (`astro-pagefind`), **view transitions**
+  (`<ClientRouter />`), and build-time **reading time** (`remark-reading-time`).
 - Fonts: Fraunces (display) + Nunito Sans (body) via Fontsource.
+
+### Delight features
+
+- **Search** — a themed Pagefind modal in the header (⌘/index built at deploy).
+- **Dark mode** — warm `[data-theme=dark]` token overrides with a no-flash
+  toggle; the illustrations and prose adapt automatically.
+- **View transitions** — smooth client navigation; all inline islands re-init on
+  `astro:page-load` and the theme re-applies on `astro:after-swap`.
+- **Resources hub** (`/resources`) — a curated map of the floor-living web.
+- **Custom line-art** — a cohesive `PositionArt` set + a Sharp-optimised scene.
+- **Article aids** — reading time, table of contents, related reading, cited
+  sources, and "last reviewed" dates.
+- **Printable cheat sheet** (`/cheatsheet`) via a site-wide print stylesheet.
 
 ## Develop
 

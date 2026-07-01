@@ -354,10 +354,10 @@ Make an inline island survive view transitions:
 - [x] Add a warm **dark mode**: `[data-theme=dark]` token overrides in
       `global.css`, a no-flash inline head script, and a header toggle
       that persists to `localStorage`
-- [ ] Add a print-friendly **"Start here" cheat sheet** (print CSS on
+- [x] Add a print-friendly **"Start here" cheat sheet** (print CSS on
       `/start` or a dedicated `/cheatsheet`) summarising positions & first
       moves
-- [ ] Update `src/lib/site.ts` nav/footer, ensure the sitemap + RSS cover
+- [x] Update `src/lib/site.ts` nav/footer, ensure the sitemap + RSS cover
       new routes, and refresh the README with the new features
 
 ## Validation Checklist
