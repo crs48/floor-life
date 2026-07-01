@@ -2,6 +2,7 @@
 import { site, nav } from '../lib/site';
 import { href, isActive } from '../lib/url';
 import ThemeToggle from './ThemeToggle.astro';
+import SearchModal from './SearchModal.astro';
 
 const current = Astro.url.pathname;
 ---
@@ -36,6 +37,7 @@ const current = Astro.url.pathname;
         }
       </nav>
 
+      <SearchModal />
       <ThemeToggle />
 
       <!-- Mobile toggle -->

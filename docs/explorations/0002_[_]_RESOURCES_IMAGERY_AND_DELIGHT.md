@@ -341,7 +341,7 @@ Make an inline island survive view transitions:
 - [ ] Wire the image pipeline: `Figure.astro` (caption + credit) over
       `astro:assets` `<Image>`, an `src/assets/` dir, and README notes on
       the Unsplash/Pexels workflow + credits convention
-- [ ] Add on-site search with `astro-pagefind`: integration in
+- [x] Add on-site search with `astro-pagefind`: integration in
       `astro.config.mjs`, a `Search` UI in the header, styled to theme
 - [ ] Add view transitions: `<ClientRouter />` in `BaseLayout`, and
       refactor every inline island (menu, SRT, newsletter, search, theme)
