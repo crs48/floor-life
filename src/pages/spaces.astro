@@ -4,6 +4,8 @@ import PageHeader from '../components/PageHeader.astro';
 import Callout from '../components/Callout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import Icon from '../components/Icon.astro';
+import Figure from '../components/Figure.astro';
+import floorScene from '../assets/floor-scene.png';
 import { href } from '../lib/url';
 
 const rooms = [
@@ -47,6 +49,16 @@ const rooms = [
     title="Set up your space"
     lede="Floor living isn't an all-or-nothing vow of furniture poverty. It's a series of small, reversible moves that make the ground the most inviting place in the room."
   />
+
+  <section class="mx-auto mt-12 max-w-5xl px-5 sm:px-8">
+    <Figure
+      src={floorScene}
+      alt="A sunlit room set up for floor living: a low cushion, a chabudai with a cup, a plant, and a bright window."
+      caption="One corner, done well — a cushion, a low table, a plant, and good light."
+      credit="Illustration: Floor Life"
+      priority
+    />
+  </section>
 
   <!-- One corner -->
   <section class="mx-auto mt-16 max-w-4xl px-5 sm:px-8">

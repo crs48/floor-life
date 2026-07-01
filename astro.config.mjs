@@ -17,6 +17,12 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
+  image: {
+    // Responsive images (stable since Astro 5.10). `responsiveStyles` is
+    // required or <Image>/<Picture> won't actually be responsive.
+    layout: 'constrained',
+    responsiveStyles: true,
+  },
   vite: {
     // Cast to any: Astro bundles its own copy of Vite, whose `Plugin` type
     // differs from the top-level one at the type level only — runtime is fine.

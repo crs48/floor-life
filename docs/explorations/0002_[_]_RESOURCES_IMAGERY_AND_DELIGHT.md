@@ -338,7 +338,7 @@ Make an inline island survive view transitions:
       (one line-art scene per position slug) and a small shared scene set
 - [x] Use the illustrations on `PositionCard`, the positions detail route,
       and the start gallery; refresh the home/pillar motifs for cohesion
-- [ ] Wire the image pipeline: `Figure.astro` (caption + credit) over
+- [x] Wire the image pipeline: `Figure.astro` (caption + credit) over
       `astro:assets` `<Image>`, an `src/assets/` dir, and README notes on
       the Unsplash/Pexels workflow + credits convention
 - [x] Add on-site search with `astro-pagefind`: integration in

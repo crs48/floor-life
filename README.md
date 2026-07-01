@@ -52,6 +52,28 @@ src/
 - **Products / gear:** edit `src/data/products.json`. Every buy link renders
   through `AffiliateLink.astro`, which always emits `rel="sponsored nofollow"`;
   keep the FTC disclosure visible above the links (see `/disclosure`).
+- **Resources:** edit `src/data/resources.json` (curated external links, grouped
+  by `kind`). `ExternalLink.astro` emits `rel="noopener"`.
+- **Positions art:** the line-art figures live in `src/components/PositionArt.astro`,
+  keyed by position slug and themed with CSS vars so they adapt to dark mode.
+
+## Imagery
+
+The site leads with **custom SVG line-art** (license-free, on-brand, and
+deterministic to build). For **photography**, use the `astro:assets` pipeline:
+
+- Put images in `src/assets/` and `import` them (never `public/` — imported
+  assets are optimised by Sharp and get the `/floor-life` base path
+  automatically; hardcoded `/public` paths 404 in production).
+- Render through `Figure.astro` (caption + credit) — it emits an optimised,
+  responsive `<Image>` with width/height set to prevent layout shift.
+- **Licensing:** Unsplash / Pexels allow free commercial use with no
+  attribution, but **do not clear model releases** — avoid recognisable faces
+  tied to a health claim. Safest picks: object/interior shots (tatami, cushions,
+  low tables, plants) and **public-domain ukiyo-e** interiors (The Met /
+  Rijksmuseum, CC0), which are on-theme and genuinely differentiating.
+- Credit convention: pass `credit` / `creditUrl` to `Figure`; a warm, unified
+  colour grade across photos keeps the look bespoke rather than stock-y.
 
 ## Deploy (GitHub Pages)
 
