@@ -362,23 +362,23 @@ Make an inline island survive view transitions:
 
 ## Validation Checklist
 
-- [ ] `npm run build` exits 0 and `astro check` is clean; all new routes
+- [x] `npm run build` exits 0 and `astro check` is clean; all new routes
       (`/resources`, any cheat sheet) appear in `dist/` and the sitemap
-- [ ] `/resources` renders every curated link with `rel="noopener"`;
+- [x] `/resources` renders every curated link with `rel="noopener"`;
       links open correctly and are grouped by kind
-- [ ] Pagefind index is emitted to `dist/pagefind/` and search returns
+- [x] Pagefind index is emitted to `dist/pagefind/` and search returns
       results in `preview`, loading correctly under the `/floor-life` base
-- [ ] With view transitions on, navigating between pages keeps the mobile
+- [x] With view transitions on, navigating between pages keeps the mobile
       menu, SRT test, newsletter, search, and theme toggle all working
       (scripts re-init) — verified by clicking through in `preview`
-- [ ] Position illustrations render on cards + detail pages and adapt to
+- [x] Position illustrations render on cards + detail pages and adapt to
       dark mode; no broken/oversized SVGs; layout holds mobile→desktop
-- [ ] Dark mode toggles with no flash of the wrong theme on load,
+- [x] Dark mode toggles with no flash of the wrong theme on load,
       persists across reloads and navigations, and keeps text contrast
       readable (WCAG AA for body text)
-- [ ] Journal articles show reading time, a working TOC (anchors jump),
+- [x] Journal articles show reading time, a working TOC (anchors jump),
       related reading, and a Sources block with valid links
-- [ ] Internal links still all route through `href()` (no un-based paths);
+- [x] Internal links still all route through `href()` (no un-based paths);
       external links carry `rel="noopener"`; affiliate links keep
       `rel="sponsored nofollow"`
 
