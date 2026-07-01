@@ -2,10 +2,18 @@
 title: "The test you can take on your living room floor"
 description: "One score, no equipment: how the Sitting–Rising Test became a longevity headline — and how to read it without kidding yourself."
 pubDate: 2026-06-18
+updatedDate: 2026-06-20
 category: science
 tags: ["longevity", "evidence", "getting up"]
 readingMinutes: 5
 featured: true
+sources:
+  - label: "de Brito et al., 2014 — Ability to sit and rise from the floor as a predictor of all-cause mortality (Eur J Prev Cardiol)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/23242910/"
+  - label: "Araújo et al., 2025 — Sitting–rising test scores predict natural and cardiovascular deaths (Eur J Prev Cardiol)"
+    url: "https://academic.oup.com/eurjpc/advance-article/doi/10.1093/eurjpc/zwaf325/8163161"
+  - label: "Harvard Health — What the sitting-rising test says about your health"
+    url: "https://www.health.harvard.edu/healthy-aging-and-longevity/what-the-sitting-rising-test-says-about-your-health"
 ---
 
 Clear a little space on the floor. From standing, lower yourself down to sitting, then stand back up. Try to use no hands, no knees, nothing to lean on. Start with a mental ten and subtract a point for each support you use on the way down and on the way up.

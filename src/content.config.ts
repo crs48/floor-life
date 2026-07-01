@@ -14,6 +14,9 @@ const journal = defineCollection({
     readingMinutes: z.number().optional(),
     draft: z.boolean().default(false),
     featured: z.boolean().default(false),
+    sources: z
+      .array(z.object({ label: z.string(), url: z.string().url() }))
+      .default([]),
   }),
 });
 

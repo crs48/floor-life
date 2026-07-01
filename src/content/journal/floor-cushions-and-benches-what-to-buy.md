@@ -2,6 +2,7 @@
 title: "Cushions and benches: what actually helps"
 description: "A short, opinionated buying guide to the few things that make the floor comfortable — and the fill, covers, and hinges that separate the good from the junk."
 pubDate: 2026-06-05
+updatedDate: 2026-06-07
 category: gear
 tags: ["gear", "cushions", "buying guide"]
 readingMinutes: 6

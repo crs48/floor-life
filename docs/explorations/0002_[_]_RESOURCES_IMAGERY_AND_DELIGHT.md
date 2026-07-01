@@ -346,9 +346,9 @@ Make an inline island survive view transitions:
 - [ ] Add view transitions: `<ClientRouter />` in `BaseLayout`, and
       refactor every inline island (menu, SRT, newsletter, search, theme)
       to initialise on `astro:page-load`
-- [ ] Journal: compute **reading time** and render a **table of contents**
+- [x] Journal: compute **reading time** and render a **table of contents**
       from `render()` headings, with in-page anchors
-- [ ] Journal: add **related reading** (same category/tags) and a
+- [x] Journal: add **related reading** (same category/tags) and a
       per-article **Sources** block + **last reviewed** date (frontmatter
       `updatedDate` / `sources`), and backfill the 4 existing articles
 - [x] Add a warm **dark mode**: `[data-theme=dark]` token overrides in
