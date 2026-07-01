@@ -343,7 +343,7 @@ Make an inline island survive view transitions:
       the Unsplash/Pexels workflow + credits convention
 - [x] Add on-site search with `astro-pagefind`: integration in
       `astro.config.mjs`, a `Search` UI in the header, styled to theme
-- [ ] Add view transitions: `<ClientRouter />` in `BaseLayout`, and
+- [x] Add view transitions: `<ClientRouter />` in `BaseLayout`, and
       refactor every inline island (menu, SRT, newsletter, search, theme)
       to initialise on `astro:page-load`
 - [x] Journal: compute **reading time** and render a **table of contents**
