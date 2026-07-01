@@ -13,6 +13,8 @@ export default defineConfig({
   trailingSlash: 'ignore',
   integrations: [mdx(), sitemap()],
   vite: {
-    plugins: [tailwindcss()],
+    // Cast to any: Astro bundles its own copy of Vite, whose `Plugin` type
+    // differs from the top-level one at the type level only — runtime is fine.
+    plugins: /** @type {any} */ ([tailwindcss()]),
   },
 });

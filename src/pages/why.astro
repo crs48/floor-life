@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Callout from '../components/Callout.astro';
+import { href } from '../lib/url';
+
+const myths = [
+  {
+    claim: '“Floor sitting strengthens your core.”',
+    verdict:
+      'Unsupported sitting raises low-level muscle activation, but activation is not training. Strength needs load near failure — which sitting never approaches.',
+  },
+  {
+    claim: '“Sitting on the floor gives you myofascial release.”',
+    verdict:
+      'There is no research on this at all. Fascia is real; the idea that resting on the ground “releases” it borrows credibility from the (already thin) foam-rolling literature.',
+  },
+  {
+    claim: '“Floor sitting fixes your posture and back pain.”',
+    verdict:
+      'A review of reviews found no consensus that any posture causes back pain. Oddly, slumped sitting was the lowest-pressure posture in the best in-vivo disc study.',
+  },
+  {
+    claim: '“Standing desks burn serious calories.”',
+    verdict:
+      'Standing beats sitting by about 9 kcal an hour. Real, but small. The energy that matters is in the transitions — getting up and down — not in holding still while upright.',
+  },
+];
+---
+
+<BaseLayout
+  title="Why live low"
+  description="The honest case for floor living: the Sitting–Rising Test and mortality, mobility you use or lose, the knee caveat, and the myths we refuse to repeat."
+>
+  <PageHeader
+    eyebrow="The evidence, honestly"
+    title="Why live low"
+    lede="The case for floor living is strong enough to make plainly and nuanced enough to keep interesting. Here it is with the caveats left in — because a claim you can trust is worth more than one that sounds good."
+  />
+
+  <div class="mx-auto mt-16 max-w-3xl space-y-20 px-5 pb-8 sm:px-8">
+    <!-- SRT -->
+    <section class="space-y-5">
+      <p class="eyebrow text-sagedeep">The one test worth taking</p>
+      <h2 class="display-3 font-display text-ink">Can you get off the floor?</h2>
+      <p class="text-lg leading-relaxed text-inksoft">
+        In a Brazilian study of 2,002 adults aged 51–80, researchers scored how
+        people lowered to the floor and stood back up — ten points, minus one for
+        each hand, knee, or support used. Over about six years, each single point
+        of a better score came with roughly <strong class="text-ink">21% better
+        survival</strong>, and the lowest scorers died at five to six times the
+        rate of the highest.
+      </p>
+      <p class="text-lg leading-relaxed text-inksoft">
+        A larger 2025 follow-up of 4,282 people tracked for a median of twelve
+        years found the same shape, more starkly: a perfect ten carried about a
+        <strong class="text-ink">3.7% death rate</strong>, versus
+        <strong class="text-ink">42%</strong> for the lowest scorers.
+      </p>
+      <Callout variant="caution" title="The honest reading">
+        The Sitting–Rising Test measures <strong>musculoskeletal fitness</strong> —
+        strength, flexibility, balance, leanness. Its link to lifespan is a real
+        <em>association</em>, not proof that the habit of floor-sitting adds years.
+        Fit people both score well <em>and</em> live longer. It is a superb
+        starting line and a lousy fortune-teller.
+        <span class="mt-1 block text-xs text-inkmuted">
+          Sources: <a href="https://pubmed.ncbi.nlm.nih.gov/23242910/">de Brito et al., 2012/2014</a> ·
+          <a href="https://academic.oup.com/eurjpc/advance-article/doi/10.1093/eurjpc/zwaf325/8163161">Araújo et al., 2025</a>.
+        </span>
+      </Callout>
+    </section>
+
+    <!-- Mobility -->
+    <section class="space-y-5">
+      <p class="eyebrow text-sagedeep">Range you keep</p>
+      <h2 class="display-3 font-display text-ink">Use it, or slowly lose it</h2>
+      <p class="text-lg leading-relaxed text-inksoft">
+        A full resting squat asks for around 35° of ankle bend and deep hip
+        flexion. Most Western adults can't find it — not because of anatomy, but
+        because a life of chairs never asks for the range, so the calf and hips
+        quietly tighten. Populations that still sit on the floor keep markedly
+        more hip rotation and flexion into old age.
+      </p>
+      <p class="text-lg leading-relaxed text-inksoft">
+        The point isn't that the floor magically stretches you. It's that
+        chairs let you live in a narrow slice of your available movement, and the
+        floor gently insists on the rest of it.
+      </p>
+      <Callout variant="evidence">
+        Strongest where it's descriptive: floor postures <em>demand</em> large
+        hip and ankle range, and habitual floor-sitters <em>have</em> more of it.
+        Whether the habit <em>builds</em> that range hasn't been proven in a
+        trial — it's plausible, not settled. Targeted mobility work, at least,
+        clearly does increase ankle range.
+      </Callout>
+    </section>
+
+    <!-- Knee caveat -->
+    <section class="space-y-5">
+      <p class="eyebrow text-sagedeep">The nuance everyone skips</p>
+      <h2 class="display-3 font-display text-ink">Kind to hips, a risk to knees</h2>
+      <p class="text-lg leading-relaxed text-inksoft">
+        Here's the caveat the wellness internet leaves out. Populations that
+        squat and kneel for hours a day show <em>strikingly low</em> hip
+        arthritis — but <em>more</em> knee osteoarthritis. In the Beijing
+        Osteoarthritis Study, hours of daily squatting roughly doubled the odds
+        of knee OA.
+      </p>
+      <p class="text-lg leading-relaxed text-inksoft">
+        So we don't preach marathon squat-holds. We preach <strong class="text-ink">variety,
+        moderation, and pain-free range</strong>: many short visits to many
+        positions, not one punishing posture held for an hour.
+      </p>
+      <Callout variant="caution" title="If your joints have history">
+        Deep flexion is the thing to modify with knee or hip osteoarthritis,
+        after a joint replacement (cross-legged and deep squatting are classic
+        early no-gos), or in pregnancy (loose ligaments). Prop generously, stay
+        pain-free, and check with a professional. See <a href={href('/start')}>how to start</a>.
+      </Callout>
+    </section>
+
+    <!-- Up and down -->
+    <section class="space-y-5">
+      <p class="eyebrow text-sagedeep">The real mechanism</p>
+      <h2 class="display-3 font-display text-ink">The magic is in the transitions</h2>
+      <p class="text-lg leading-relaxed text-inksoft">
+        A room without chairs makes you get up and down dozens of times a day.
+        Each rise from the floor is an unscheduled squat. This is where floor
+        living most plausibly earns its keep — not in the sitting, but in the
+        endless, low-grade, get-up-and-do-it-again movement it forces.
+      </p>
+      <p class="text-lg leading-relaxed text-inksoft">
+        It rhymes with what we know: breaking up long sitting improves blood
+        sugar and circulation, and it's the <em>interruptions</em> that help, not
+        the posture you interrupt it with. The floor is simply a very good excuse
+        to keep moving.
+      </p>
+    </section>
+
+    <!-- Myths -->
+    <section class="space-y-6">
+      <p class="eyebrow text-sagedeep">Myths vs evidence</p>
+      <h2 class="display-3 font-display text-ink">Four claims we won't repeat</h2>
+      <p class="text-lg leading-relaxed text-inksoft">
+        Being honest about what floor living <em>doesn't</em> do is how we earn
+        the right to tell you what it does.
+      </p>
+      <div class="grid gap-4">
+        {
+          myths.map((m) => (
+            <div class="rounded-soft border border-line bg-sand/40 p-5">
+              <p class="font-display text-lg text-ink">{m.claim}</p>
+              <p class="mt-2 text-[0.95rem] leading-relaxed text-inksoft">{m.verdict}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Bottom line -->
+    <section class="rounded-soft bg-ink px-6 py-10 text-paper sm:px-10">
+      <p class="eyebrow text-straw">The bottom line</p>
+      <p class="mt-3 font-display text-2xl leading-snug sm:text-3xl">
+        Variety and movement beat any single “correct” posture. Floor living's
+        real gift is that it keeps putting you on the ground and asking you to get
+        back up.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={href('/start')} class="rounded-pill bg-paper px-5 py-2.5 font-semibold text-ink no-underline">How to start</a>
+        <a href={href('/spaces')} class="rounded-pill border border-paper/40 px-5 py-2.5 font-semibold text-paper no-underline">Set up your space</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

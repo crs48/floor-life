@@ -43,7 +43,7 @@ const {
   </div>
 </section>
 
-<script define:vars={{ email: site.email }}>
+<script is:inline define:vars={{ email: site.email }}>
   const form = document.getElementById('subscribe');
   const note = document.getElementById('subscribe-note');
   form?.addEventListener('submit', (e) => {

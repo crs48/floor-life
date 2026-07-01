@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Callout from '../components/Callout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import Icon from '../components/Icon.astro';
+import { href } from '../lib/url';
+
+const rooms = [
+  {
+    icon: 'home',
+    room: 'The living room',
+    lead: 'Lower the centre of gravity.',
+    body: 'You don\'t have to lose the sofa. Add a firm rug over a dense pad, a couple of floor cushions and a bolster, and a low table within arm\'s reach. A lower sofa (or none) makes the whole room feel taller and pulls life down toward the floor.',
+    tips: ['Layer: firm base, then a movable cushion only where you actually sit', 'One low table keeps you from drifting back up to chair height'],
+  },
+  {
+    icon: 'book',
+    room: 'The workspace',
+    lead: 'The retrofit that changes your day.',
+    body: 'This is the big one. A cross-legged desk chair — a wide, backless perch — lets you fold your legs up at a standard desk. Or go fully low with a floor desk. The honest catch: no single desk spans standing to floor height, so the real move is two stations sharing a monitor on an arm.',
+    tips: ['Sitting cross-legged raises your knees — you may need to raise the desk 2–4″', 'A monitor arm lets one screen serve both a standing and a floor station'],
+  },
+  {
+    icon: 'tea',
+    room: 'The dining nook',
+    lead: 'Eat where the world eats.',
+    body: 'A chabudai — a low Japanese table — turns meals into floor time, with cushions or a seiza bench around it. In cold months a kotatsu (a low table with a heater and a quilt) is the single cosiest object in floor living. Watch the voltage on imported kotatsu.',
+    tips: ['A round low table seats more people flexibly than a long one', 'Back support (a zaisu or BackJack) makes long dinners comfortable'],
+  },
+  {
+    icon: 'ground',
+    room: 'The bedroom',
+    lead: 'Roll the bed away.',
+    body: 'A shikibuton — a thin roll-up futon, ideally on a tatami platform — lets the bedroom become a living room by day. It is the original small-space trick: one room, many lives. Side sleepers want a thicker layer, and everything needs airing so it doesn\'t trap moisture.',
+    tips: ['Air and roll the bedding daily — it is also the main mould-prevention step', 'Tatami or a firm pad underneath adds warmth and airflow'],
+  },
+];
+---
+
+<BaseLayout
+  title="Set up your space"
+  description="How to make a Western home floor-friendly without going furniture-free — the one-corner on-ramp, a room-by-room retrofit, and why the floor should be firm and warm, not soft and cold."
+>
+  <PageHeader
+    eyebrow="Architect & retrofit"
+    title="Set up your space"
+    lede="Floor living isn't an all-or-nothing vow of furniture poverty. It's a series of small, reversible moves that make the ground the most inviting place in the room."
+  />
+
+  <!-- One corner -->
+  <section class="mx-auto mt-16 max-w-4xl px-5 sm:px-8">
+    <div class="rounded-soft border border-clay/30 bg-claypaper/50 px-6 py-10 sm:px-10">
+      <p class="eyebrow text-claydeep">Start here</p>
+      <h2 class="mt-2 display-3 font-display text-ink">Make one corner irresistible</h2>
+      <p class="mt-4 text-lg leading-relaxed text-inksoft">
+        Don't redesign your home. Choose a single corner — by a window, near the
+        books — and make it the nicest place to be low: a soft rug, one good
+        cushion, a low table, a plant, warm light. When the floor is the most
+        inviting spot in the room, you'll end up there without willpower. Grow
+        from that one corner outward.
+      </p>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+    <SectionHeader eyebrow="Room by room" title="Retrofitting the Western home" />
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {
+        rooms.map((r) => (
+          <article class="flex flex-col rounded-soft border border-line bg-paper/60 p-7">
+            <span class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-soft bg-sage/12 text-sagedeep">
+              <Icon name={r.icon as any} size={22} />
+            </span>
+            <h3 class="font-display text-2xl text-ink">{r.room}</h3>
+            <p class="mt-1 font-display text-lg italic text-clay">{r.lead}</p>
+            <p class="mt-3 text-[0.95rem] leading-relaxed text-inksoft">{r.body}</p>
+            <ul class="mt-4 space-y-2 border-t border-linesoft pt-4">
+              {r.tips.map((t) => (
+                <li class="flex gap-2 text-sm text-inksoft">
+                  <span class="mt-0.5 text-sagedeep" aria-hidden="true">→</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Firm and warm -->
+  <section class="mx-auto mt-24 max-w-4xl px-5 sm:px-8">
+    <SectionHeader
+      eyebrow="The one rule underfoot"
+      title="Firm and warm beats soft and cold"
+    />
+    <div class="mt-8 space-y-5 text-lg leading-relaxed text-inksoft">
+      <p>
+        The instinct is to make the floor plush. Resist it. Deep, squishy
+        surfaces compress under your hands and feet, so you can't push off
+        cleanly — bad for the knees, worse for the getting-up that is the whole
+        benefit. And a slumping-soft seat rolls the pelvis back into a slouch.
+      </p>
+      <p>
+        Build in layers instead: a <strong class="text-ink">firm, warm base</strong>
+        everywhere — tatami, cork, or a dense flatweave wool rug over a good pad —
+        and add softness only where the body actually rests, with a cushion or a
+        bolster. In a cold climate, warm floors (or a heated under-rug mat) do
+        more for comfort than any amount of padding, and they let you keep the
+        firmness that keeps you mobile.
+      </p>
+    </div>
+    <div class="mt-8">
+      <Callout variant="evidence" title="The five-thing starter kit">
+        A firm base surface · an under-rug heater if your floors run cold · two
+        cork blocks and a bolster as movable seat-risers · a back-support seat for
+        a fussy lower back · a wedge or slant board to build the squat. That's a
+        whole floor-living setup. <a href={href('/gear')}>See the gear →</a>
+      </Callout>
+    </div>
+  </section>
+</BaseLayout>

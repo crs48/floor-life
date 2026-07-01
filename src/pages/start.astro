@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PositionCard from '../components/PositionCard.astro';
+import Callout from '../components/Callout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { href } from '../lib/url';
+
+const positions = (await getCollection('positions')).sort((a, b) => a.data.order - b.data.order);
+
+const steps = [
+  {
+    title: 'Raise your hips',
+    body: 'Sit on the front edge of a firm cushion so your hips sit above your knees. This one change tilts the pelvis forward and makes cross-legged sitting sustainable for almost everyone.',
+  },
+  {
+    title: 'Start with short bouts',
+    body: 'Five minutes, several times a day, beats one grim half-hour. Come out the moment something aches or falls asleep. Comfort compounds; strain teaches you to avoid the floor.',
+  },
+  {
+    title: 'Rotate positions',
+    body: 'Your best posture is your next one. Cross-legged, kneeling, long-sitting, a squat to fetch something — cycle through them. Variety is the whole point, and it protects your joints.',
+  },
+  {
+    title: 'Get up the hard way',
+    body: 'When you rise, use as little support as you can. Those get-ups are the training effect. Do a few on purpose each day and you are literally practising the longevity test.',
+  },
+];
+---
+
+<BaseLayout
+  title="Start on the floor"
+  description="How to build the floor-sitting habit gently — raise your hips, keep bouts short, rotate positions, and rise the hard way — plus a reference of positions with cues and cautions."
+>
+  <PageHeader
+    eyebrow="Building the habit"
+    title="Start on the floor"
+    lede="The floor should feel inviting, not punishing. A few small habits turn “this hurts” into “this is where I want to be” — and the trick is patience, not willpower."
+  />
+
+  <!-- First moves -->
+  <section class="mx-auto mt-16 max-w-4xl px-5 sm:px-8">
+    <ol class="grid gap-5 sm:grid-cols-2">
+      {
+        steps.map((step, i) => (
+          <li class="rounded-soft border border-line bg-paper/60 p-6">
+            <span class="font-display text-3xl text-straw">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="mt-2 font-display text-xl text-ink">{step.title}</h3>
+            <p class="mt-2 text-[0.95rem] leading-relaxed text-inksoft">{step.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+    <div class="mt-6">
+      <Callout variant="caution" title="Go gently, and go safely">
+        Build up over weeks, not days. Ease off anything sharp, prop deep
+        positions generously, and check with a professional if you have joint,
+        back, or balance concerns, are pregnant, or have had a joint replacement.
+        This is not medical advice.
+      </Callout>
+    </div>
+  </section>
+
+  <!-- Positions gallery -->
+  <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
+    <SectionHeader
+      eyebrow="The vocabulary"
+      title="Ways to sit on the floor"
+      intro="No single position is “correct.” Each asks something different of the body — the goal is to own a handful and move between them freely."
+    />
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        positions.map((p) => (
+          <PositionCard
+            slug={p.id}
+            name={p.data.name}
+            otherName={p.data.otherName}
+            difficulty={p.data.difficulty}
+            summary={p.data.summary}
+          />
+        ))
+      }
+    </div>
+    <p class="mt-8 text-inksoft">
+      A cushion, a bench, or a wedge makes every one of these easier —
+      <a href={href('/gear')} class="text-claydeep">see the gear that helps</a>.
+    </p>
+  </section>
+</BaseLayout>

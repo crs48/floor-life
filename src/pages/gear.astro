@@ -1,0 +1,88 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ProductCard from '../components/ProductCard.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import { href } from '../lib/url';
+
+const products = await getCollection('products');
+
+const categories = [
+  { key: 'desk-chair', title: 'Cross-legged desk chairs', blurb: 'Sit folded-up at a normal desk. The niche this whole site grew out of.' },
+  { key: 'seating', title: 'Floor seating', blurb: 'Cushions, benches and back support that make the floor kind to sit on.' },
+  { key: 'desk', title: 'Floor desks', blurb: 'Real ground-level work surfaces — not “low” standing desks in disguise.' },
+  { key: 'sleeping', title: 'Floor sleeping', blurb: 'Roll-up bedding that hands the room back to you each morning.' },
+  { key: 'flooring', title: 'Underfoot', blurb: 'A firm, warm base is the foundation everything else sits on.' },
+  { key: 'props', title: 'Mobility props', blurb: 'Small things that unlock deep positions and easier get-ups.' },
+] as const;
+
+const byCategory = (key: string) => products.filter((p) => p.data.category === key);
+const deskChairs = byCategory('desk-chair').map((p) => p.data);
+---
+
+<BaseLayout
+  title="Gear"
+  description="Floor-living gear compared honestly and clearly disclosed — cross-legged desk chairs, cushions and benches, floor desks, shikibutons, tatami, and mobility props."
+>
+  <PageHeader
+    eyebrow="Compared & curated"
+    title="Gear worth owning"
+    lede="A small, opinionated shelf rather than an endless catalogue. We only list things we'd genuinely point a friend toward, and we tell you where each one falls short."
+  />
+
+  <!-- Disclosure ABOVE the links (FTC) -->
+  <section class="mx-auto mt-10 max-w-6xl px-5 sm:px-8">
+    <div class="rounded-soft border border-line bg-sand/50 px-5 py-4 text-sm leading-relaxed text-inksoft">
+      <strong class="text-ink">Heads up:</strong> some links below are affiliate
+      links — if you buy through them we may earn a commission, at no extra cost
+      to you. It never changes what we recommend or what we say about it. Prices
+      drift; check the current price at the link. <a href={href('/disclosure')} class="text-claydeep">Full disclosure →</a>
+    </div>
+  </section>
+
+  <!-- Anchor comparison -->
+  {
+    deskChairs.length > 0 && (
+      <section class="mx-auto mt-16 max-w-6xl px-5 sm:px-8">
+        <h2 class="display-3 font-display text-ink">The cross-legged desk chair, three ways</h2>
+        <p class="mt-3 max-w-2xl text-inksoft">
+          The premium original, the value challenger, and a budget on-ramp. One
+          practical warning for all of them: tucking your legs up raises your
+          knees, so you may need to raise your desk a couple of inches.
+        </p>
+        <div class="mt-6">
+          <ComparisonTable products={deskChairs} caption="Cross-legged desk chairs, compared" />
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Category sections -->
+  {
+    categories.map((cat) => {
+      const items = byCategory(cat.key);
+      if (items.length === 0) return null;
+      return (
+        <section class="mx-auto mt-20 max-w-6xl px-5 sm:px-8">
+          <div class="max-w-2xl">
+            <h2 class="font-display text-2xl text-ink">{cat.title}</h2>
+            <p class="mt-2 text-inksoft">{cat.blurb}</p>
+          </div>
+          <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {items.map((p) => (
+              <ProductCard product={p.data} />
+            ))}
+          </div>
+        </section>
+      );
+    })
+  }
+
+  <section class="mx-auto mt-20 max-w-6xl px-5 sm:px-8">
+    <p class="text-sm text-inkmuted">
+      Nothing here is sponsored placement. Affiliate relationships, where they
+      exist, are disclosed on the <a href={href('/disclosure')} class="text-claydeep">disclosure page</a>.
+    </p>
+  </section>
+</BaseLayout>

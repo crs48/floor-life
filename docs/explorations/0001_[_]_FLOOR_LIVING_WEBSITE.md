@@ -440,27 +440,27 @@ export function href(path = '/') {
       `AffiliateLink` (emits `rel="sponsored nofollow"`), `Newsletter` CTA
 - [x] Home page (`/`): hero, "the case", the **SRT self-test** interactive
       island, the four pillars, featured Journal, gentle CTA
-- [ ] Why page (`/why`): the science told honestly — SRT stats, mobility,
+- [x] Why page (`/why`): the science told honestly — SRT stats, mobility,
       digestion, the knee caveat, myths-vs-evidence, cited sources
-- [ ] Start page (`/start`): building the habit + the positions gallery
+- [x] Start page (`/start`): building the habit + the positions gallery
       rendered from the `positions` collection, with cues & cautions
-- [ ] Positions detail route (`/positions/[slug]`) generated from data
-- [ ] Spaces page (`/spaces`): architecting & retrofitting Western rooms
+- [x] Positions detail route (`/positions/[slug]`) generated from data
+- [x] Spaces page (`/spaces`): architecting & retrofitting Western rooms
       (one-corner on-ramp, room-by-room, the cross-legged-desk retrofit)
-- [ ] Gear index (`/gear`): categories, `ProductCard`s + a
+- [x] Gear index (`/gear`): categories, `ProductCard`s + a
       `ComparisonTable` (anchored by the Soul Seat), disclosure banner
-- [ ] Disclosure page (`/disclosure`): affiliate + FTC + not-medical-advice
-- [ ] Journal index (`/journal`) + article route (`/journal/[slug]`) using
+- [x] Disclosure page (`/disclosure`): affiliate + FTC + not-medical-advice
+- [x] Journal index (`/journal`) + article route (`/journal/[slug]`) using
       the `Prose` layout, with at least 3 real MD/MDX entries (incl. one
       gear guide and one "myths vs evidence" piece)
-- [ ] About page (`/about`) and a styled 404 page
-- [ ] Feeds & SEO: `rss.xml` endpoint, `robots.txt`, `sitemap` integration
+- [x] About page (`/about`) and a styled 404 page
+- [x] Feeds & SEO: `rss.xml` endpoint, `robots.txt`, `sitemap` integration
       wired, social/OG image
-- [ ] Seed real content: `positions.json` (≥5 positions), `products.json`
+- [x] Seed real content: `positions.json` (≥5 positions), `products.json`
       (≥4 products incl. Soul Seat), and the Journal entries above
-- [ ] GitHub Actions deploy workflow (`.github/workflows/deploy.yml`)
+- [x] GitHub Actions deploy workflow (`.github/workflows/deploy.yml`)
       using `withastro/action`
-- [ ] Project `README.md` (dev/build/deploy, base-path & custom-domain
+- [x] Project `README.md` (dev/build/deploy, base-path & custom-domain
       notes) and license
 
 ## Validation Checklist

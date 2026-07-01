@@ -1,0 +1,114 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Callout from '../../components/Callout.astro';
+import Icon from '../../components/Icon.astro';
+import { href } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const positions = await getCollection('positions');
+  const sorted = positions.sort((a, b) => a.data.order - b.data.order);
+  return sorted.map((entry, i) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      prev: sorted[(i - 1 + sorted.length) % sorted.length],
+      next: sorted[(i + 1) % sorted.length],
+    },
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+const p = entry.data;
+
+const pill = {
+  gentle: 'bg-sage/15 text-sagedeep',
+  moderate: 'bg-straw/40 text-claydeep',
+  advanced: 'bg-clay/15 text-claydeep',
+}[p.difficulty];
+---
+
+<BaseLayout
+  title={p.name}
+  description={p.summary}
+  type="article"
+>
+  <article class="mx-auto max-w-3xl px-5 pt-16 sm:px-8 sm:pt-24">
+    <a href={href('/start')} class="text-sm text-inkmuted no-underline hover:text-claydeep">← All positions</a>
+
+    <header class="mt-6">
+      <div class="flex items-center gap-3">
+        <span class:list={['rounded-pill px-2.5 py-1 text-[0.68rem] font-semibold uppercase tracking-wider', pill]}>
+          {p.difficulty}
+        </span>
+        {p.otherName && <span class="text-sm italic text-inkmuted">{p.otherName}</span>}
+      </div>
+      <h1 class="display-1 mt-4 font-display text-ink">{p.name}</h1>
+      <p class="mt-5 text-xl leading-relaxed text-inksoft">{p.summary}</p>
+    </header>
+
+    <div class="mt-12 space-y-10">
+      <section>
+        <h2 class="flex items-center gap-2 font-display text-xl text-ink">
+          <Icon name="mobility" size={20} class="text-sagedeep" /> What it asks of you
+        </h2>
+        <ul class="mt-3 space-y-2">
+          {p.demands.map((d) => (
+            <li class="flex gap-3 text-inksoft">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-straw" aria-hidden="true" />
+              {d}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="flex items-center gap-2 font-display text-xl text-ink">
+          <Icon name="compass" size={20} class="text-sagedeep" /> How to sit it well
+        </h2>
+        <ol class="mt-3 space-y-3">
+          {p.cues.map((c, i) => (
+            <li class="flex gap-3 text-inksoft">
+              <span class="font-display text-lg leading-none text-clay">{i + 1}</span>
+              <span>{c}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <Callout variant="caution" title="Mind these">
+        <ul class="space-y-2">
+          {p.cautions.map((c) => <li>{c}</li>)}
+        </ul>
+      </Callout>
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        <section class="rounded-soft border border-line bg-paper/60 p-5">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-inkmuted">Good for</h2>
+          <ul class="mt-3 flex flex-wrap gap-2">
+            {p.goodFor.map((g) => (
+              <li class="rounded-pill bg-sage/12 px-3 py-1 text-sm text-sagedeep">{g}</li>
+            ))}
+          </ul>
+        </section>
+        {
+          p.props.length > 0 && (
+            <section class="rounded-soft border border-line bg-paper/60 p-5">
+              <h2 class="text-sm font-semibold uppercase tracking-wider text-inkmuted">Props that help</h2>
+              <ul class="mt-3 flex flex-wrap gap-2">
+                {p.props.map((pr) => (
+                  <li class="rounded-pill bg-straw/30 px-3 py-1 text-sm text-claydeep">{pr}</li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+      </div>
+    </div>
+
+    <nav class="mt-16 flex items-center justify-between gap-4 border-t border-line pt-6 text-sm">
+      <a href={href(`/positions/${prev.id}`)} class="text-inksoft no-underline hover:text-claydeep">← {prev.data.name}</a>
+      <a href={href(`/positions/${next.id}`)} class="text-inksoft no-underline hover:text-claydeep">{next.data.name} →</a>
+    </nav>
+  </article>
+</BaseLayout>
