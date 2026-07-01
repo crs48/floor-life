@@ -465,21 +465,21 @@ export function href(path = '/') {
 
 ## Validation Checklist
 
-- [ ] `npm install` completes cleanly and `npm run build` exits 0
-- [ ] `dist/` contains all expected routes (home, why, start, spaces,
+- [x] `npm install` completes cleanly and `npm run build` exits 0
+- [x] `dist/` contains all expected routes (home, why, start, spaces,
       gear, disclosure, journal + entries, positions + entries, about,
       404, rss.xml, sitemap, robots.txt)
-- [ ] No internal link/asset 404s under the `/floor-life` base — every
+- [x] No internal link/asset 404s under the `/floor-life` base — every
       internal link goes through `href()`; assets use `<Image>`/imports
-- [ ] `astro build` emits no unresolved-image or schema errors; Zod
+- [x] `astro build` emits no unresolved-image or schema errors; Zod
       schemas validate the seeded JSON data
-- [ ] Pages carry correct `<title>`, meta description, canonical, and OG
+- [x] Pages carry correct `<title>`, meta description, canonical, and OG
       tags; sitemap and RSS reference absolute URLs via `site`
-- [ ] `preview` server renders the site; SRT interactive works; mobile nav
+- [x] `preview` server renders the site; SRT interactive works; mobile nav
       opens; layout holds at mobile/tablet/desktop widths
-- [ ] Every affiliate link renders `rel="sponsored nofollow"` and the FTC
+- [x] Every affiliate link renders `rel="sponsored nofollow"` and the FTC
       disclosure is visible above the links
-- [ ] Deploy workflow is valid YAML with the correct `pages`/`id-token`
+- [x] Deploy workflow is valid YAML with the correct `pages`/`id-token`
       permissions and triggers on push to `main`
 
 ## References
