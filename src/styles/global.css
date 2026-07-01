@@ -38,6 +38,25 @@
   --radius-pill: 999px;
 }
 
+/* Warm dark theme — re-derive the tokens; every utility that reads a
+   var(--color-*) flips automatically. Higher specificity than :root. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-paper: #201c17;
+  --color-sand: #2a2620;
+  --color-claypaper: #322a21;
+  --color-ink: #f3ecdd;
+  --color-inksoft: #d8cfbf;
+  --color-inkmuted: #a49a88;
+  --color-clay: #cf8760;
+  --color-claydeep: #e3aa80;
+  --color-sage: #97a184;
+  --color-sagedeep: #b2bc9b;
+  --color-straw: #b59a68;
+  --color-line: color-mix(in oklab, #f3ecdd 15%, transparent);
+  --color-linesoft: color-mix(in oklab, #f3ecdd 8%, transparent);
+}
+
 @layer base {
   :root {
     color-scheme: light;
@@ -45,6 +64,9 @@
     /* generous editorial reading measure */
     --measure: 68ch;
   }
+
+  /* In dark mode the faint grain reads better a touch stronger. */
+  :root[data-theme="dark"] body::before { opacity: 0.05; }
 
   @media (prefers-reduced-motion: reduce) {
     :root { scroll-behavior: auto; }

@@ -21,6 +21,21 @@ const { title, description, image, type } = Astro.props;
 <!doctype html>
 <html lang={site.locale}>
   <head>
+    <script is:inline>
+      // Set the theme before first paint to avoid a flash of the wrong one.
+      (function () {
+        function apply() {
+          var t = localStorage.getItem('theme');
+          if (!t) {
+            t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.dataset.theme = t;
+        }
+        apply();
+        // Re-apply after view-transition swaps (ClientRouter replaces the DOM).
+        document.addEventListener('astro:after-swap', apply);
+      })();
+    </script>
     <BaseHead title={title} description={description} image={image} type={type} />
   </head>
   <body class="min-h-screen">

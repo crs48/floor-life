@@ -351,7 +351,7 @@ Make an inline island survive view transitions:
 - [ ] Journal: add **related reading** (same category/tags) and a
       per-article **Sources** block + **last reviewed** date (frontmatter
       `updatedDate` / `sources`), and backfill the 4 existing articles
-- [ ] Add a warm **dark mode**: `[data-theme=dark]` token overrides in
+- [x] Add a warm **dark mode**: `[data-theme=dark]` token overrides in
       `global.css`, a no-flash inline head script, and a header toggle
       that persists to `localStorage`
 - [ ] Add a print-friendly **"Start here" cheat sheet** (print CSS on
