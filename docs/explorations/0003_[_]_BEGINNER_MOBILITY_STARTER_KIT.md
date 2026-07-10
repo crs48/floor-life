@@ -372,20 +372,20 @@ sources:
 - [x] Add ~6 mobility products to `src/data/products.json` (kettlebell,
       lacrosse ball, Indian clubs, steel mace, budget + premium barefoot
       shoes) with honest pros/cons and tier spread
-- [ ] Write `src/content/journal/mobility-starter-kit.md` using the tier
+- [x] Write `src/content/journal/mobility-starter-kit.md` using the tier
       ladder: $0 drills → ball → bell-or-shoes → clubs/mace, each tier ending
       with a "do this today" action
-- [ ] Include safety callouts: kettlebell form-before-load, unloaded get-up
+- [x] Include safety callouts: kettlebell form-before-load, unloaded get-up
       progression, mace-requires-baseline-ROM, barefoot transition protocol,
       don't-roll-the-IT-band
-- [ ] Fill `sources` frontmatter with the key citations (Konrad 2022,
+- [x] Fill `sources` frontmatter with the key citations (Konrad 2022,
       Wiewelhove 2019, Sci Reports 2021, Ridge 2013, PubMed 35878616,
       Hewes 1955)
 - [x] Add resource entries to `src/data/resources.json`: Simple & Sinister
       (`reading`), Mark Wildman kettlebell/mace playlists (`watch`), GMB
       hanging guide (`reading`), 2–3 studies (`research`)
-- [ ] Cross-link the post ↔ deep-squat / kneeling position pages
-- [ ] Verify featured-post behavior on `index.astro` before setting
+- [x] Cross-link the post ↔ deep-squat / kneeling position pages
+- [x] Verify featured-post behavior on `index.astro` before setting
       `featured: true`
 - [x] Check Vivobarefoot/Xero affiliate programs; otherwise plain links per
       existing convention
