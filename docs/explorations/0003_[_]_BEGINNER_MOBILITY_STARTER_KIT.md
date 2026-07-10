@@ -381,7 +381,7 @@ sources:
 - [ ] Fill `sources` frontmatter with the key citations (Konrad 2022,
       Wiewelhove 2019, Sci Reports 2021, Ridge 2013, PubMed 35878616,
       Hewes 1955)
-- [ ] Add resource entries to `src/data/resources.json`: Simple & Sinister
+- [x] Add resource entries to `src/data/resources.json`: Simple & Sinister
       (`reading`), Mark Wildman kettlebell/mace playlists (`watch`), GMB
       hanging guide (`reading`), 2–3 studies (`research`)
 - [ ] Cross-link the post ↔ deep-squat / kneeling position pages

@@ -237,6 +237,16 @@
     "detail": "Video",
     "order": 12
   },
+  {
+    "id": "yt-markwildman",
+    "title": "Mark Wildman",
+    "url": "https://www.youtube.com/@MarkWildman",
+    "kind": "watch",
+    "source": "YouTube · channel",
+    "note": "The clearest free progressions for kettlebell get-ups, Indian clubs, and steel mace — start here before you swing anything.",
+    "detail": "Kettlebell · clubs · mace",
+    "order": 13
+  },
 
   {
     "id": "rd-bluezones",
@@ -391,6 +401,24 @@
     "note": "The most practical 'how to actually ease into it' resource there is.",
     "order": 17
   },
+  {
+    "id": "rd-simple-sinister",
+    "title": "Kettlebell Simple & Sinister",
+    "url": "https://www.strongfirst.com/shop/books/simple-sinister-book/",
+    "kind": "reading",
+    "source": "Pavel Tsatsouline · StrongFirst",
+    "note": "The minimalist kettlebell program: one bell, two movements — and one of them starts lying on the floor.",
+    "order": 18
+  },
+  {
+    "id": "rd-gmb-hanging",
+    "title": "Hanging: the forgotten shoulder exercise",
+    "url": "https://gmb.io/hanging/",
+    "kind": "reading",
+    "source": "GMB Fitness",
+    "note": "A patient, free progression for dead hangs — the zero-equipment antidote to desk shoulders.",
+    "order": 19
+  },
 
   {
     "id": "sci-srt-2012",
@@ -411,5 +439,35 @@
     "note": "The larger, longer follow-up — 4,282 adults, ~12-yr follow-up, cause-specific mortality.",
     "detail": "Eur J Prev Cardiol · 2025 · doi:10.1093/eurjpc/zwaf325",
     "order": 2
+  },
+  {
+    "id": "sci-hewes-1955",
+    "title": "World distribution of certain postural habits",
+    "url": "https://doi.org/10.1525/aa.1955.57.2.02a00040",
+    "kind": "research",
+    "source": "Hewes",
+    "note": "The classic anthropology survey: roughly a quarter of humanity rests in a flat-foot deep squat. Chairs are the anomaly.",
+    "detail": "American Anthropologist · 1955 · 57(2):231–244",
+    "order": 3
+  },
+  {
+    "id": "sci-konrad-2022",
+    "title": "Foam rolling training effects on range of motion: a systematic review and meta-analysis",
+    "url": "https://link.springer.com/article/10.1007/s40279-022-01699-8",
+    "kind": "research",
+    "source": "Konrad et al.",
+    "note": "The best summary of what ball-and-roller work actually does: real but modest range-of-motion gains, on par with stretching.",
+    "detail": "Sports Medicine · 2022 · 52:2523–2535",
+    "order": 4
+  },
+  {
+    "id": "sci-ridge-2013",
+    "title": "Foot bone marrow edema after a 10-week transition to minimalist running shoes",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23439417/",
+    "kind": "research",
+    "source": "Ridge et al.",
+    "note": "Why every barefoot-shoe transition guide says go slow: over half of runners who switched fast showed bone stress on MRI.",
+    "detail": "Med Sci Sports Exerc · 2013 · PMID 23439417",
+    "order": 5
   }
 ]
