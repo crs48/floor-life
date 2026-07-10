@@ -50,6 +50,7 @@ const products = defineCollection({
       'sleeping',
       'flooring',
       'props',
+      'mobility',
     ]),
     price: z.string(),
     priceNote: z.string().optional(),

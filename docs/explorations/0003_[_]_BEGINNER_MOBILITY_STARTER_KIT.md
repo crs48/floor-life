@@ -367,9 +367,9 @@ sources:
 
 ## Implementation Checklist
 
-- [ ] Add `'mobility'` to products `category` enum in `src/content.config.ts`
-- [ ] Add `mobility` section (key/title/blurb) to `src/pages/gear.astro`
-- [ ] Add ~6 mobility products to `src/data/products.json` (kettlebell,
+- [x] Add `'mobility'` to products `category` enum in `src/content.config.ts`
+- [x] Add `mobility` section (key/title/blurb) to `src/pages/gear.astro`
+- [x] Add ~6 mobility products to `src/data/products.json` (kettlebell,
       lacrosse ball, Indian clubs, steel mace, budget + premium barefoot
       shoes) with honest pros/cons and tier spread
 - [ ] Write `src/content/journal/mobility-starter-kit.md` using the tier
@@ -387,7 +387,7 @@ sources:
 - [ ] Cross-link the post ↔ deep-squat / kneeling position pages
 - [ ] Verify featured-post behavior on `index.astro` before setting
       `featured: true`
-- [ ] Check Vivobarefoot/Xero affiliate programs; otherwise plain links per
+- [x] Check Vivobarefoot/Xero affiliate programs; otherwise plain links per
       existing convention
 
 ## Validation Checklist

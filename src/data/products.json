@@ -224,5 +224,147 @@
     "bestFor": "Building the ankle range that makes getting down to (and up from) the floor easy.",
     "verdict": "The quiet MVP. Better squats mean more time on the floor with less complaint.",
     "featured": false
+  },
+  {
+    "id": "lacrosse-balls",
+    "name": "Lacrosse Balls (set)",
+    "brand": "Rogue",
+    "category": "mobility",
+    "price": "$5–$12",
+    "priceNote": "A tennis ball you already own is the free, softer starter.",
+    "affiliateUrl": "https://www.roguefitness.com/rogue-lacrosse-balls",
+    "retailer": "Rogue / any sporting goods store",
+    "tier": "budget",
+    "rating": 4.8,
+    "pros": [
+      "Feet, glutes, and upper back — the three desk-worker hot spots — for pocket change",
+      "Firm enough to actually reach deep hip rotators where a foam roller can't",
+      "Fits in a laptop bag; works against any wall or floor"
+    ],
+    "cons": [
+      "The relief is neurological and temporary — a door-opener for movement, not a repair",
+      "Easy to overdo; tender the next day if you grind instead of breathe"
+    ],
+    "bestFor": "The first dollar anyone should spend on mobility. Start with the soles of your feet.",
+    "verdict": "The cheapest useful object in fitness. Buy two and lose one under the couch.",
+    "featured": false
+  },
+  {
+    "id": "yes4all-kettlebell",
+    "name": "Powder-Coated Kettlebell",
+    "brand": "Yes4All",
+    "category": "mobility",
+    "price": "$30–$60",
+    "priceNote": "Buy by the kilo: 8 kg to learn the drills, 12–16 kg to grow into.",
+    "affiliateUrl": "https://www.walmart.com/ip/Yes4All-8kg-18lb-Powder-Coated-Kettlebell-Single/287969962",
+    "retailer": "Walmart / Amazon",
+    "tier": "budget",
+    "rating": 4.7,
+    "pros": [
+      "One bell covers halos, prying squats, arm bars, windmills, and get-ups for months",
+      "Powder coat grips well without chalk; flat base won't roll away",
+      "Probably the best cost-per-decade in home fitness"
+    ],
+    "cons": [
+      "The swing and the get-up have a real learning curve — learn both unloaded first",
+      "Cast iron and a bare floor need a mat between them"
+    ],
+    "bestFor": "Desk workers whose hips and shoulders are the rusty parts.",
+    "verdict": "The single best ~$50 in home fitness. Start lighter than your ego suggests.",
+    "featured": false
+  },
+  {
+    "id": "whitin-barefoot",
+    "name": "Barefoot Sneaker (wide toe box)",
+    "brand": "Whitin",
+    "category": "mobility",
+    "price": "$40–$50",
+    "priceNote": "Sold via Amazon; the budget way to test whether barefoot shoes suit you.",
+    "affiliateUrl": "https://whitinshoes.com",
+    "retailer": "Whitin / Amazon",
+    "tier": "budget",
+    "rating": 4.3,
+    "pros": [
+      "Wide toe box and zero drop at a third of the big-brand price",
+      "Roomy enough for toes to actually splay",
+      "Low-stakes entry: if barefoot isn't for you, you're out $45, not $160"
+    ],
+    "cons": [
+      "Durability and refinement lag the premium brands",
+      "Transition slowly regardless of price — your feet don't know what the shoes cost"
+    ],
+    "bestFor": "Trying the wide-toe-box life without a premium-brand commitment.",
+    "verdict": "The gateway shoe. If your feet wake up happy after a month, upgrade later.",
+    "featured": false
+  },
+  {
+    "id": "xero-prio",
+    "name": "Prio Barefoot Shoe",
+    "brand": "Xero Shoes",
+    "category": "mobility",
+    "price": "$90–$110",
+    "priceNote": "Sold direct and via Amazon; no affiliate relationship — linked for reference.",
+    "affiliateUrl": "https://xeroshoes.com/shop/shoes/prio-men/",
+    "retailer": "Xero Shoes",
+    "tier": "premium",
+    "rating": 4.5,
+    "pros": [
+      "Wide toe box, zero drop, thin flexible sole — the full barefoot recipe, well made",
+      "5,000-mile sole warranty; a forgiving fit for first-timers",
+      "Everyday-normal looks; nobody will ask about your toe shoes"
+    ],
+    "cons": [
+      "Several times the price of the budget option for the same geometry",
+      "Minimal cushioning is the point — but it's a shock if you skip the slow transition"
+    ],
+    "bestFor": "Committing to barefoot shoes as your daily driver once the trial month goes well.",
+    "verdict": "The sensible premium pick — durable, normal-looking, honestly barefoot.",
+    "featured": false
+  },
+  {
+    "id": "maverick-indian-clubs",
+    "name": "Wooden Indian Clubs (pair, 1–2 lb)",
+    "brand": "Maverick Mace",
+    "category": "mobility",
+    "price": "$40–$70",
+    "priceNote": "Sold direct; no affiliate program — linked for reference.",
+    "affiliateUrl": "https://www.maverickmace.com/product/indian-clubs/",
+    "retailer": "Maverick Mace",
+    "tier": "mid",
+    "pros": [
+      "Circular swings take the shoulders through ranges no dumbbell visits",
+      "So light (1–2 lb) that daily practice is recovery, not training",
+      "A 2,000-year-old tool that doubles as the nicest object in the room"
+    ],
+    "cons": [
+      "Real technique to learn — budget a few sessions of following videos",
+      "Ceiling fans and clubs are natural enemies"
+    ],
+    "bestFor": "Desk-rounded shoulders that want gentle, rhythmic, daily unwinding.",
+    "verdict": "The most pleasant mobility habit we know. Start with the lightest pair.",
+    "featured": false
+  },
+  {
+    "id": "yes4all-steel-mace",
+    "name": "Steel Mace (10 lb)",
+    "brand": "Yes4All",
+    "category": "mobility",
+    "price": "$30–$45",
+    "priceNote": "Women often start at 7 lb, men at 10 lb — the long lever makes it feel far heavier.",
+    "affiliateUrl": "https://www.walmart.com/ip/Yes4All-10lb-Steel-Mace-Bell-Single/973830740",
+    "retailer": "Walmart / Amazon",
+    "tier": "mid",
+    "pros": [
+      "The offset load makes 10 lb train shoulders, grip, and core like far more",
+      "360s and 10-to-2s build shoulder control through full circles",
+      "Nearly indestructible; one purchase, done"
+    ],
+    "cons": [
+      "Requires baseline shoulder mobility you may not have yet — it reinforces range, it doesn't grant it",
+      "Easiest tool on this list to swing badly; learn the halo first"
+    ],
+    "bestFor": "Graduating from clubs and kettlebell halos to bigger circles.",
+    "verdict": "The reward tier, not the entry point. Earn it with the basics, then have fun.",
+    "featured": false
   }
 ]
