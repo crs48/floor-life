@@ -15,6 +15,7 @@ const categories = [
   { key: 'sleeping', title: 'Floor sleeping', blurb: 'Roll-up bedding that hands the room back to you each morning.' },
   { key: 'flooring', title: 'Underfoot', blurb: 'A firm, warm base is the foundation everything else sits on.' },
   { key: 'props', title: 'Mobility props', blurb: 'Small things that unlock deep positions and easier get-ups.' },
+  { key: 'mobility', title: 'Mobility tools', blurb: 'One ball, one bell, maybe a weird ancient club — cheap tools that buy back the range your chair took.' },
 ] as const;
 
 const byCategory = (key: string) => products.filter((p) => p.data.category === key);
