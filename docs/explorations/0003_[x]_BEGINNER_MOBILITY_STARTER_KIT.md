@@ -392,16 +392,16 @@ sources:
 
 ## Validation Checklist
 
-- [ ] `npm run build` passes (content schema validates, including the new
+- [x] `npm run build` passes (content schema validates, including the new
       enum value and post frontmatter)
-- [ ] `/gear` renders the new "Mobility tools" section with product cards and
+- [x] `/gear` renders the new "Mobility tools" section with product cards and
       the FTC disclosure still above all links
-- [ ] `/journal` lists the post with correct category badge, tags, and
+- [x] `/journal` lists the post with correct category badge, tags, and
       reading time; post page renders callouts and sources block
-- [ ] Post appears in RSS (`/rss.xml`) and site search
-- [ ] `/resources` shows the new entries under the right kinds
-- [ ] All external URLs resolve (retailer links, study links)
-- [ ] Read-through check: every purchase tier is preceded by a free
+- [x] Post appears in RSS (`/rss.xml`) and site search
+- [x] `/resources` shows the new entries under the right kinds
+- [x] All external URLs resolve (retailer links, study links)
+- [x] Read-through check: every purchase tier is preceded by a free
       alternative, and every strong claim carries its caveat
 
 ## References
