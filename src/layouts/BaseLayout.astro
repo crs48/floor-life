@@ -26,7 +26,8 @@ const { title, description, image, type } = Astro.props;
       // Set the theme before first paint to avoid a flash of the wrong one.
       (function () {
         function apply() {
-          var t = localStorage.getItem('theme');
+          var t;
+          try { t = localStorage.getItem('theme'); } catch (_) { /* Theme still works without storage. */ }
           if (!t) {
             t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
           }

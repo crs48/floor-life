@@ -1,45 +1,61 @@
 ---
-title: "What floor living can't do"
-description: "The honest counter-column: the popular claims that outrun the evidence — fascia 'release', core strengthening, posture cures — and why we're better off without them."
+title: "The floor has declined your miracle request"
+description: "Posture cures, fascia claims, and instant core strength: a friendly reality check for a surface we still like very much."
 pubDate: 2026-06-25
-updatedDate: 2026-06-27
+updatedDate: 2026-10-10
 category: science
 tags: ["myths", "evidence", "honesty"]
-readingMinutes: 6
+readingMinutes: 4
 featured: true
 sources:
-  - label: "Chaudhry et al., 2008 — Three-dimensional mathematical model for deformation of human fasciae (JAOA)"
-    url: "https://pubmed.ncbi.nlm.nih.gov/18723456/"
-  - label: "Wilke et al., 1999 — New in vivo measurements of pressures in the intervertebral disc (Spine)"
-    url: "https://pubmed.ncbi.nlm.nih.gov/10222525/"
-  - label: "Swain et al., 2020 — No consensus on causality of spine postures or physical exposure and low back pain (J Biomech)"
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S002192901930524X"
-  - label: "Schoenfeld, 2013 — Is there a minimum intensity threshold for resistance training-induced hypertrophy?"
-    url: "https://pubmed.ncbi.nlm.nih.gov/23955603/"
+  - label: "Raichlen et al., 2020 — Resting postures and muscle activity"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7132251/"
+  - label: "Swain et al., 2020 — Review of posture and low-back-pain reviews"
+    url: "https://pubmed.ncbi.nlm.nih.gov/31451200/"
+  - label: "Konrad et al., 2022 — Foam rolling and range of motion"
+    url: "https://link.springer.com/article/10.1007/s40279-022-01699-8"
+  - label: "WHO, 2020 — Physical activity and sedentary behaviour guidelines"
+    url: "https://www.who.int/publications/i/item/9789240015128"
 ---
 
-Wellness writing loves floor living a little too much. Search around and you'll be told that sitting on the ground releases your fascia, strengthens your core, fixes your posture, and cures your back pain. It's an appealing pile of claims. Most of it doesn't hold up — and saying so is the only way to be trusted about the parts that do.
+We have asked a great deal of the humble floor. It already holds the furniture, catches dropped toast, and provides a stage for every missing sock. Now it is supposed to fix our posture and extend our lives, too.
 
-## "It releases your fascia"
+It is possible to enjoy floor living without giving it a job it has not been shown to do. Here are four places to lower the volume.
 
-There is no research on floor sitting and fascia at all. None. The claim is borrowed wholesale from the foam-rolling literature, which is itself thin — rolling produces a brief, neurologically-mediated bump in range of motion, not a structural change in tissue. And a well-known 2008 model found that dense fascia needs forces far beyond anything your body weight applies to deform even slightly. Resting on the floor isn't doing that. The pleasant "release" you feel is your nervous system relaxing, not connective tissue melting.
+## “It releases your fascia”
 
-## "It strengthens your core"
+“Release” can describe a pleasant feeling. It does not, by itself, identify what changed in a tissue. If you feel better after changing position, you do not need a theory about fascia to appreciate it.
 
-Sitting without a backrest does raise the low-level activity of your trunk muscles — that part is real and measurable. But activation isn't training. Muscles grow stronger from load taken near failure, and quiet postural tone never comes close. You can sit tall all day and it will not build a stronger core, any more than standing in line builds bigger legs.
+Foam rolling is a different activity from sitting on a rug. A review found range-of-motion improvements with repeated rolling, but the mechanisms remain uncertain and the available studies have limitations. It does not demonstrate that floor sitting breaks adhesions or remodels connective tissue. [Konrad et al., 2022](https://link.springer.com/article/10.1007/s40279-022-01699-8).
 
-## "It fixes your posture and your back pain"
+Our wording matters here. “I feel less stiff” is an observation. “My fascia has been released” is a claim about a mechanism. Those are different kinds of sentence.
 
-This is the big one, and the evidence is genuinely humbling. A systematic review *of* systematic reviews found no consensus that any sitting posture causes back pain. In the best in-vivo study of disc pressure, the *slumped* posture — the one we're all told to avoid — produced the **lowest** pressure of all. The tidy story where "good posture" prevents pain and "bad posture" causes it simply isn't supported.
+## “It turns sitting into strength training”
 
-> Being honest about what the floor doesn't do is how we earn the right to tell you what it does.
+Some positions ask more of muscles than others. In the Hadza study, squatting increased activity in measured lower-leg muscles compared with chair sitting; the measured ground-sitting positions did not show the same change. That is a useful distinction, not a long-term strength trial. [Raichlen et al., 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7132251/).
 
-## So what's left?
+Muscle activation, strength gains, and health outcomes are different measurements. We should not move between them as if they were interchangeable. We also should not claim that all strengthening requires training to failure; useful exercise can be adapted in many ways.
 
-Quite a lot, actually — just not the miracle version.
+Keep activities that challenge your muscles in your routine when possible. The [WHO guidelines](https://www.who.int/publications/i/item/9789240015128) recommend strengthening alongside aerobic activity. A cushion is a lovely accessory, but it is not a whole exercise programme.
 
-- **Getting up and down, often.** The real, defensible benefit. A room without chairs makes you rise from the floor dozens of times a day, and those unscheduled squats are movement that counts.
-- **Keeping your range.** Floor positions ask for hip and ankle motion that chairs let you lose. That's use-it-or-lose-it, and it's worth a lot as you age.
-- **A calmer, more spacious room.** Clearing the floor makes small spaces breathe. That's an aesthetic and a psychological win, and it needs no science to justify.
+## “It fixes posture and back pain”
 
-The honest headline isn't "sit on the floor and transform your body." It's quieter and more durable: **move more, in more ways, closer to the ground.** That one, we can stand behind.
+The tidy story is that chairs put the spine in a bad shape and the floor returns it to a good one. Bodies are less tidy, and the evidence deserves more care.
+
+An umbrella review found no consensus that specific spinal postures or physical exposures cause low back pain. This does not mean that changing position cannot help a particular person, or that someone's pain is imaginary. It means a universal posture cure is too confident. [Swain et al., 2020](https://pubmed.ncbi.nlm.nih.gov/31451200/).
+
+A measurement of disc pressure is not a measure of future pain, either. Ranking postures by a small laboratory measurement does not establish which posture every person should use all day.
+
+Try a support or position change for comfort. If pain persists, interferes with life, or comes with new weakness or sensory changes, seek an individual assessment.
+
+## “Natural means necessary”
+
+People have long cooked, rested, worked, and gathered close to the ground. Those traditions deserve respect as living cultures, not as shortcuts to a universal wellness rule.
+
+A person may prefer a wheelchair, raised bed, supportive chair, or high work surface for very good reasons. A room becomes more welcoming when it offers options, not when it asks everyone to pass a flexibility test at the door.
+
+## What we still like about it
+
+More ways to sit. A practical movement to learn. A corner that makes an ordinary evening feel a little different. Low furniture that lets a small room do several jobs.
+
+Those are enough reasons to try something. Experiment gently, notice what works, and keep the parts you enjoy. The floor can cope with a modest job description.

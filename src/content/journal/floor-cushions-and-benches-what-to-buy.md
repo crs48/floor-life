@@ -1,34 +1,52 @@
 ---
-title: "Cushions and benches: what actually helps"
-description: "A short, opinionated buying guide to the few things that make the floor comfortable — and the fill, covers, and hinges that separate the good from the junk."
+title: "Give your floor a support staff"
+description: "Cushions, benches, backrests, and wedges: what to look for, what to skip, and how to start with things you already own."
 pubDate: 2026-06-05
-updatedDate: 2026-06-07
+updatedDate: 2026-10-10
 category: gear
 tags: ["gear", "cushions", "buying guide"]
-readingMinutes: 6
+readingMinutes: 4
 featured: false
 ---
 
-You need less than the internet wants to sell you. For most people, comfortable floor living comes down to two or three well-chosen objects. Here's what matters when you pick them.
+The floor is free. Making it feel welcoming can be almost as inexpensive. Before buying a specialist anything, try a firm cushion or folded blanket, a stable support for getting up, and a spot with decent light. The plant is optional, though it does make an excellent non-judgmental audience.
 
-## A cushion to raise your hips
+This is a guide to choosing features, not a set of lab-tested product rankings. Check current dimensions, construction, return costs, and care instructions with the seller before buying.
 
-The single most useful purchase is a firm cushion that lifts your hips above your knees. Sit on the front edge of it and your pelvis tips forward, your low back stops rounding, and cross-legged sitting suddenly becomes sustainable.
+## A cushion: height before hype
 
-Look for **buckwheat-hull fill with a zippered inner liner** — it holds its shape for years and you can pour some out to tune the height. A **removable, washable cover** is non-negotiable on something you sweat and sit on daily. Pair the round cushion (a *zafu*) with a flat mat (a *zabuton*) and your knees and ankles get a soft place to land, too. Cheap all-foam "zafu-shaped" pillows compress flat and quietly wreck your posture — skip them.
+A higher seat changes how much your hips and knees need to bend. Try the front edge of a firm cushion, then adjust the height. Support your knees separately if helpful. Your aim is comfort, not a perfectly posed pelvis.
 
-## A bench, if you love kneeling
+A **zafu** is a raised meditation cushion; a **zabuton** is the flatter pad beneath it. Buckwheat fill can be adjustable and fairly firm. Foam, cotton, and other fills feel different; none is automatically a posture villain. What matters is whether the cushion supports you without sliding or sinking more than you like.
 
-Kneeling — *seiza* — is the most restful upright floor posture there is, but it loads the ankles and knees. A **seiza bench** takes that load: you straddle it and your shins tuck underneath. The quality tells are a **curved seat** (so you need no cushion) and either **detachable legs** or **locking magnetic hinges** — plain friction hinges can fold under you mid-sit.
+Look for a washable or replaceable cover, enough height under your weight, and a base that stays put. A removable-fill design can be useful, but keep loose filling away from small children and pets. If you can, sit on a similar cushion before ordering.
 
-## Back support, if your back complains
+## A bench: for people who like kneeling
 
-The number-one reason Westerners abandon the floor is lower-back fatigue. A floor chair with a **rigid frame** — the classic is the BackJack — gives real support at ground level. The rigid frame is the whole point; soft folding "floor chairs" collapse and support nothing. Add a cushion under you, since most have thin foam.
+A kneeling bench carries some body weight while your shins rest below. Seat height, width, leg clearance, and edge pressure all matter. A curved seat is a preference, not a guarantee that you will need no padding.
 
-## The one mobility prop worth it
+Check that folding parts lock as designed and that the bench is stable on your surface. Do not use a small meditation bench as a handhold for standing unless it is designed to bear that load. Knee pain, ankle discomfort, or numbness are reasons to change position; a bench does not make kneeling obligatory.
 
-A **heel wedge or slant board** raises your heels a couple of inches, which instantly unlocks a deeper, more upright squat while your ankles slowly open up. A stack of books does the same job for free — but an adjustable board is nicer to keep by the door.
+## A backrest: support is not cheating
 
-> Firm fill, washable covers, a frame or hinge that won't fail. Get those three things right and almost any brand is fine.
+Some people enjoy an unsupported seat. Others would rather read a chapter than hold their torso up for one. A wall, a suitable floor chair, or another stable backrest can make the visit more pleasant.
 
-That's the whole shelf. A cushion set, maybe a bench, maybe a back-support seat, and a wedge. Everything else is optional — and a lot of it is just a nicer-looking version of these four.
+Check the angle, seat height, stability, and space needed to get out. If a chair folds, understand how it locks and what loads it can take. We do not assume a more expensive frame is safer without product-specific evidence.
+
+## A heel wedge: a different squat, not a cure
+
+A stable heel lift can reduce the ankle bend needed for a particular squat. It does not automatically increase your ankle range or make every deep position safe. Use a secure hand support, stay within comfortable depth, and treat the wedge as an adaptation.
+
+Choose something non-slip and designed for the load. Loose books, rolling cushions, and improvised stacks can slide just when you need them most. You can also choose a shallower squat and buy nothing.
+
+## The five-minute shopping pause
+
+Before checking out, ask:
+
+- **What problem am I solving?** Seat height, pressure, back support, or access?
+- **Can I try the change with something stable I already own?**
+- **Will it fit my body and room?** Measure the actual usable space.
+- **Can I return it after trying it?** Look at shipping and restocking terms.
+- **Can I still get up easily?** This is the feature no beautiful product photo can answer for you.
+
+Buy the smallest useful solution. Your living room does not need to become a cushion distribution centre.

@@ -4,7 +4,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BenefitCard from '../components/BenefitCard.astro';
 import PositionCard from '../components/PositionCard.astro';
 import ProductCard from '../components/ProductCard.astro';
-import SitRiseTest from '../components/SitRiseTest.astro';
+import PositionPicker from '../components/PositionPicker.astro';
+import FloorFriend from '../components/FloorFriend.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import Icon from '../components/Icon.astro';
 import Newsletter from '../components/Newsletter.astro';
@@ -27,24 +28,24 @@ const pillarIcon = { '/why': 'longevity', '/start': 'squat', '/spaces': 'home', 
 
 <BaseLayout>
   <!-- Hero -->
-  <section class="mx-auto max-w-6xl px-5 pt-14 sm:px-8 sm:pt-20">
+  <section class="home-hero mx-auto max-w-6xl px-5 pt-12 sm:px-8 sm:pt-20">
     <div class="grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr]">
       <div>
-        <p class="eyebrow mb-5">Two-thirds of the world never left the floor</p>
+        <p class="eyebrow mb-5">A field guide to living a little lower</p>
         <h1 class="display-1 font-display text-ink">
-          Live closer to the&nbsp;ground.
+          Your floor<br />misses you.<br /><em>Say hello.</em>
         </h1>
         <p class="mt-6 max-w-xl text-xl leading-relaxed text-inksoft">
-          The West built its life around chairs. Floor Life is a calm, honest
-          guide to getting back down — for the mobility, the daily getting
-          up-and-down, and rooms that breathe.
+          There’s a whole other level to your living room. A little movement,
+          a different way to sit, a very good excuse for a cushion. Let’s get
+          curious about life closer to the ground.
         </p>
         <div class="mt-8 flex flex-wrap items-center gap-3">
           <a
             href={href('/start')}
             class="rounded-pill bg-ink px-6 py-3 font-semibold text-paper no-underline transition-opacity hover:opacity-90"
           >
-            Start on the floor
+            Find your way down ↗
           </a>
           <a
             href={href('/why')}
@@ -53,51 +54,24 @@ const pillarIcon = { '/why': 'longevity', '/start': 'squat', '/spaces': 'home', 
             See the evidence
           </a>
         </div>
-        <p class="mt-6 text-sm text-inkmuted">
-          In one study, people who could rise from the floor unaided had roughly
-          <span class="text-inksoft">five to six times</span> lower mortality than
-          those who struggled. <a href={href('/why')} class="text-claydeep">The honest version →</a>
-        </p>
+        <p class="mt-6 text-sm text-inkmuted">Small visits. Plenty of support. Your sofa can stay.</p>
       </div>
 
-      <!-- Motif -->
       <div class="relative mx-auto w-full max-w-md">
-        <svg viewBox="0 0 400 380" class="h-auto w-full" role="img" aria-label="A figure sitting cross-legged on the floor beside a plant and a low table.">
-          <circle cx="300" cy="96" r="58" fill="#d7c197" fill-opacity="0.5" />
-          <line x1="40" y1="300" x2="360" y2="300" stroke="#2a2520" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" />
-          <!-- cushion -->
-          <ellipse cx="180" cy="300" rx="96" ry="20" fill="#b16844" fill-opacity="0.16" />
-          <!-- figure -->
-          <g fill="none" stroke="#59634a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M118 300c8-40 34-58 62-58s54 18 62 58" />
-            <path d="M118 300h124" stroke="#2a2520" stroke-opacity="0.25" />
-          </g>
-          <circle cx="180" cy="214" r="30" fill="#b16844" />
-          <path d="M180 244c-6 10-6 26 0 40" stroke="#8f4f2e" stroke-width="6" stroke-linecap="round" fill="none" />
-          <!-- plant -->
-          <g transform="translate(324 236)" stroke="#59634a" stroke-width="4" fill="none" stroke-linecap="round">
-            <path d="M0 64V28" />
-            <path d="M0 40C-14 34-20 22-18 8-6 12 2 24 0 40Z" fill="#7a856a" fill-opacity="0.35" />
-            <path d="M0 32C12 26 20 16 18 4 6 8 0 18 0 32Z" fill="#7a856a" fill-opacity="0.35" />
-            <rect x="-14" y="62" width="28" height="20" rx="3" fill="#b16844" fill-opacity="0.25" stroke="#8f4f2e" />
-          </g>
-          <!-- low table -->
-          <g transform="translate(40 250)" stroke="#8f4f2e" stroke-width="4" fill="none" stroke-linecap="round">
-            <rect x="0" y="0" width="60" height="10" rx="3" fill="#d7c197" fill-opacity="0.5" />
-            <path d="M6 10v18M54 10v18" />
-          </g>
-        </svg>
+        <p class="field-note text-center text-inkmuted">Fig. 01 · The welcoming committee</p>
+        <FloorFriend />
       </div>
     </div>
   </section>
 
-  <!-- The case -->
-  <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
-    <div class="rounded-soft border border-line bg-sand/50 px-6 py-12 sm:px-12">
-      <p class="mx-auto max-w-3xl text-center font-display text-2xl leading-snug text-ink sm:text-3xl">
-        You don't need to throw out the couch. You need one corner of one room
-        that invites you down — and a body that remembers how to get up.
-      </p>
+  <div class="manifesto mx-auto mt-12 max-w-6xl">
+    <span>Movement over perfection</span><span>Cushions count</span><span>Curiosity, with citations</span>
+  </div>
+
+  <section class="mx-auto mt-20 max-w-6xl px-5 sm:px-8">
+    <div class="grid gap-8 md:grid-cols-[.8fr_1.2fr] md:gap-16">
+      <div><p class="eyebrow">A lower-stakes lifestyle</p><h2 class="display-2 mt-4">The floor is<br />an invitation.</h2></div>
+      <div class="space-y-4 text-lg"><p>You don’t need a furniture bonfire or the flexibility of a house cat. Floor living can mean reading one page on a cushion, playing a game at a low table, or practising a supported trip down and back up.</p><p>It gives you more ways to move through an ordinary day. It doesn’t make chairs bad, cure a sore back, or predict how long you’ll live. Those are rather large jobs for a rug.</p><a href={href('/why')} class="field-link">The evidence, with the fine print <span aria-hidden="true">↗</span></a></div>
     </div>
   </section>
 
@@ -105,21 +79,21 @@ const pillarIcon = { '/why': 'longevity', '/start': 'squat', '/spaces': 'home', 
   <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
     <SectionHeader
       eyebrow="Why bother"
-      title="What living low actually does"
-      intro="No hype. Here is the case at its most defensible — and where we draw the honest line."
+      title="A little less autopilot"
+      intro="A few useful possibilities. None requires becoming a different person."
     />
     <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       <BenefitCard icon="swap" title="Getting up, often">
-        Every trip down to the floor and back is a squat you didn't schedule. Do
-        it dozens of times a day and the movement adds up where it counts.
+        Getting down and back up is a practical movement skill. Use a hand, a
+        stable chair, and whatever route works for your body.
       </BenefitCard>
       <BenefitCard icon="mobility" title="Range you keep">
-        Floor positions ask for hip and ankle range most chairs let you lose.
-        Use it or slowly surrender it.
+        Try different hip, knee, and ankle positions within a comfortable range.
+        There is no one shape every body needs to make.
       </BenefitCard>
-      <BenefitCard icon="longevity" title="A longevity signal">
-        The ease of rising from the floor tracks with survival in the research —
-        as a marker of fitness, honestly read, not a magic act.
+      <BenefitCard icon="longevity" title="Curiosity, not a score">
+        Notice what feels easy, awkward, or unfamiliar. A cushion and some
+        practice can be more useful than another thing to grade yourself on.
       </BenefitCard>
       <BenefitCard icon="ground" title="Rooms that breathe">
         Clear the middle of the room and the floor becomes the furniture. Small
@@ -128,10 +102,7 @@ const pillarIcon = { '/why': 'longevity', '/start': 'squat', '/spaces': 'home', 
     </div>
   </section>
 
-  <!-- SRT -->
-  <section class="mx-auto mt-24 max-w-3xl px-5 sm:px-8">
-    <SitRiseTest />
-  </section>
+  <div class="mx-auto mt-20 max-w-6xl px-5 sm:px-8"><PositionPicker /></div>
 
   <!-- Pillars -->
   <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
@@ -205,7 +176,7 @@ const pillarIcon = { '/why': 'longevity', '/start': 'squat', '/spaces': 'home', 
     featuredProducts.length > 0 && (
       <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
         <div class="flex items-end justify-between gap-4">
-          <SectionHeader eyebrow="The gear" title="A few things worth owning" intro="Compared honestly, and clearly disclosed." />
+          <SectionHeader eyebrow="The gear" title="Only if it earns its floor space" intro="Start with what you own. These are examples to investigate, not tested rankings." />
           <a href={href('/gear')} class="hidden shrink-0 text-sm font-semibold text-claydeep sm:block">All gear →</a>
         </div>
         <div class="mt-10 grid gap-5 md:grid-cols-3">
@@ -216,6 +187,15 @@ const pillarIcon = { '/why': 'longevity', '/start': 'squat', '/spaces': 'home', 
       </section>
     )
   }
+
+  <section class="floor-faq mx-auto mt-24 max-w-3xl px-5 sm:px-8">
+    <p class="eyebrow">Questions from the cushion</p>
+    <h2 class="display-2 mt-3 mb-8">Very fair questions.</h2>
+    <details><summary>Is sitting on the floor actually healthier?</summary><p>It can add variety and a reason to get up and down. The stronger evidence supports moving more and breaking up long sitting, rather than one special place to park yourself. <a href={href('/why')}>Follow the research.</a></p></details>
+    <details><summary>What if I can’t sit cross-legged?</summary><p>Then you don’t have to. Raise your seat, try your legs out front, or use a chair. Hip shape, comfort, history, and balance all matter. <a href={href('/start')}>Find a supported starting point.</a></p></details>
+    <details><summary>Do I need to buy anything?</summary><p>Probably not to try it. A stable surface and a firm cushion or folded blanket may be enough. Set up your way back up before you sit down. <a href={href('/spaces')}>Make one welcoming corner.</a></p></details>
+    <details><summary>And what about my allegedly “dead” butt?</summary><p>Our sibling field guide has a warm welcome for underemployed glutes, too. <a href="https://deadbutt.fyi/">Meet deadbutt.fyi.</a> Different topic; same enthusiasm for small, useful moves.</p></details>
+  </section>
 
   <div class="mt-24">
     <Newsletter />

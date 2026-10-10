@@ -30,13 +30,13 @@ const sections = [
     eyebrow: 'Long-form',
     title: 'Worth reading',
     intro:
-      'The essays, home tours, and journalism that make the case better than we can.',
+      'Essays, home tours, and coaching perspectives. Inspiration and opinion need a different reading lens from research.',
   },
   {
     kind: 'research',
     eyebrow: 'Go to the source',
     title: 'The research',
-    intro: 'The primary studies behind the claims — read them yourself.',
+    intro: 'Primary studies, reviews, and clinical guidance, with the type of evidence labelled. Start here for health claims.',
   },
 ];
 ---
@@ -52,20 +52,21 @@ const sections = [
   />
 
   <div class="mx-auto mt-8 max-w-6xl px-5 sm:px-8">
-    <Callout variant="note" title="A note on the gap">
-      In researching this, one thing stood out: <strong>there is no dedicated,
-      active hub for floor living.</strong> The topic lives in the margins of
-      minimalism, mobility, and Japanese-living communities. If that ever
-      changes — maybe it starts here — we'll point you to it first.
+    <Callout variant="note" title="Bring your curiosity. Keep your filter.">
+      Community stories and beautiful room tours can inspire an experiment.
+      They do not establish medical benefits. The research section labels what
+      each source can tell us; inclusion elsewhere is not endorsement of every
+      claim or product a creator promotes.
     </Callout>
   </div>
 
+  <nav class="reading-nav mx-auto mt-8 max-w-6xl px-5 sm:px-8" aria-label="Resource categories">{sections.map(section => <a href={`#${section.kind}`}>{section.title} ↓</a>)}</nav>
   {
     sections.map((section) => {
       const items = byKind(section.kind);
       if (items.length === 0) return null;
       return (
-        <section class="mx-auto mt-16 max-w-6xl px-5 sm:px-8">
+        <section id={section.kind} class="mx-auto mt-16 max-w-6xl px-5 sm:px-8">
           <div class="max-w-2xl">
             <p class="eyebrow text-sagedeep">{section.eyebrow}</p>
             <h2 class="mt-2 display-3 font-display text-ink">{section.title}</h2>

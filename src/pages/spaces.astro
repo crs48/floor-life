@@ -14,40 +14,40 @@ const rooms = [
     room: 'The living room',
     lead: 'Lower the centre of gravity.',
     body: 'You don\'t have to lose the sofa. Add a firm rug over a dense pad, a couple of floor cushions and a bolster, and a low table within arm\'s reach. A lower sofa (or none) makes the whole room feel taller and pulls life down toward the floor.',
-    tips: ['Layer: firm base, then a movable cushion only where you actually sit', 'One low table keeps you from drifting back up to chair height'],
+    tips: ['Layer: firm base, then a movable cushion only where you actually sit', 'Keep a stable chair nearby for support and a different seating option'],
   },
   {
     icon: 'book',
     room: 'The workspace',
-    lead: 'The retrofit that changes your day.',
-    body: 'This is the big one. A cross-legged desk chair — a wide, backless perch — lets you fold your legs up at a standard desk. Or go fully low with a floor desk. The honest catch: no single desk spans standing to floor height, so the real move is two stations sharing a monitor on an arm.',
-    tips: ['Sitting cross-legged raises your knees — you may need to raise the desk 2–4″', 'A monitor arm lets one screen serve both a standing and a floor station'],
+    lead: 'Make room for a change of position.',
+    body: 'Try a short task at a low table before redesigning a whole workday. A laptop alone can make it difficult to place both screen and keyboard comfortably; an external keyboard may help. Compare the actual adjustment range if you want a desk or monitor arm to serve several heights.',
+    tips: ['Measure leg clearance and keep elbows and shoulders comfortable', 'Keep a higher seat available and move between tasks when you can'],
   },
   {
     icon: 'tea',
     room: 'The dining nook',
-    lead: 'Eat where the world eats.',
-    body: 'A chabudai — a low Japanese table — turns meals into floor time, with cushions or a seiza bench around it. In cold months a kotatsu (a low table with a heater and a quilt) is the single cosiest object in floor living. Watch the voltage on imported kotatsu.',
-    tips: ['A round low table seats more people flexibly than a long one', 'Back support (a zaisu or BackJack) makes long dinners comfortable'],
+    lead: 'Dinner, at a different altitude.',
+    body: 'A chabudai — a low Japanese table — turns meals into floor time, with cushions or a seiza bench around it. In cold months a kotatsu (a low table with a heater and a quilt) is the single cosiest object in floor living. Use only heating equipment certified for your local electrical supply and follow its installation and fire-safety instructions.',
+    tips: ['A round low table seats more people flexibly than a long one', 'Offer both low seats and regular chairs so guests can choose'],
   },
   {
     icon: 'ground',
     room: 'The bedroom',
     lead: 'Roll the bed away.',
-    body: 'A shikibuton — a thin roll-up futon, ideally on a tatami platform — lets the bedroom become a living room by day. It is the original small-space trick: one room, many lives. Side sleepers want a thicker layer, and everything needs airing so it doesn\'t trap moisture.',
-    tips: ['Air and roll the bedding daily — it is also the main mould-prevention step', 'Tatami or a firm pad underneath adds warmth and airflow'],
+    body: 'A shikibuton — a thin roll-up futon, ideally on a tatami platform — lets the bedroom become a living room by day. It is the original small-space trick: one room, many lives. Choose bedding for your own pressure comfort and plan how to get up easily. Follow its care instructions and check underneath for moisture.',
+    tips: ['Follow the bedding maker’s airing schedule and check for moisture', 'Check the recommended base; a mat alone does not guarantee ventilation'],
   },
 ];
 ---
 
 <BaseLayout
   title="Set up your space"
-  description="How to make a Western home floor-friendly without going furniture-free — the one-corner on-ramp, a room-by-room retrofit, and why the floor should be firm and warm, not soft and cold."
+  description="Make one corner floor-friendly, then explore practical room ideas, comfortable supports, stable surfaces, and options for guests."
 >
   <PageHeader
-    eyebrow="Architect & retrofit"
-    title="Set up your space"
-    lede="Floor living isn't an all-or-nothing vow of furniture poverty. It's a series of small, reversible moves that make the ground the most inviting place in the room."
+    eyebrow="Interior design, minus the upheaval"
+    title="One very inviting corner."
+    lede="Your sofa has not been fired. Give the floor a small promotion: a comfortable spot, a little light, and an easy way back up. Start with the room you already have."
   />
 
   <section class="mx-auto mt-12 max-w-5xl px-5 sm:px-8">
@@ -68,16 +68,15 @@ const rooms = [
       <p class="mt-4 text-lg leading-relaxed text-inksoft">
         Don't redesign your home. Choose a single corner — by a window, near the
         books — and make it the nicest place to be low: a soft rug, one good
-        cushion, a low table, a plant, warm light. When the floor is the most
-        inviting spot in the room, you'll end up there without willpower. Grow
-        from that one corner outward.
+        cushion, a low table, a plant, warm light. Try a few short visits and see whether the spot suits you. Keep a stable
+        support for getting up within reach, and adjust the setup before buying more.
       </p>
     </div>
   </section>
 
   <!-- Rooms -->
   <section class="mx-auto mt-24 max-w-6xl px-5 sm:px-8">
-    <SectionHeader eyebrow="Room by room" title="Retrofitting the Western home" />
+    <SectionHeader eyebrow="Room by room" title="Same home. A few new possibilities." />
     <div class="mt-10 grid gap-6 md:grid-cols-2">
       {
         rooms.map((r) => (
@@ -110,27 +109,22 @@ const rooms = [
     />
     <div class="mt-8 space-y-5 text-lg leading-relaxed text-inksoft">
       <p>
-        The instinct is to make the floor plush. Resist it. Deep, squishy
-        surfaces compress under your hands and feet, so you can't push off
-        cleanly — bad for the knees, worse for the getting-up that is the whole
-        benefit. And a slumping-soft seat rolls the pelvis back into a slouch.
+        A cushion should be comfortable; a surface you push against should be
+        stable. Very soft padding can make a transfer feel less predictable.
+        Try the whole route down and back up with support before settling in.
+        Comfort is personal, and neither a hard floor nor an upright spine is a
+        health requirement.
       </p>
       <p>
-        Build in layers instead: a <strong class="text-ink">firm, warm base</strong>
-        everywhere — tatami, cork, or a dense flatweave wool rug over a good pad —
-        and add softness only where the body actually rests, with a cushion or a
-        bolster. In a cold climate, warm floors (or a heated under-rug mat) do
-        more for comfort than any amount of padding, and they let you keep the
-        firmness that keeps you mobile.
+        Build in layers if you like: a secure rug or mat, then movable padding
+        where your body rests. Keep edges flat, walking paths clear, and a
+        stable chair nearby. Choose washable materials and check for moisture
+        beneath bedding. Warmth matters too, but ordinary heating and a blanket
+        may do the job without adding electrical equipment under a rug.
       </p>
     </div>
     <div class="mt-8">
-      <Callout variant="evidence" title="The five-thing starter kit">
-        A firm base surface · an under-rug heater if your floors run cold · two
-        cork blocks and a bolster as movable seat-risers · a back-support seat for
-        a fussy lower back · a wedge or slant board to build the squat. That's a
-        whole floor-living setup. <a href={href('/gear')}>See the gear →</a>
-      </Callout>
+      <Callout variant="note" title="The start-with-what-you-own kit">A stable surface, a firm cushion or folded blanket, a secure way back up, and something pleasant to do. Add other equipment only when you can name the problem it will solve. <a href={href('/gear')}>Explore the optional extras →</a></Callout>
     </div>
   </section>
 </BaseLayout>

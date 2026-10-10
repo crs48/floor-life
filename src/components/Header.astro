@@ -3,6 +3,7 @@ import { site, nav } from '../lib/site';
 import { href, isActive } from '../lib/url';
 import ThemeToggle from './ThemeToggle.astro';
 import SearchModal from './SearchModal.astro';
+import FloorFriend from './FloorFriend.astro';
 
 const current = Astro.url.pathname;
 ---
@@ -11,9 +12,10 @@ const current = Astro.url.pathname;
   <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
     <a
       href={href('/')}
-      class="group flex items-baseline gap-2 no-underline"
+      class="group flex items-center gap-2 no-underline"
       aria-label={`${site.name} — home`}
     >
+      <span aria-hidden="true"><FloorFriend small /></span>
       <span class="font-display text-2xl font-medium tracking-tight text-ink">Floor</span>
       <span class="font-display text-2xl font-medium tracking-tight text-clay italic">Life</span>
     </a>

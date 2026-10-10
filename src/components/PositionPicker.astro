@@ -1,0 +1,48 @@
+---
+import { href } from '../lib/url';
+const choices = [
+  { id: 'new', label: 'I’m floor-curious', title: 'Meet the cushion. Keep the chair.', body: 'Try a supported cross-legged seat for a moment, with a firm cushion under your hips and a stable way back up. If it feels awkward, change the setup or return to your chair. This is an introduction, not an endurance event.', link: '/positions/cross-legged', action: 'Meet cross-legged sitting' },
+  { id: 'knees', label: 'Less knee bending, please', title: 'Your knees can sit this one out.', body: 'Long-sitting leaves your legs in front of you. Keep a comfortable bend in the knees, raise your seat, and use a wall or backrest if you like. If floor transfers or this position hurt, stay at chair height and get individual guidance.', link: '/positions/long-sitting', action: 'Explore long-sitting' },
+  { id: 'change', label: 'I like to fidget', title: 'Excellent. A change of scenery.', body: 'Explore side-sitting, then switch sides when comfortable. Lean on a hand or cushion. There is no bonus for holding yourself perfectly still. Getting up for a little walk is also a very good position change.', link: '/positions/side-sitting', action: 'Meet side-sitting' },
+  { id: 'chair', label: 'The floor isn’t for me', title: 'You’re still in the club.', body: 'Shift in a comfortable chair, move your ankles, reach within an easy range, or take a short walk if able. Floor sitting is one option for variety; it is not an entry requirement for moving more.', link: '/start#chair-option', action: 'Start from a chair' },
+];
+---
+
+<section class="position-picker" aria-labelledby="picker-title" data-position-picker>
+  <div>
+    <p class="eyebrow">A tiny choose-your-own-adventure</p>
+    <h2 id="picker-title" class="display-2 mt-3">Find your first<br /><em>floor friend.</em></h2>
+    <p class="mt-4 max-w-md">Every body arrives with a different backstory. Pick an invitation that sounds good today.</p>
+    <p class="mt-4 text-sm text-inkmuted">A comfort guide, not a medical assessment. Nothing is saved or sent.</p>
+  </div>
+  <div>
+    <fieldset>
+      <legend class="mb-3 font-semibold text-ink">What sounds like you?</legend>
+      <div class="picker-options">
+        {choices.map((choice, index) => <label><input type="radio" name="floor-choice" value={choice.id} checked={index === 0} /><span>{choice.label}</span></label>)}
+      </div>
+    </fieldset>
+    <div class="picker-answer" aria-live="polite" aria-atomic="true">
+      {choices.map((choice, index) => <div data-answer={choice.id} hidden={index !== 0}>
+        <h3 class="text-2xl">{choice.title}</h3>
+        <p class="mt-3">{choice.body}</p>
+        <a href={href(choice.link)} class="field-link mt-4">{choice.action} <span aria-hidden="true">↗</span></a>
+      </div>)}
+    </div>
+    <noscript><p class="mt-3">The chooser needs JavaScript. <a href={href('/start')}>Browse all positions and the chair option.</a></p></noscript>
+  </div>
+</section>
+
+<script>
+  const initPicker = () => document.querySelectorAll<HTMLElement>('[data-position-picker]').forEach((root) => {
+    if (root.dataset.bound) return;
+    root.dataset.bound = 'true';
+    root.addEventListener('change', (event) => {
+      const input = event.target;
+      if (!(input instanceof HTMLInputElement) || input.name !== 'floor-choice') return;
+      root.querySelectorAll<HTMLElement>('[data-answer]').forEach((answer) => { answer.hidden = answer.dataset.answer !== input.value; });
+    });
+  });
+  initPicker();
+  document.addEventListener('astro:page-load', initPicker);
+</script>

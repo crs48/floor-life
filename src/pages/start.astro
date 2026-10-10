@@ -5,6 +5,7 @@ import PageHeader from '../components/PageHeader.astro';
 import PositionCard from '../components/PositionCard.astro';
 import Callout from '../components/Callout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import PositionPicker from '../components/PositionPicker.astro';
 import { href } from '../lib/url';
 
 const positions = (await getCollection('positions')).sort((a, b) => a.data.order - b.data.order);
@@ -12,31 +13,31 @@ const positions = (await getCollection('positions')).sort((a, b) => a.data.order
 const steps = [
   {
     title: 'Raise your hips',
-    body: 'Sit on the front edge of a firm cushion so your hips sit above your knees. This one change tilts the pelvis forward and makes cross-legged sitting sustainable for almost everyone.',
+    body: 'Try the front of a firm cushion or folded blanket. More height can make the position more comfortable. Support your knees if useful; they do not have to touch the floor.',
   },
   {
     title: 'Start with short bouts',
-    body: 'Five minutes, several times a day, beats one grim half-hour. Come out the moment something aches or falls asleep. Comfort compounds; strain teaches you to avoid the floor.',
+    body: 'Begin with a comfortable moment or two, not a target to endure. Change position or get up before discomfort builds. There is no evidence-based minimum dose of floor sitting.',
   },
   {
     title: 'Rotate positions',
-    body: 'Your best posture is your next one. Cross-legged, kneeling, long-sitting, a squat to fetch something — cycle through them. Variety is the whole point, and it protects your joints.',
+    body: 'Explore a few comfortable positions and change when you want. Include a walk or another bit of movement if able. A chair belongs in the rotation, too.',
   },
   {
-    title: 'Get up the hard way',
-    body: 'When you rise, use as little support as you can. Those get-ups are the training effect. Do a few on purpose each day and you are literally practising the longevity test.',
+    title: 'Plan the return trip',
+    body: 'Put a stable chair or other secure support within reach before sitting down. Use your hands and take your time. An easy, confident exit beats a heroic entrance.',
   },
 ];
 ---
 
 <BaseLayout
   title="Start on the floor"
-  description="How to build the floor-sitting habit gently — raise your hips, keep bouts short, rotate positions, and rise the hard way — plus a reference of positions with cues and cautions."
+  description="How to build the floor-sitting habit gently — raise your hips, keep bouts short, rotate positions, and rise with support — plus a reference of positions with cues and cautions."
 >
   <PageHeader
-    eyebrow="Building the habit"
-    title="Start on the floor"
-    lede="The floor should feel inviting, not punishing. A few small habits turn “this hurts” into “this is where I want to be” — and the trick is patience, not willpower."
+    eyebrow="Welcome to ground level"
+    title="Start small. Sit curious."
+    lede="No flexibility audition. No gold star for discomfort. Find one position you enjoy, make getting back up straightforward, and let that be enough for today."
   />
 
   <!-- First moves -->
@@ -54,12 +55,27 @@ const steps = [
     </ol>
     <div class="mt-6">
       <Callout variant="caution" title="Go gently, and go safely">
-        Build up over weeks, not days. Ease off anything sharp, prop deep
-        positions generously, and check with a professional if you have joint,
-        back, or balance concerns, are pregnant, or have had a joint replacement.
-        This is not medical advice.
+        Stop or change position if you feel pain, tingling, or numbness. If symptoms
+        persist or you are unsure about balance, joint restrictions, or getting
+        up, get individual advice. Recent surgery and joint replacements may
+        require specific precautions from your care team. You can begin at chair height.
       </Callout>
     </div>
+  </section>
+
+  <section class="mx-auto mt-20 max-w-4xl px-5 sm:px-8" id="return-trip">
+    <p class="eyebrow">Before you settle in</p><h2 class="display-3 mt-3">Give yourself an exit strategy.</h2>
+    <div class="mt-5 space-y-4 text-lg">
+      <p>Clear the area and choose firm, non-slip support that cannot roll or tip. Practise with a helper or clinician if the transfer is unfamiliar. A low stool may be a better starting height than the floor.</p>
+      <p>One possible route up is to turn onto hands and knees, bring your hands to a stable chair, step one foot forward, then push up gradually. This route will not suit every knee, hip, or body. Learn an alternative if it hurts or feels unsafe.</p>
+      <p class="source-note">Adapted from <a href="https://www.guysandstthomas.nhs.uk/health-information/falls/what-do-if-you-fall">Guy’s and St Thomas’ NHS guidance on getting up</a>. After an actual fall, check for injury first and seek help when needed; this page is about planned practice.</p>
+    </div>
+  </section>
+  <div class="mx-auto mt-20 max-w-6xl px-5 sm:px-8"><PositionPicker /></div>
+  <section id="chair-option" class="mx-auto mt-16 max-w-4xl px-5 sm:px-8">
+    <Callout variant="note" title="The chair-height chapter counts">
+      Stay in a comfortable, supported seat. Explore a small ankle movement, reach toward something nearby, or shift your sitting position within an easy range. If able, stand with support or take a short walk. If none of that suits today, rest. This is a menu, not a test of belonging.
+    </Callout>
   </section>
 
   <!-- Positions gallery -->
@@ -67,7 +83,7 @@ const steps = [
     <SectionHeader
       eyebrow="The vocabulary"
       title="Ways to sit on the floor"
-      intro="No single position is “correct.” Each asks something different of the body — the goal is to own a handful and move between them freely."
+      intro="No single position is “correct.” Each asks something different of the body — explore a few that suit you. The difficulty labels describe typical demands, not a required progression."
     />
     <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {
@@ -83,7 +99,7 @@ const steps = [
       }
     </div>
     <p class="mt-8 text-inksoft">
-      A cushion, a bench, or a wedge makes every one of these easier —
+      A cushion, a bench, or another stable support may help —
       <a href={href('/gear')} class="text-claydeep">see the gear that helps</a>.
       Or <a href={href('/cheatsheet')} class="text-claydeep">print the one-page cheat sheet</a>
       to keep by the cushion.

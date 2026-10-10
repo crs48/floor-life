@@ -68,7 +68,7 @@
     "url": "https://www.reddit.com/r/squatuniversity/",
     "kind": "community",
     "source": "Reddit",
-    "note": "The resting (Asian) squat and its mechanics, in detail.",
+    "note": "Discussion of squat technique and mobility. Community posts are not individual clinical guidance.",
     "order": 8
   },
   {
@@ -104,7 +104,7 @@
     "url": "https://www.instagram.com/nutritiousmovement/",
     "kind": "community",
     "source": "Instagram",
-    "note": "The definitive furniture-free voice in the West, in bite-size form.",
+    "note": "Movement ideas and furniture-free home experiments from Katy Bowman.",
     "order": 12
   },
   {
@@ -116,14 +116,13 @@
     "note": "Chair-free home, barefoot, unapologetically ground-based living.",
     "order": 13
   },
-
   {
     "id": "yt-squatuniversity",
     "title": "Squat University",
     "url": "https://www.youtube.com/@SquatUniversity",
     "kind": "watch",
     "source": "YouTube · channel",
-    "note": "Dr. Aaron Horschig on the deep squat and the ankle/hip range it needs. The go-to.",
+    "note": "Physical-therapy and strength-training videos. Choose advice that fits your situation.",
     "detail": "Deep squat & mobility",
     "order": 1
   },
@@ -153,7 +152,7 @@
     "url": "https://www.youtube.com/channel/UCCwj1xAY55Dd-H281T1g-bQ",
     "kind": "watch",
     "source": "YouTube · channel",
-    "note": "Matt Hsu on fixing the hips and ankles that stop you resting on the floor.",
+    "note": "Movement ideas for hips, ankles, and floor practice; not a diagnosis of your symptoms.",
     "detail": "Hips & ankles",
     "order": 4
   },
@@ -163,7 +162,7 @@
     "url": "https://www.youtube.com/@BodyweightWarrior",
     "kind": "watch",
     "source": "YouTube · channel",
-    "note": "Flexibility and floor-based bodyweight routines, twice a week.",
+    "note": "Flexibility and bodyweight routines; adapt intensity and range to your starting point.",
     "detail": "Flexibility",
     "order": 5
   },
@@ -183,7 +182,7 @@
     "url": "https://www.youtube.com/channel/UClgvURJ0dOkiLpkaQtT1NuQ",
     "kind": "watch",
     "source": "YouTube · channel",
-    "note": "Furniture-free home tours and floor-sitting transitions from the movement's founder.",
+    "note": "Furniture-free home tours and everyday movement ideas.",
     "detail": "Furniture-free",
     "order": 7
   },
@@ -233,7 +232,7 @@
     "url": "https://www.youtube.com/watch?v=E-sROj4QrPI",
     "kind": "watch",
     "source": "YouTube · video · Katy Bowman",
-    "note": "The definitive furniture-free home tour from the biomechanist who named the idea.",
+    "note": "A furniture-free home tour with practical ideas to borrow selectively.",
     "detail": "Video",
     "order": 12
   },
@@ -247,14 +246,13 @@
     "detail": "Kettlebell · clubs · mace",
     "order": 13
   },
-
   {
     "id": "rd-bluezones",
     "title": "The Okinawan practice of sitting on the floor",
     "url": "https://www.bluezones.com/2020/07/why-the-okinawan-practice-of-sitting-on-the-floor-is-linked-to-health-mobility-and-longevity-how-you-can-practice-it-at-home/",
     "kind": "reading",
     "source": "Blue Zones",
-    "note": "How a furniture-light Okinawan home ties floor sitting to mobility and long life.",
+    "note": "A popular lifestyle account of floor sitting. Longevity stories do not establish that this habit extends life.",
     "order": 1
   },
   {
@@ -380,7 +378,7 @@
     "url": "https://gmb.io/sit-to-rise-test/",
     "kind": "reading",
     "source": "GMB Fitness",
-    "note": "The best written breakdown of the science — and how to actually improve your score.",
+    "note": "A coaching perspective on the test. For the clinical evidence, read the primary studies below.",
     "order": 15
   },
   {
@@ -398,7 +396,7 @@
     "url": "https://nutritiousmovement.com/articles/transitioning-to-floor-sitting-podcast-episode-65",
     "kind": "reading",
     "source": "Nutritious Movement · Katy Bowman",
-    "note": "The most practical 'how to actually ease into it' resource there is.",
+    "note": "Practical suggestions for easing into floor sitting.",
     "order": 17
   },
   {
@@ -416,28 +414,27 @@
     "url": "https://gmb.io/hanging/",
     "kind": "reading",
     "source": "GMB Fitness",
-    "note": "A patient, free progression for dead hangs — the zero-equipment antidote to desk shoulders.",
+    "note": "A coaching progression for hanging. Use secure equipment and choose a load you can control.",
     "order": 19
   },
-
   {
     "id": "sci-srt-2012",
     "title": "Ability to sit and rise from the floor as a predictor of all-cause mortality",
     "url": "https://pubmed.ncbi.nlm.nih.gov/23242910/",
     "kind": "research",
     "source": "de Brito et al.",
-    "note": "The foundational study behind the whole longevity claim — 2,002 adults, ~6.3-yr follow-up.",
+    "note": "A clinical cohort linking test performance with mortality. Association does not establish a benefit from floor sitting.",
     "detail": "Eur J Prev Cardiol · 2014 · PMID 23242910",
     "order": 1
   },
   {
     "id": "sci-srt-2025",
     "title": "Sitting–rising test scores predict natural and cardiovascular causes of death",
-    "url": "https://academic.oup.com/eurjpc/advance-article/doi/10.1093/eurjpc/zwaf325/8163161",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40569873/",
     "kind": "research",
     "source": "Araújo et al.",
-    "note": "The larger, longer follow-up — 4,282 adults, ~12-yr follow-up, cause-specific mortality.",
-    "detail": "Eur J Prev Cardiol · 2025 · doi:10.1093/eurjpc/zwaf325",
+    "note": "A later clinical cohort found an association with natural and cardiovascular mortality; not a floor-living trial.",
+    "detail": "Eur J Prev Cardiol · online 2025 / issue 2026",
     "order": 2
   },
   {
@@ -446,7 +443,7 @@
     "url": "https://doi.org/10.1525/aa.1955.57.2.02a00040",
     "kind": "research",
     "source": "Hewes",
-    "note": "The classic anthropology survey: roughly a quarter of humanity rests in a flat-foot deep squat. Chairs are the anomaly.",
+    "note": "A historical anthropology survey of postures, not a current population estimate or a health trial.",
     "detail": "American Anthropologist · 1955 · 57(2):231–244",
     "order": 3
   },
@@ -456,18 +453,78 @@
     "url": "https://link.springer.com/article/10.1007/s40279-022-01699-8",
     "kind": "research",
     "source": "Konrad et al.",
-    "note": "The best summary of what ball-and-roller work actually does: real but modest range-of-motion gains, on par with stretching.",
+    "note": "A systematic review of repeated foam rolling and range of motion. Protocols vary; mechanisms remain uncertain.",
     "detail": "Sports Medicine · 2022 · 52:2523–2535",
     "order": 4
   },
   {
     "id": "sci-ridge-2013",
     "title": "Foot bone marrow edema after a 10-week transition to minimalist running shoes",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/23439417/",
+    "url": "https://scholarsarchive.byu.edu/facpub/2014/",
     "kind": "research",
     "source": "Ridge et al.",
-    "note": "Why every barefoot-shoe transition guide says go slow: over half of runners who switched fast showed bone stress on MRI.",
+    "note": "A small running-shoe transition study found increased MRI bone-stress findings. It does not test ordinary barefoot walking.",
     "detail": "Med Sci Sports Exerc · 2013 · PMID 23439417",
     "order": 5
+  },
+  {
+    "id": "sci-breaks",
+    "title": "Breaking up prolonged sitting reduces postprandial glucose and insulin responses",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22374636/",
+    "kind": "research",
+    "source": "Dunstan et al. · 2012",
+    "note": "Short walking breaks in a small acute crossover trial. Direct activity-break evidence, not floor-sitting evidence.",
+    "detail": "Randomized crossover trial",
+    "order": 6
+  },
+  {
+    "id": "sci-hadza",
+    "title": "Sitting, squatting, and the evolutionary biology of human inactivity",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7132251/",
+    "kind": "research",
+    "source": "Raichlen et al. · 2020",
+    "note": "Observed resting postures and measured muscle activity in Hadza adults. Position matters; health benefits were not tested.",
+    "detail": "Observational and physiological study",
+    "order": 7
+  },
+  {
+    "id": "sci-knees",
+    "title": "Squatting and knee osteoarthritis: the Beijing study",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15077301/",
+    "kind": "research",
+    "source": "Zhang et al. · 2004",
+    "note": "Long-term squatting exposure and knee OA were associated. This cannot predict the effects of a brief supported practice.",
+    "detail": "Observational study",
+    "order": 8
+  },
+  {
+    "id": "sci-feet",
+    "title": "Daily activity in minimal footwear increases foot strength",
+    "url": "https://www.nature.com/articles/s41598-021-98070-0",
+    "kind": "research",
+    "source": "Curtis et al. · 2021",
+    "note": "A small study of healthy adults and daily footwear use. Measured toe-flexion strength, not injury prevention.",
+    "detail": "Six-month intervention",
+    "order": 9
+  },
+  {
+    "id": "rd-who",
+    "title": "Physical activity and sedentary behaviour guidelines",
+    "url": "https://www.who.int/publications/i/item/9789240015128",
+    "kind": "research",
+    "source": "World Health Organization · 2020",
+    "note": "The broader activity recommendations. Floor time is an optional addition, not a substitute for aerobic and strengthening activity.",
+    "detail": "Public health guidance",
+    "order": 10
+  },
+  {
+    "id": "rd-nhs-transfers",
+    "title": "Supported ways to get up from the floor",
+    "url": "https://www.guysandstthomas.nhs.uk/health-information/falls/what-do-if-you-fall",
+    "kind": "research",
+    "source": "Guy’s and St Thomas’ NHS",
+    "note": "Clinical guidance with supported transfer options and what to consider after an actual fall.",
+    "detail": "Patient guidance",
+    "order": 11
   }
 ]

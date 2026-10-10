@@ -37,7 +37,7 @@
         const next =
           document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
         document.documentElement.dataset.theme = next;
-        localStorage.setItem('theme', next);
+        try { localStorage.setItem('theme', next); } catch { /* Keep the session preference when storage is unavailable. */ }
       });
     });
   }

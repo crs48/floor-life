@@ -7,7 +7,6 @@ interface Props {
   caption?: string;
 }
 const { products, caption } = Astro.props;
-const tierLabel = { budget: 'Budget', mid: 'Mid', premium: 'Premium' } as const;
 ---
 
 <div class="overflow-x-auto rounded-soft border border-line">
@@ -17,8 +16,8 @@ const tierLabel = { budget: 'Budget', mid: 'Mid', premium: 'Premium' } as const;
       <tr class="border-b border-line bg-sand/50 text-xs uppercase tracking-wider text-inkmuted">
         <th scope="col" class="px-5 py-3 font-semibold">Product</th>
         <th scope="col" class="px-5 py-3 font-semibold">Price</th>
-        <th scope="col" class="px-5 py-3 font-semibold">Tier</th>
-        <th scope="col" class="px-5 py-3 font-semibold">Best for</th>
+
+        <th scope="col" class="px-5 py-3 font-semibold">Explore if</th>
         <th scope="col" class="px-5 py-3 font-semibold"><span class="sr-only">Link</span></th>
       </tr>
     </thead>
@@ -31,7 +30,7 @@ const tierLabel = { budget: 'Budget', mid: 'Mid', premium: 'Premium' } as const;
               <span class="text-xs text-inkmuted">{p.brand}</span>
             </th>
             <td class="px-5 py-4 font-semibold text-ink">{p.price}</td>
-            <td class="px-5 py-4 text-inksoft">{tierLabel[p.tier]}</td>
+
             <td class="px-5 py-4 text-inksoft">{p.bestFor}</td>
             <td class="px-5 py-4 whitespace-nowrap">
               <AffiliateLink href={p.affiliateUrl} label="View" />

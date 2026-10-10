@@ -14,7 +14,7 @@ const { Content, headings, remarkPluginFrontmatter } = await render(entry);
 const { data } = entry;
 
 const fmt = (d: Date) =>
-  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 
 const readingTime =
   remarkPluginFrontmatter?.minutesRead ??
@@ -134,6 +134,6 @@ const related = all
   }
 
   <div class="mt-20">
-    <Newsletter title="More from the floor" blurb="The occasional letter when a new piece lands. No noise." />
+    <Newsletter title="More from the floor" blurb="Follow the journal in your feed reader, or find your next curious detour." />
   </div>
 </BaseLayout>

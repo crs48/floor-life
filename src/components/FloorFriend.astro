@@ -1,0 +1,29 @@
+---
+interface Props { small?: boolean }
+const { small = false } = Astro.props;
+---
+
+<svg viewBox="0 0 480 430" class:list={['floor-friend', { small }]} role="img" aria-label="A smiling, sage-green floor cushion with little feet, keeping a cup of tea company.">
+  <path d="M55 346C15 241 62 85 179 65C339 12 459 132 438 267C432 332 358 383 244 373Z" fill="var(--color-sand)" />
+  <g fill="none" stroke="var(--color-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M39 352H448" opacity=".45" />
+    <path d="M158 280L141 336L112 348Q106 353 119 355L167 355L184 289" fill="var(--color-paper)" />
+    <path d="M283 283L300 337L333 348Q341 354 329 356H281L258 287" fill="var(--color-paper)" />
+    <path d="M84 189C90 143 143 133 224 133C310 132 364 147 369 189L359 258C343 288 125 295 94 262Z" fill="var(--color-sage)" />
+    <path d="M84 189C95 221 347 225 369 189" />
+    <path d="M113 193C161 208 293 208 341 192" stroke-dasharray="2 7" opacity=".6" />
+    <path d="M173 245Q179 238 186 245M261 245Q268 238 275 245M213 253Q225 265 238 253" />
+    <ellipse cx="161" cy="253" rx="10" ry="5" fill="var(--color-clay)" stroke="none" opacity=".65" />
+    <ellipse cx="285" cy="253" rx="10" ry="5" fill="var(--color-clay)" stroke="none" opacity=".65" />
+    <path d="M100 240Q67 246 61 274M357 239Q390 243 390 278" />
+    <path d="M382 291H420V316Q400 327 382 316Z" fill="var(--color-straw)" />
+    <path d="M420 295Q441 290 438 306Q436 315 420 310M399 279Q388 270 399 260Q409 250 399 241" />
+    <path d="M74 91L79 78L84 91L97 96L84 101L79 114L74 101L61 96ZM389 123L393 113L397 123L407 127L397 131L393 141L389 131L379 127Z" fill="var(--color-straw)" stroke-width="2" />
+  </g>
+  {!small && <text x="240" y="398" text-anchor="middle" font-family="var(--font-display)" font-size="17" font-style="italic" fill="var(--color-inksoft)">Professionally underqualified. Excellent support.</text>}
+</svg>
+
+<style>
+  .floor-friend { width: 100%; height: auto; overflow: visible; }
+  .small { width: 46px; height: 42px; }
+</style>

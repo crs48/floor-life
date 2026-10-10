@@ -20,10 +20,10 @@
   /* Ink (warm near-blacks — text family) */
   --color-ink: #2a2520;
   --color-inksoft: #574d42;
-  --color-inkmuted: #8a7d6c;
+  --color-inkmuted: #716454;
 
   /* Naturals (accents) */
-  --color-clay: #b16844;
+  --color-clay: #a65d3b;
   --color-claydeep: #8f4f2e;
   --color-sage: #7a856a;
   --color-sagedeep: #59634a;
@@ -34,7 +34,7 @@
   --color-linesoft: color-mix(in oklab, #2a2520 8%, transparent);
 
   /* Rhythm */
-  --radius-soft: 0.75rem;
+  --radius-soft: 1rem;
   --radius-pill: 999px;
 }
 
@@ -110,6 +110,9 @@
   }
 
   p { text-wrap: pretty; }
+  [id] { scroll-margin-top: 2rem; }
+  button, summary { cursor: pointer; }
+  button, input, select { font: inherit; }
 
   a {
     color: var(--color-claydeep);
@@ -137,8 +140,8 @@
 /* Print: strip chrome, go ink-on-paper, keep cards from splitting. */
 @media print {
   :root { --measure: 100%; }
-  header,
-  footer,
+  body > header,
+  body > footer,
   [data-search-dialog],
   [data-no-print] {
     display: none !important;
@@ -193,5 +196,37 @@
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 400;
+  }
+  .prose-floor { font-size: 1.075rem; line-height: 1.85; }
+  .prose-floor :where(h2) { font-size: 2rem; margin-top: 2.2em; }
+  .prose-floor :where(a) { text-decoration-color: var(--color-straw); }
+  .prose-floor :where(a:hover) { text-decoration-color: currentColor; }
+  .field-link { display: inline-flex; align-items: center; gap: 1.5rem; border-bottom: 1px solid; padding-bottom: .3rem; font-size: .9rem; font-weight: 700; text-decoration: none; }
+  .field-note { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; }
+  .home-hero h1 { font-size: clamp(3.8rem, 6.7vw, 6rem); line-height: 1.02; letter-spacing: -.045em; }
+  .home-hero h1 em { color: var(--color-claydeep); font-weight: 400; }
+  .manifesto { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem 3rem; padding: 1.1rem; border-block: 1px solid var(--color-line); font-size: .76rem; font-weight: 700; letter-spacing: .035em; }
+  .manifesto span::before { content: '✳'; color: var(--color-claydeep); margin-right: .7rem; }
+  .position-picker { display: grid; grid-template-columns: .85fr 1.15fr; gap: 3rem; padding: clamp(1.4rem, 4vw, 3rem); background: var(--color-sand); border: 1px solid var(--color-line); border-radius: 1rem; }
+  .position-picker h2 em { color: var(--color-claydeep); }
+  .picker-options { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; }
+  .picker-options label { position: relative; cursor: pointer; }
+  .picker-options input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .picker-options span { display: flex; height: 100%; align-items: center; border: 1px solid var(--color-line); border-radius: .5rem; padding: .8rem; font-size: .86rem; background: var(--color-paper); }
+  .picker-options input:checked + span { background: var(--color-ink); color: var(--color-paper); border-color: var(--color-ink); }
+  .picker-options input:focus-visible + span { outline: 3px solid var(--color-claydeep); outline-offset: 3px; }
+  .picker-answer { border-top: 1px solid var(--color-line); margin-top: 1.4rem; padding-top: 1.4rem; min-height: 240px; }
+  .reading-nav { display: flex; flex-wrap: wrap; gap: .7rem 1.5rem; border-block: 1px solid var(--color-line); padding-block: 1rem; font-size: .9rem; }
+  .reading-nav a { text-decoration: none; }
+  .evidence-label { display: inline-flex; border: 1px solid var(--color-line); border-radius: 999px; padding: .3rem .7rem; font-size: .7rem; color: var(--color-sagedeep); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .source-note { font-size: .9rem; padding-left: 1rem; border-left: 2px solid var(--color-straw); }
+  .floor-faq details { padding-block: 1.2rem; border-top: 1px solid var(--color-line); }
+  .floor-faq summary { font-family: var(--font-display); font-size: 1.4rem; color: var(--color-ink); }
+  .floor-faq details p { margin-top: .75rem; max-width: 65ch; }
+  @media (max-width: 700px) {
+    .position-picker { grid-template-columns: 1fr; gap: 1.7rem; }
+    .picker-answer { min-height: 0; }
+    .manifesto { gap: .5rem 1.3rem; font-size: .67rem; }
+    .home-hero h1 { font-size: clamp(3.7rem, 13.5vw, 5rem); }
   }
 }

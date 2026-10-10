@@ -56,8 +56,6 @@ const products = defineCollection({
     priceNote: z.string().optional(),
     affiliateUrl: z.string(),
     retailer: z.string(),
-    tier: z.enum(['budget', 'mid', 'premium']),
-    rating: z.number().min(0).max(5).optional(),
     pros: z.array(z.string()),
     cons: z.array(z.string()),
     bestFor: z.string(),

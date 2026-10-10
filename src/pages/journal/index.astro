@@ -9,7 +9,7 @@ const posts = (await getCollection('journal', ({ data }) => !data.draft)).sort(
 );
 
 const fmt = (d: Date) =>
-  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
 
 <BaseLayout
@@ -17,7 +17,7 @@ const fmt = (d: Date) =>
   description="Long-form writing on floor living — the evidence, the how-to, the gear, and the quieter case for living closer to the ground."
 >
   <PageHeader
-    eyebrow="Long-form reading"
+    eyebrow="Put the kettle on"
     title="The Journal"
     lede="Essays and guides for the floor-curious and the already-committed — always with the caveats left in."
   />

@@ -2,173 +2,62 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Callout from '../components/Callout.astro';
+import SitRiseTest from '../components/SitRiseTest.astro';
 import { href } from '../lib/url';
-
-const myths = [
-  {
-    claim: '“Floor sitting strengthens your core.”',
-    verdict:
-      'Unsupported sitting raises low-level muscle activation, but activation is not training. Strength needs load near failure — which sitting never approaches.',
-  },
-  {
-    claim: '“Sitting on the floor gives you myofascial release.”',
-    verdict:
-      'There is no research on this at all. Fascia is real; the idea that resting on the ground “releases” it borrows credibility from the (already thin) foam-rolling literature.',
-  },
-  {
-    claim: '“Floor sitting fixes your posture and back pain.”',
-    verdict:
-      'A review of reviews found no consensus that any posture causes back pain. Oddly, slumped sitting was the lowest-pressure posture in the best in-vivo disc study.',
-  },
-  {
-    claim: '“Standing desks burn serious calories.”',
-    verdict:
-      'Standing beats sitting by about 9 kcal an hour. Real, but small. The energy that matters is in the transitions — getting up and down — not in holding still while upright.',
-  },
-];
+const chapters = [{id:'movement',label:'Moving more'},{id:'positions',label:'What the floor adds'},{id:'test',label:'The famous test'},{id:'knees',label:'Knees & comfort'},{id:'myths',label:'Myth compost'}];
 ---
-
-<BaseLayout
-  title="Why live low"
-  description="The honest case for floor living: the Sitting–Rising Test and mortality, mobility you use or lose, the knee caveat, and the myths we refuse to repeat."
->
-  <PageHeader
-    eyebrow="The evidence, honestly"
-    title="Why live low"
-    lede="The case for floor living is strong enough to make plainly and nuanced enough to keep interesting. Here it is with the caveats left in — because a claim you can trust is worth more than one that sounds good."
-  />
-
-  <div class="mx-auto mt-16 max-w-3xl space-y-20 px-5 pb-8 sm:px-8">
-    <!-- SRT -->
-    <section class="space-y-5">
-      <p class="eyebrow text-sagedeep">The one test worth taking</p>
-      <h2 class="display-3 font-display text-ink">Can you get off the floor?</h2>
-      <p class="text-lg leading-relaxed text-inksoft">
-        In a Brazilian study of 2,002 adults aged 51–80, researchers scored how
-        people lowered to the floor and stood back up — ten points, minus one for
-        each hand, knee, or support used. Over about six years, each single point
-        of a better score came with roughly <strong class="text-ink">21% better
-        survival</strong>, and the lowest scorers died at five to six times the
-        rate of the highest.
-      </p>
-      <p class="text-lg leading-relaxed text-inksoft">
-        A larger 2025 follow-up of 4,282 people tracked for a median of twelve
-        years found the same shape, more starkly: a perfect ten carried about a
-        <strong class="text-ink">3.7% death rate</strong>, versus
-        <strong class="text-ink">42%</strong> for the lowest scorers.
-      </p>
-      <Callout variant="caution" title="The honest reading">
-        The Sitting–Rising Test measures <strong>musculoskeletal fitness</strong> —
-        strength, flexibility, balance, leanness. Its link to lifespan is a real
-        <em>association</em>, not proof that the habit of floor-sitting adds years.
-        Fit people both score well <em>and</em> live longer. It is a superb
-        starting line and a lousy fortune-teller.
-        <span class="mt-1 block text-xs text-inkmuted">
-          Sources: <a href="https://pubmed.ncbi.nlm.nih.gov/23242910/">de Brito et al., 2012/2014</a> ·
-          <a href="https://academic.oup.com/eurjpc/advance-article/doi/10.1093/eurjpc/zwaf325/8163161">Araújo et al., 2025</a>.
-        </span>
-      </Callout>
+<BaseLayout title="Why live low" description="What floor living can offer, what the research actually measured, and why a sitting-rising score is not your personal expiry date.">
+  <PageHeader eyebrow="The evidence, with its shoes off" title="A good idea. A few asterisks." lede="We like the floor. We also like a claim that survives a closer look. Here’s what has been studied, what seems plausible, and what belongs in the compost." />
+  <div class="mx-auto mt-10 max-w-3xl space-y-16 px-5 pb-8 sm:px-8">
+    <nav class="reading-nav" aria-label="On this page">{chapters.map(c => <a href={`#${c.id}`}>{c.label} ↓</a>)}</nav>
+    <section id="movement" class="space-y-5">
+      <span class="evidence-label">Tested · activity breaks</span>
+      <h2 class="display-3">The useful bit: interrupting the stillness.</h2>
+      <p class="text-lg">In a small randomized crossover trial, 19 adults aged 45–65 with overweight or obesity had lower after-meal glucose and insulin responses when they interrupted sitting with two minutes of walking every 20 minutes. The experiment measured short-term responses; it did not test floor sitting or establish a universal break schedule.</p>
+      <p class="source-note"><a href="https://pubmed.ncbi.nlm.nih.gov/22374636/">Dunstan et al., 2012 · randomized crossover trial.</a></p>
+      <p class="text-lg">Our practical take: use a change of seat as a cue to move, when you can. A floor cushion can be a reminder, but a chair, a timer, or a kettle can do that job too. Trading eight motionless hours on a chair for eight motionless hours on the floor misses the interesting part.</p>
+      <Callout variant="evidence" title="The bigger picture still matters">WHO recommends regular aerobic activity, muscle strengthening on at least two days a week, and limiting sedentary time. For adults able to do it, the aerobic target is 150–300 minutes of moderate activity weekly, or an equivalent amount of vigorous activity. Floor time is an optional extra, not a replacement. <a href="https://www.who.int/publications/i/item/9789240015128">WHO physical activity guidelines, 2020.</a></Callout>
     </section>
-
-    <!-- Mobility -->
-    <section class="space-y-5">
-      <p class="eyebrow text-sagedeep">Range you keep</p>
-      <h2 class="display-3 font-display text-ink">Use it, or slowly lose it</h2>
-      <p class="text-lg leading-relaxed text-inksoft">
-        A full resting squat asks for around 35° of ankle bend and deep hip
-        flexion. Most Western adults can't find it — not because of anatomy, but
-        because a life of chairs never asks for the range, so the calf and hips
-        quietly tighten. Populations that still sit on the floor keep markedly
-        more hip rotation and flexion into old age.
-      </p>
-      <p class="text-lg leading-relaxed text-inksoft">
-        The point isn't that the floor magically stretches you. It's that
-        chairs let you live in a narrow slice of your available movement, and the
-        floor gently insists on the rest of it.
-      </p>
-      <Callout variant="evidence">
-        Strongest where it's descriptive: floor postures <em>demand</em> large
-        hip and ankle range, and habitual floor-sitters <em>have</em> more of it.
-        Whether the habit <em>builds</em> that range hasn't been proven in a
-        trial — it's plausible, not settled. Targeted mobility work, at least,
-        clearly does increase ankle range.
-      </Callout>
+    <section id="positions" class="space-y-5">
+      <span class="evidence-label">Promising · mechanism and observation</span>
+      <h2 class="display-3">Different seats ask different things of you.</h2>
+      <p class="text-lg">Cross-legged sitting, kneeling, and squatting put the legs in different positions. Transitions also give you a chance to practise coordinating a useful everyday task. That is a sensible reason to explore; it is not proof that everyone needs a deep squat.</p>
+      <p class="text-lg">A study with Hadza adults found more lower-leg muscle activity in squatting than in chair sitting. The other ground-sitting positions they measured did not show the same increase. The study helps explain why the particular position matters; it cannot tell us that adopting floor living prevents disease.</p>
+      <p class="source-note"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7132251/">Raichlen et al., 2020 · observation and muscle-activity measurements.</a></p>
+      <p class="text-lg">Habit, anatomy, injuries, and personal preference all help determine what feels available. There is no universal ankle-angle entrance exam. Raise your seat, support your knees, bend your legs, or choose another position. The floor is not keeping a leaderboard.</p>
     </section>
-
-    <!-- Knee caveat -->
-    <section class="space-y-5">
-      <p class="eyebrow text-sagedeep">The nuance everyone skips</p>
-      <h2 class="display-3 font-display text-ink">Kind to hips, a risk to knees</h2>
-      <p class="text-lg leading-relaxed text-inksoft">
-        Here's the caveat the wellness internet leaves out. Populations that
-        squat and kneel for hours a day show <em>strikingly low</em> hip
-        arthritis — but <em>more</em> knee osteoarthritis. In the Beijing
-        Osteoarthritis Study, hours of daily squatting roughly doubled the odds
-        of knee OA.
-      </p>
-      <p class="text-lg leading-relaxed text-inksoft">
-        So we don't preach marathon squat-holds. We preach <strong class="text-ink">variety,
-        moderation, and pain-free range</strong>: many short visits to many
-        positions, not one punishing posture held for an hour.
-      </p>
-      <Callout variant="caution" title="If your joints have history">
-        Deep flexion is the thing to modify with knee or hip osteoarthritis,
-        after a joint replacement (cross-legged and deep squatting are classic
-        early no-gos), or in pregnancy (loose ligaments). Prop generously, stay
-        pain-free, and check with a professional. See <a href={href('/start')}>how to start</a>.
-      </Callout>
+    <section id="test" class="space-y-5">
+      <span class="evidence-label">Association · not a treatment trial</span>
+      <h2 class="display-3">Your rug cannot predict your future.</h2>
+      <p class="text-lg">The Sitting–Rising Test scores the supports and balance adjustments someone uses to sit on the floor and get back up. A cohort of 2,002 adults aged 51–80 found that lower scores were associated with higher all-cause mortality over follow-up. The test reflects several capacities at once; it did not measure the effects of starting a floor-sitting habit.</p>
+      <p class="source-note"><a href="https://pubmed.ncbi.nlm.nih.gov/23242910/">de Brito et al., published online 2012 / journal issue 2014.</a></p>
+      <p class="text-lg">A later cohort of 4,282 adults aged 46–75 also found an association between lower scores and natural and cardiovascular mortality. Researchers adjusted for several measured factors, but adjustment does not turn an observational study into an experiment. Neither study gives an individual reader an expiry date.</p>
+      <p class="source-note"><a href="https://pubmed.ncbi.nlm.nih.gov/40569873/">Araújo et al., online 2025 / journal issue 2026.</a></p>
+      <Callout variant="caution" title="Use the support. Keep the dignity.">Using your hands is a strategy, not a character flaw. Pain, balance difficulties, disability, body proportions, and previous surgery can change how you get up. A clinician can help you practise a suitable transfer; removing support to chase a score may make the task less safe.</Callout>
+      <p><a href={href('/journal/the-sitting-rising-test')} class="field-link">Read the fuller story <span aria-hidden="true">↗</span></a></p>
+      <SitRiseTest />
     </section>
-
-    <!-- Up and down -->
-    <section class="space-y-5">
-      <p class="eyebrow text-sagedeep">The real mechanism</p>
-      <h2 class="display-3 font-display text-ink">The magic is in the transitions</h2>
-      <p class="text-lg leading-relaxed text-inksoft">
-        A room without chairs makes you get up and down dozens of times a day.
-        Each rise from the floor is an unscheduled squat. This is where floor
-        living most plausibly earns its keep — not in the sitting, but in the
-        endless, low-grade, get-up-and-do-it-again movement it forces.
-      </p>
-      <p class="text-lg leading-relaxed text-inksoft">
-        It rhymes with what we know: breaking up long sitting improves blood
-        sugar and circulation, and it's the <em>interruptions</em> that help, not
-        the posture you interrupt it with. The floor is simply a very good excuse
-        to keep moving.
-      </p>
+    <section id="knees" class="space-y-5">
+      <span class="evidence-label">Context matters · exposure is not destiny</span>
+      <h2 class="display-3">Your knees get a vote.</h2>
+      <p class="text-lg">The Beijing Osteoarthritis Study found an association between recalled time spent squatting earlier in life and knee osteoarthritis in older adults. This observational result about prolonged exposure cannot tell us whether a brief, supported squat is harmful or beneficial for a particular person. It also does not show that floor sitting protects the hips.</p>
+      <p class="source-note"><a href="https://pubmed.ncbi.nlm.nih.gov/15077301/">Zhang et al., 2004 · observational study.</a></p>
+      <p class="text-lg">Our approach is deliberately unheroic: brief visits, comfortable ranges, and support you can trust. Stop or change position for pain, tingling, or numbness. If symptoms persist, recur, or include weakness, get assessed instead of trying to stretch through them.</p>
+      <Callout variant="caution" title="Choose your starting height">If you have a recent operation, joint replacement, significant pain, dizziness, or uncertain balance, ask your care team about suitable positions and transfers. Restrictions depend on your procedure and circumstances. A chair-height practice can be the whole practice.</Callout>
     </section>
-
-    <!-- Myths -->
-    <section class="space-y-6">
-      <p class="eyebrow text-sagedeep">Myths vs evidence</p>
-      <h2 class="display-3 font-display text-ink">Four claims we won't repeat</h2>
-      <p class="text-lg leading-relaxed text-inksoft">
-        Being honest about what floor living <em>doesn't</em> do is how we earn
-        the right to tell you what it does.
-      </p>
-      <div class="grid gap-4">
-        {
-          myths.map((m) => (
-            <div class="rounded-soft border border-line bg-sand/40 p-5">
-              <p class="font-display text-lg text-ink">{m.claim}</p>
-              <p class="mt-2 text-[0.95rem] leading-relaxed text-inksoft">{m.verdict}</p>
-            </div>
-          ))
-        }
-      </div>
+    <section id="myths" class="floor-faq">
+      <p class="eyebrow">The myth compost</p><h2 class="display-3 mt-3 mb-7">Good intentions. Overgrown claims.</h2>
+      <details><summary>“Floor sitting fixes your posture.”</summary><p>There is no single shape to maintain all day. Comfort, support, task, and movement options matter. Back pain is more complex than the position of your pelvis; persistent pain deserves individual care.</p></details>
+      <details><summary>“No backrest means a strength workout.”</summary><p>Muscles being active is not the same as a demonstrated training effect. We have not established that sitting on the floor alone builds meaningful strength. Keep some actual strengthening in your week, adapted to your abilities.</p></details>
+      <details><summary>“The floor releases your fascia.”</summary><p>A position can feel relaxing without proving a particular tissue mechanism. Evidence about foam rolling cannot simply be transferred to sitting on a rug. It is fine to enjoy the feeling without giving it a laboratory coat.</p></details>
+      <details><summary>“Natural means right for everyone.”</summary><p>Floor traditions are rich and varied; bodies are, too. A chair, a wheelchair, a supported seat, and a cushion can all belong in a welcoming room. You can like low living without turning it into a rule for other people.</p></details>
+      <p class="mt-6"><a href={href('/journal/what-floor-living-cant-do')} class="field-link">A closer look at the claims <span aria-hidden="true">↗</span></a></p>
     </section>
-
-    <!-- Bottom line -->
     <section class="rounded-soft bg-ink px-6 py-10 text-paper sm:px-10">
-      <p class="eyebrow text-straw">The bottom line</p>
-      <p class="mt-3 font-display text-2xl leading-snug sm:text-3xl">
-        Variety and movement beat any single “correct” posture. Floor living's
-        real gift is that it keeps putting you on the ground and asking you to get
-        back up.
-      </p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href={href('/start')} class="rounded-pill bg-paper px-5 py-2.5 font-semibold text-ink no-underline">How to start</a>
-        <a href={href('/spaces')} class="rounded-pill border border-paper/40 px-5 py-2.5 font-semibold text-paper no-underline">Set up your space</a>
-      </div>
+      <p class="eyebrow text-straw">A practical next move</p>
+      <p class="mt-3 font-display text-3xl leading-snug">Make a little room for movement.<br />Leave room for being human.</p>
+      <a href={href('/start')} class="mt-6 inline-flex rounded-pill bg-paper px-5 py-3 font-semibold text-ink no-underline">Find a comfortable beginning ↗</a>
     </section>
+    <p class="text-sm text-inkmuted">Evidence reviewed October 10, 2026. Educational editorial content; not an individual assessment. See the <a href={href('/resources#research')}>research library</a> for more reading.</p>
   </div>
 </BaseLayout>
