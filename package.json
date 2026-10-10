@@ -3,14 +3,15 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "description": "Floor Life — the art & science of living closer to the ground.",
+  "description": "Floor Life \u2014 the art & science of living closer to the ground.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",
